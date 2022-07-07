@@ -6,7 +6,6 @@
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
-		"postbuild": "node --loader ts-node/esm --experimental-specifier-resolution=node ./src/lib/scripts/postbuild.ts",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
