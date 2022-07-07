@@ -53,12 +53,12 @@
 	</div>
 	<div class="grid grid-cols-6 gap-8 w-full h-80 mt-16">
 		{#each { length: 12 } as _}
-			<div class="rounded-full w-full !aspect-square bg-gray-500" />
+			<div class="rounded-full w-full !aspect-square bg-gray-500/20 border-2 border-gray-200/40" />
 		{/each}
 	</div>
 </section>
 
-<section class="container mx-auto mt-20">
+<section class="container mx-auto mt-20 mb-20">
 	<div
 		class="bg-[url('/red.png')] max-w-screen-lg mx-auto px-28 py-16 rounded-3xl shadow-red-900 shadow-lg">
 		<h2 class="font-bold text-4xl text-center">Our speakers list is coming soon</h2>
