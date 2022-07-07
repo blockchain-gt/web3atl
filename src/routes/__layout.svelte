@@ -3,9 +3,6 @@
 	import Footer from '$components/layout/Footer.svelte'
 
 	import '$styles/global.scss'
-
-	// Fontsource (self-hosted) fonts
-	import '@fontsource/open-sans/latin-400.css'
 </script>
 
 <!-- Google Fonts -->
