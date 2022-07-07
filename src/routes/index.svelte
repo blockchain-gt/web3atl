@@ -20,6 +20,25 @@
 			bgElm.style.transform = `translate(${bgDegreeX + 100}px, ${bgDegreeY - 100}px, -100px)`
 		})
 	})
+
+	const data = [
+		{
+			name: 'Blockchain at Georgia Tech',
+			image: 'bgt.jpg',
+			url: 'https://blockchain-gt.io'
+		},
+		{
+			name: 'Babylon Web3 Academy',
+			image: 'babylon.jpg',
+			url: 'http://babylonweb3.academy'
+		},
+
+		{
+			name: '404 Dao',
+			// image: 'babylon.jpg',
+			url: 'https://404dao.io'
+		}
+	]
 </script>
 
 <section class="pt-12 min-h-screen">
@@ -29,7 +48,7 @@
 		<h1 class="font-extrabold text-9xl max-w-lg text-gray-100 bg-clip-text drop-shadow-md">
 			Web <span>3.0</span> <span class="font-black text-white">ATL</span>
 		</h1>
-		<p class="font-bold text-white/80 text-xl">November 2022</p>
+		<p class="font-bold text-white/80 text-xl">November 5-6, 2022</p>
 	</div>
 	<img
 		style="transform: translate(100px, -100px);"
@@ -38,27 +57,22 @@
 		alt=""
 		class="object-contain absolute right-0 top-0 h-[40rem] -z-50" />
 </section>
-<section class="container mx-auto max-w-screen-lg py-10">
-	<div class="flex ">
-		<div class="max-w-lg">
-			<h2 class="font-bold text-5xl leading-[4rem]">Atlanta's premier Web3 conference</h2>
-			<p class="mt-4 text-gray-300">
-				Welcome to Lorem Ipsum. Get started with lorem ipsum in Atlanta’s first blockchain lorem
-				Ipsum. Welcome to Lorem Ipsum. Get started with lorem ipsum in Atlanta’s first blockchain
-				lorem Ipsum
-			</p>
-		</div>
-		<!-- Coin -->
-		<div />
-	</div>
-	<div class="grid grid-cols-6 gap-8 w-full h-80 mt-16">
-		{#each { length: 12 } as _}
-			<div class="rounded-full w-full !aspect-square bg-gray-500/20 border-2 border-gray-200/40" />
+
+<section class="container max-w-screen-md mx-auto mt-16 pb-20">
+	<h2 class="text-5xl font-bold">Hosted By</h2>
+	<div class="grid grid-cols-3 gap-8 mt-8 mb-40">
+		{#each data as host}
+			<a href={host.url} class="flex flex-col">
+				<div
+					style="background: url('{host.image}'); background-size: cover;"
+					class="aspect-square border-gray-200/20 border rounded-full w-full h-full" />
+				<p class="mt-4 text-center font-bold">{host.name}</p>
+			</a>
 		{/each}
 	</div>
 </section>
 
-<section class="container mx-auto mt-20 mb-20">
+<section class="container mx-auto mb-20">
 	<div
 		class="bg-[url('/red.png')] max-w-screen-lg mx-auto px-28 py-16 rounded-3xl shadow-red-900 shadow-lg">
 		<h2 class="font-bold text-4xl text-center">Our speakers list is coming soon</h2>
