@@ -185,17 +185,16 @@
     "@vercel/nft" "^0.20.0"
     esbuild "^0.14.42"
 
-"@sveltejs/kit@1.0.0-next.350":
-  version "1.0.0-next.350"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.350.tgz#b90fc2f337b518837664b47c0fe77a978d00c1ce"
-  integrity sha512-qkZNjp7yIj6t91+wMhmMtGJH0Lb89OaKdVXUDy92CS5/4OHRTKcQPdfOKs4no/upkS3RiFb+rEpOkYqTMcPUXg==
+"@sveltejs/kit@^1.0.0-next.360":
+  version "1.0.0-next.360"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.360.tgz#d4199194726b6d95df9e934e39697e09110dd6e0"
+  integrity sha512-z1W6oYSmDzYcjlXANkbsb0N0IS/0aDl0huzDGRZWXobis4VmzoqzOyxsczyvxwH6FWxQBXls5wNrtm6drzsr6A==
   dependencies:
-    "@sveltejs/vite-plugin-svelte" "^1.0.0-next.46"
+    "@sveltejs/vite-plugin-svelte" "^1.0.0-next.48"
     chokidar "^3.5.3"
     sade "^1.8.1"
-    vite "^2.9.10"
 
-"@sveltejs/vite-plugin-svelte@^1.0.0-next.46":
+"@sveltejs/vite-plugin-svelte@^1.0.0-next.48":
   version "1.0.0-next.49"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-1.0.0-next.49.tgz#44cc00a19c6c23002516b66c5ab90ee66720df57"
   integrity sha512-AKh0Ka8EDgidnxWUs8Hh2iZLZovkETkefO99XxZ4sW4WGJ7VFeBx5kH/NIIGlaNHLcrIvK3CK0HkZwC3Cici0A==
@@ -2367,7 +2366,7 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
-vite@^2.9.10:
+vite@^2.9.13:
   version "2.9.13"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.13.tgz#859cb5d4c316c0d8c6ec9866045c0f7858ca6abc"
   integrity sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==

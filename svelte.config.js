@@ -12,17 +12,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		prerender: { default: true },
-
-		vite: {
-			resolve: {
-				alias: {
-					$lib: resolve('./src/lib'),
-					$components: resolve('./src/components'),
-					$styles: resolve('./src/styles')
-				}
-			}
-		}
+		prerender: { default: true }
 	}
 }
 
