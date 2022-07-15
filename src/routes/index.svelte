@@ -43,11 +43,12 @@
 	let submitSuccess = false
 </script>
 
-<section class="pt-12 min-h-screen">
+<section class="pt-60 md:pt-12 md:min-h-screen">
 	<div
-		class="bg-[url('/lines.png')] z-50 bg-cover rounded-xl pr-32 pl-40 py-40 -translate-x-20 w-2/3"
+		class="bg-[url('/lines.png')] z-50 bg-cover rounded-xl pr-32 pl-40 py-40 -translate-x-20 md:w-2/3"
 		bind:this={ticketElm}>
-		<h1 class="font-extrabold text-9xl max-w-lg text-gray-100 bg-clip-text drop-shadow-md">
+		<h1
+			class="font-extrabold text-8xl md:text-9xl md:max-w-lg text-gray-100 bg-clip-text drop-shadow-md">
 			Web <span>3.0</span> <span class="font-black text-white">ATL</span>
 		</h1>
 		<p class="font-bold text-white/80 text-xl">November 5-6, 2022</p>
@@ -61,8 +62,8 @@
 </section>
 
 <section class="container max-w-screen-md mx-auto mt-16 pb-20">
-	<h2 class="text-5xl font-bold">Hosted By</h2>
-	<div class="grid grid-cols-3 gap-8 mt-8 mb-40">
+	<h2 class="text-5xl font-bold ml-8">Hosted By</h2>
+	<div class="grid md:grid-cols-3 gap-8 mt-8 mb-40 px-3 max-w-[300px] md:max-w-none mx-auto">
 		{#each data as host}
 			<a href={host.url} class="flex flex-col">
 				<div
