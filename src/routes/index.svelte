@@ -39,6 +39,8 @@
 			url: 'https://twitter.com/the404dao'
 		}
 	]
+
+	let submitSuccess = false
 </script>
 
 <section class="pt-12 min-h-screen">
@@ -79,15 +81,47 @@
 		<p class="text-white/80 text-center w-[300px] mt-2 mx-auto">
 			Want more updates about Web 3.0 ATL? Sign up for our email list.
 		</p>
-		<form action="">
+		<form
+			on:submit|preventDefault={(e) => {
+				e.preventDefault()
+				// @ts-ignore
+				const formData = new FormData(e.target)
+				fetch('https://usebasin.com/f/0ec24bc8acba', {
+					method: 'POST',
+					headers: {
+						Accept: 'application/json'
+					},
+					body: formData
+				})
+					.then((response) => {
+						if (response.status === 200) {
+							console.log('success')
+							submitSuccess = true
+							setTimeout(() => {
+								submitSuccess = false
+							}, 2000)
+						} else {
+							console.log('fail')
+							alert('Something went wrong submitting your email. Please try again.')
+						}
+					})
+					.catch((error) => console.log(error))
+			}}>
 			<input
 				type="email"
+				id="email"
+				name="email"
 				placeholder="satoshi@nakomoto.com"
 				class="p-4 rounded-md bg-white/20 border-white/50 border-2 backdrop-blur-sm placeholder-gray-200 block mx-auto w-80 mt-8" />
 			<button
 				type="submit"
-				class="mx-auto mt-3 bg-white border-black border-2 text-black px-4 py-2 font-bold text-lg block rounded-lg"
-				>Submit &rarr;</button>
+				class="mx-auto mt-3 bg-white border-black border-2 text-black px-4 py-2 font-bold text-lg block rounded-lg">
+				{#if submitSuccess}
+					✓ Success
+				{:else}
+					Submit &rarr;
+				{/if}
+			</button>
 		</form>
 	</div>
 </section>
