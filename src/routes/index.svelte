@@ -35,8 +35,8 @@
 
 		{
 			name: '404 Dao',
-			// image: 'babylon.jpg',
-			url: 'https://404dao.io'
+			image: '404dao.jpg',
+			url: 'https://twitter.com/the404dao'
 		}
 	]
 </script>
