@@ -33,6 +33,12 @@
 	const priceData = priceResolver(ticketPhases);
 </script>
 
+<svelte:head>
+	<title>
+		{page.title}
+	</title>
+</svelte:head>
+
 {#each page.components as component}
 	<svelte:component this={componentResolver(component)} section={component} {priceData} />
 {/each}
