@@ -20,6 +20,7 @@ const priceResolver = (phases: TicketPhase[]): PriceResolverReturn => {
 				price: phase.price,
 				endDate: phase.endDate
 			};
+			break;
 		}
 	}
 
