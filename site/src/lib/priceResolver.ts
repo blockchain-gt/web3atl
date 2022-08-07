@@ -1,6 +1,6 @@
 import type { TicketPhase } from './types/models';
 
-type PriceResolverReturn = {
+export type PriceResolverReturn = {
 	currentPhase: TicketPhase;
 	allPhases: TicketPhase[];
 };

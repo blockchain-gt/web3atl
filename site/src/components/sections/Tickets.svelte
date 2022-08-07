@@ -1,16 +1,26 @@
 <script lang="ts">
+	import type { PriceResolverReturn } from '$lib/priceResolver';
+
 	import type { TicketsSection } from '$lib/types/components';
 
 	export let section: TicketsSection;
-
-	let endDate = new Date(Date.now() + 1000 * 60 * 60 * 24 * 7);
+	export let priceData: PriceResolverReturn;
 </script>
 
 <section id="tickets">
 	<h2>{section.title}</h2>
 	<a class="card block">
-		<p aria-label="Ticket Price">$200</p>
-		<p>Available until {endDate}</p>
+		<p aria-label="Ticket Price">${priceData.currentPhase.price}</p>
+		<p>
+			Available until {new Date(priceData.currentPhase.endDate).toLocaleDateString('en-US', {
+				month: 'short',
+				day: 'numeric',
+				year: 'numeric',
+				hour: 'numeric',
+				minute: 'numeric',
+				timeZone: 'America/New_York'
+			})}
+		</p>
 		<div class="prose">
 			{@html section.description.html}
 		</div>

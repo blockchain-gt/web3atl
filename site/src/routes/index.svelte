@@ -30,9 +30,9 @@
 	export let page: Page;
 	export let ticketPhases: TicketPhase[];
 
-	const currentPrice = priceResolver(ticketPhases);
+	const priceData = priceResolver(ticketPhases);
 </script>
 
 {#each page.components as component}
-	<svelte:component this={componentResolver(component)} section={component} />
+	<svelte:component this={componentResolver(component)} section={component} {priceData} />
 {/each}
