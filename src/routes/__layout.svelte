@@ -14,8 +14,6 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<Nav />
-<main>
-	<slot />
+<main class="flex flex-col items-center justify-center h-full">
+	<p class="mt-80 uppercase font-bold text-2xl">Coming soon</p>
 </main>
-<Footer />
