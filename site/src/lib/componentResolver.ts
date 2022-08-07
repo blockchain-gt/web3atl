@@ -15,7 +15,7 @@ function componentResolver(component: Component) {
 			return Sponsors;
 		case 'TicketsSection':
 			return Tickets;
-		case 'FAQSection':
+		case 'FaqSection':
 			return Faq;
 		default:
 			return null;

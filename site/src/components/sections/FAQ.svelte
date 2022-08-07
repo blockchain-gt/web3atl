@@ -1,5 +1,33 @@
 <script lang="ts">
-	import type { FAQSection } from '$lib/types/components'
+	import type { FAQSection } from '$lib/types/components';
 
-	export let section: FAQSection
+	export let section: FAQSection;
+
+	let selectedIndex: number | null = null;
 </script>
+
+<section>
+	<h2>{section.title}</h2>
+	{#each section.faqs as faq, i}
+		<button
+			class="block bg-gray-50 w-full text-left p-3 border border-gray-100"
+			on:click={() => {
+				// Close all open FAQs
+				if (selectedIndex === i) {
+					selectedIndex = null;
+				} else {
+					selectedIndex = i;
+				}
+			}}
+		>
+			<h4 class="font-medium text-xl">
+				{faq.question}
+			</h4>
+		</button>
+		{#if selectedIndex === i}
+			<div class="prose p-4">
+				{@html faq.answer.html}
+			</div>
+		{/if}
+	{/each}
+</section>

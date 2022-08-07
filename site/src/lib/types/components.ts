@@ -40,5 +40,5 @@ export type Component = (
 		| 'SpeakersSection'
 		| 'SponsorsSection'
 		| 'TicketsSection'
-		| 'FAQSection';
+		| 'FaqSection';
 };
