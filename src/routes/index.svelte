@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import homePageQuery from '$lib/queries'
 
-	export async function load({ params, fetch }) {
+	export async function load({ fetch }) {
 		const res = await fetch(
 			'https://api-us-east-1.hygraph.com/v2/cl6isf8724r4g01uh7l9w44u3/master',
 			{
@@ -23,7 +23,7 @@
 </script>
 
 <script lang="ts">
-	import HeroS from '$components/sections/Hero.svelte'
+	import Hero from '$components/sections/Hero.svelte'
 	import type { Page, TicketPhase } from '$lib/types/models'
 
 	export let page: Page
@@ -39,7 +39,7 @@
 
 {#each page.components as component}
 	{#if component.__typename === 'HeroSection'}
-		<HeroS section={component} />
+		<Hero section={component} />
 	{/if}
 {/each}
 

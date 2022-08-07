@@ -4,5 +4,5 @@
 	export let section: HeroSection
 </script>
 
-I am here2234343123123
+1231231
 <h1>{section.title}</h1>
