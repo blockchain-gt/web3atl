@@ -1,6 +1,5 @@
 <script lang="ts" context="module">
 	import homePageQuery from '$lib/queries'
-	import type { Page, TicketPhase } from '$lib/types/models'
 
 	export async function load({ params, fetch }) {
 		const res = await fetch(
@@ -24,7 +23,8 @@
 </script>
 
 <script lang="ts">
-	import { componentResolver } from '$lib/componentResolver'
+	import HeroS from '$components/sections/Hero.svelte'
+	import type { Page, TicketPhase } from '$lib/types/models'
 
 	export let page: Page
 
@@ -36,9 +36,13 @@
 </svelte:head>
 
 <!-- Components -->
+
 {#each page.components as component}
-	<svelte:component this={componentResolver(component)} props={component} />
+	{#if component.__typename === 'HeroSection'}
+		<HeroS section={component} />
+	{/if}
 {/each}
+
 <pre>
 {JSON.stringify(page, null, 2)}
 </pre>
