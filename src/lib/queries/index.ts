@@ -1,6 +1,6 @@
-const query = `
+const homePageQuery = `
 query {
     
 }`
 
-export default query
+export default homePageQuery
