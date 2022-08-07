@@ -25,9 +25,12 @@
 <script lang="ts">
 	import type { Page, TicketPhase } from '$lib/types/models';
 	import componentResolver from '$lib/componentResolver';
+	import priceResolver from '$lib/priceResolver';
 
 	export let page: Page;
 	export let ticketPhases: TicketPhase[];
+
+	const currentPrice = priceResolver(ticketPhases);
 </script>
 
 {#each page.components as component}
