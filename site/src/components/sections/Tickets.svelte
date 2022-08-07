@@ -4,7 +4,7 @@
 	export let section: TicketsSection;
 </script>
 
-<section>
+<section id="tickets">
 	<h2>{section.title}</h2>
 	<div>
 		<p aria-label="Ticket Price">$200</p>
