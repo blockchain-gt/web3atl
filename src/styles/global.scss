@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-	// Gradient
-	@apply bg-gradient-to-t from-green-900/10 to-blue-800/10 bg-no-repeat bg-black
-	text-white overflow-x-hidden;
-}
