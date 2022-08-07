@@ -1,6 +1,12 @@
 import type { TicketPhase } from './types/models';
 
-const priceResolver = (phases: TicketPhase[]) => {
+type PriceResolverReturn = {
+	currentPhase: TicketPhase;
+	allPhases: TicketPhase[];
+	timeUntilNextPhase: string; // Should be friendly, like "2 days from now". There's a way to do this with native js.
+};
+
+const priceResolver = (phases: TicketPhase[]): PriceResolverReturn => {
 	console.log(phases);
 };
 

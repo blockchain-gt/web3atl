@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<h1>{section.title}</h1>
+	<h1 class="">{section.title}</h1>
 	<p>{@html section.description.html}</p>
 	<button>{section.cta}</button>
 </section>
