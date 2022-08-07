@@ -27,4 +27,17 @@ export type FAQSection = {
 	faqs: FAQ[]
 }
 
-export type Component = HeroSection | SpeakersSection
+export type Component = (
+	| HeroSection
+	| SpeakersSection
+	| SponsorsSection
+	| TicketsSection
+	| FAQSection
+) & {
+	__typename:
+		| 'HeroSection'
+		| 'SpeakersSection'
+		| 'SponsorsSection'
+		| 'TicketsSection'
+		| 'FAQSection'
+}
