@@ -1,7 +1,4 @@
 <script lang="ts">
-	import Nav from '$components/layout/Nav.svelte'
-	import Footer from '$components/layout/Footer.svelte'
-
 	import '$styles/global.scss'
 </script>
 
@@ -14,8 +11,6 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<Nav />
 <main>
 	<slot />
 </main>
-<Footer />
