@@ -25,6 +25,6 @@
 			{@html section.description.html}
 		</div>
 		<!-- Fake button -->
-		<span class="px-8 py-3 bg-gray-200"> Coming soon </span>
+		<span class="px-8 py-3 bg-gray-200 rounded-md"> Coming soon </span>
 	</a>
 </section>

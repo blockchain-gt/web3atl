@@ -20,13 +20,15 @@
 				}
 			}}
 		>
-			<h4 class="font-medium text-xl">
+			<h4 class="font-medium text-xl text-black">
 				{faq.question}
 			</h4>
 		</button>
 		{#if selectedIndex === i}
-			<div class="prose p-4">
-				{@html faq.answer.html}
+			<div class="p-4 bg-gray-200 w-full">
+				<div class="prose">
+					{@html faq.answer.html}
+				</div>
 			</div>
 		{/if}
 	{/each}

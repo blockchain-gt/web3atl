@@ -37,9 +37,9 @@
 		<h3>
 			{tierGroup.tier}
 		</h3>
-		<div class="flex flex-wrap">
+		<div class="flex flex-wrap gap-x-4">
 			{#each tierGroup.sponsors as sponsor}
-				<a href={sponsor.link} class="overflow-hidden">
+				<a href={sponsor.link} class="overflow-hidden shadow-hover-2xl rounded-xl border">
 					<img src={sponsor.image.url} alt="{sponsor.tier} Sponsor {sponsor.link}" />
 				</a>
 			{/each}
