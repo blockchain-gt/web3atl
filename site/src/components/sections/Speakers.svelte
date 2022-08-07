@@ -14,7 +14,11 @@
 		<div>
 			<!-- Speaker Card -->
 			{#if person.image}
-				<img src={person.image.url} alt={person.name} />
+				<img
+					class="rounded-full border border-gray-300 w-40 !aspect-square"
+					src={person.image.url}
+					alt={person.name}
+				/>
 			{/if}
 			<h4>
 				{person.name}
