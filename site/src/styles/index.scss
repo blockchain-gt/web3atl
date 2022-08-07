@@ -19,13 +19,13 @@ section {
 }
 
 .card {
-	@apply border-2 border-black p-8 rounded;
+	@apply border-2 p-8 rounded;
 }
 
 .shadow-hover-lg {
-	@apply hover:shadow-primary/60 hover:shadow-lg shadow-sm transition-shadow;
+	@apply hover:shadow-primary/80 hover:shadow-lg shadow-sm transition-shadow;
 }
 
 .shadow-hover-2xl {
-	@apply hover:shadow-primary/50 hover:shadow-2xl shadow-sm transition-shadow;
+	@apply hover:shadow-primary/90 hover:shadow-2xl hover:scale-[1.01] shadow-sm transition-all;
 }

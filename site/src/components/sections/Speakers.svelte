@@ -7,7 +7,7 @@
 <!-- <pre>
 {JSON.stringify(section, null, 2)}
 </pre> -->
-<div class="border-t border-gray-800 bg-[#000020]">
+<div class="border-y border-gray-800 bg-[#000020]">
 	<section>
 		<h2>{section.title}</h2>
 		<div class="flex flex-wrap gap-x-8 justify-start">
