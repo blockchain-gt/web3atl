@@ -23,6 +23,7 @@ export type TicketsSection = {
 	description: RichText;
 };
 
+
 export type FAQSection = {
 	title: string;
 	faqs: FAQ[];

@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-	background-color: #000030;
+	background-color: #FFFFFF;
 	@apply text-white;
 }
 
 section {
-	@apply container max-w-screen-lg mx-auto;
+	@apply container max-w-screen-2xl mx-auto;
 	padding: 2rem;
 	h2 {
 		@apply font-bold text-4xl mb-8;
