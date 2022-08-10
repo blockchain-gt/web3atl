@@ -7,9 +7,9 @@
 	export let priceData: PriceResolverReturn;
 </script>
 
-<section id="tickets" class="bg-[#000030] max-w-none w-full">
-	<div class="mx-auto max-w-screen-2xl p-0 lg:p-8">
-		<h2>{section.title}</h2>
+<section id="tickets" class="bg-[#000030] max-w-none w-full p-0 mt-10">
+	<div class="mx-auto max-w-screen-2xl p-8 lg:p-8">
+		<h2 class="text-center py-8 m-0 lg:text-left">{section.title}</h2>
 		<!-- <a
 			class="card block bg-white text-black shadow-hover-2xl group"
 			href="/buy"
@@ -43,5 +43,6 @@
 			>
 			</div>
 		</span>
+		<div class="h-[5px] w-full bg-[#FFFFFF] rounded-full mt-10"></div>
 	</div>
 </section>

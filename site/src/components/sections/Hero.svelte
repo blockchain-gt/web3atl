@@ -34,7 +34,7 @@
 	<section class="flex flex-col justify-start">
 		<div class="py-96 flex flex-col gap-y-8 justify-start">
 			<h1 class="font-bold text-5xl">{section.title}</h1>
-			<p>{@html section.description.html}</p>
+			<p class="text-2xl">{@html section.description.html}</p>
 			<div>
 				<a
 					class="px-8 py-3 inline-block rounded-md text-white bg-primary shadow-hover-lg"

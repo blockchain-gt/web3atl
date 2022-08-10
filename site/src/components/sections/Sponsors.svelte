@@ -38,9 +38,6 @@
 </pre> -->
 
 <section class="bg-white text-black" >
-	<h2>
-		{section.title}
-	</h2>
 	<!-- {#each sortedGroupSections as tierGroup}
 		<h3>
 			{tierGroup.tier}
@@ -53,12 +50,14 @@
 			{/each}
 		</div>
 	{/each} -->
-	<span class="flex flex-col items-baseline gap-10 my-20">
-		<h3 class="">Announcing sponsors at the end of August</h3>
-		<div class="mx-auto lg:mx-0">
+	<div class="h-[5px] w-full bg-[#000030] rounded-full my-10"></div>
+	<span class="flex flex-col items-baseline text-black p-8 lg:p-0">
+		<h2 class="w-full my-4 text-center lg:text-left">{section.title}</h2>
+		<h3 class="w-full my-4 text-center lg:text-left">Announcing sponsors at the end of August</h3>
+		<div class="mx-auto lg:mx-0 my-4">
 		<a
 			class="px-8 py-3 inline-block rounded-md text-white bg-primary shadow-hover-lg"
-			href="#sponsors">Sponsor Interest Form</a
+			href="#speakers">Sponsor Interest Form</a
 		>
 		</div>
 	</span>
