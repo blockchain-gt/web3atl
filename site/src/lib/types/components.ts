@@ -23,7 +23,6 @@ export type TicketsSection = {
 	description: RichText;
 };
 
-
 export type FAQSection = {
 	title: string;
 	faqs: FAQ[];
@@ -41,5 +40,6 @@ export type Component = (
 		| 'SpeakersSection'
 		| 'SponsorsSection'
 		| 'TicketsSection'
-		| 'FaqSection';
+		| 'FaqSection'
+		| 'ThemeSection';
 };
