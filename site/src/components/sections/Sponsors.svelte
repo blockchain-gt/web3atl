@@ -23,21 +23,21 @@
 			return tier1Order - tier2Order;
 		})
 		.map(([tier, sponsors]) => ({ tier, sponsors }));
-	
-	const parseWidth = (group: string) : number => {
+
+	const parseWidth = (group: string): number => {
 		if (group == 'Platinum') {
-			return 300
+			return 300;
 		} else {
-			return 150
+			return 150;
 		}
-	}
+	};
 </script>
 
 <!-- <pre>
 {JSON.stringify(section, null, 2)}
 </pre> -->
 
-<section class="bg-white text-black" >
+<section class="bg-white text-black">
 	<!-- {#each sortedGroupSections as tierGroup}
 		<h3>
 			{tierGroup.tier}
@@ -50,15 +50,12 @@
 			{/each}
 		</div>
 	{/each} -->
-	<div class="h-[5px] w-full bg-[#000030] rounded-full my-10"></div>
+	<div class="h-[5px] w-full bg-[#000030] rounded-full my-10" />
 	<span class="flex flex-col items-baseline text-black p-8 lg:p-0">
 		<h2 class="w-full my-4 text-center lg:text-left">{section.title}</h2>
 		<h3 class="w-full my-4 text-center lg:text-left">Announcing sponsors at the end of August</h3>
 		<div class="mx-auto lg:mx-0 my-4">
-		<a
-			class="px-8 py-3 inline-block rounded-md text-white bg-primary shadow-hover-lg"
-			href="#speakers">Sponsor Interest Form</a
-		>
+			<a class="button inline-block" href="#speakers">Sponsor Interest Form</a>
 		</div>
 	</span>
 </section>

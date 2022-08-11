@@ -1,19 +1,18 @@
 <script lang="ts">
 	import type { HeroSection } from 'src/lib/types/components';
 	import { onMount } from 'svelte';
-	import { now } from 'svelte/internal';
 
 	export let section: HeroSection;
-	const conferenceDate = 1667624400
+	const conferenceDate = 1667624400;
 	const _now = new Date().getTime() / 1000;
 	let remaining = Math.floor(conferenceDate - _now);
 
 	setInterval(() => {
-        if (remaining > 0) {
-            remaining--;
-        }
-    },1000)
-	
+		if (remaining > 0) {
+			remaining--;
+		}
+	}, 1000);
+
 	onMount(() => {
 		// @ts-ignore
 		VANTA.HALO({
@@ -36,30 +35,50 @@
 			<h1 class="font-bold text-5xl">{section.title}</h1>
 			<p class="text-2xl">{@html section.description.html}</p>
 			<div>
-				<a
-					class="px-8 py-3 inline-block rounded-md text-white bg-primary shadow-hover-lg"
-					href="#tickets">{section.cta}</a
-				>
+				<a class="button inline-block" href="#tickets">{section.cta}</a>
 			</div>
 		</div>
 	</section>
-	<div id="countdown" class="flex items-center justify-center">
-		<div class="bg-primary w-full lg:max-w-[1024px] flex gap-2 items-center justify-around font-bold lg:rounded-xl">
-			<div class="m-4 lg:m-10 lg:text-3xl">{Math.floor(remaining / (60 * 60 * 24 * 7)).toString().padStart(2, "0")}w</div>
-			<div class="text-grey">:</div>
-			<div class="m-4 lg:m-10 lg:text-3xl">{Math.floor((remaining % (60 * 60 * 24 * 7)) / (60 * 60 * 24)).toString().padStart(2, "0")}d</div>
-			<div class="text-grey">:</div>
-			<div class="m-4 lg:m-10 lg:text-3xl">{Math.floor((remaining % (60 * 60 * 24)) / (60 * 60)).toString().padStart(2, "0")}h</div>
-			<div class="text-grey">:</div>
-			<div class="m-4 lg:m-10 lg:text-3xl">{Math.floor((remaining % (60 * 60)) / (60)).toString().padStart(2, "0")}m</div>
-			<div class="text-grey">:</div>
-			<div class="m-4 lg:m-10 lg:text-3xl">{Math.floor(remaining % 60).toString().padStart(2, "0")}s</div>
+	<!-- Countdown -->
+	<div id="countdown" class="flex items-center justify-center px-4">
+		<div
+			class="bg-primary border border-blue-400 gap-2 font-bold rounded-xl grid grid-cols-1 lg:grid-cols-9 px-8"
+		>
+			<p aria-label="weeks remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
+				{Math.floor(remaining / (60 * 60 * 24 * 7))
+					.toString()
+					.padStart(2, '0')}w
+			</p>
+			<div class="flex items-center justify-center">:</div>
+			<p aria-label="days remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
+				{Math.floor((remaining % (60 * 60 * 24 * 7)) / (60 * 60 * 24))
+					.toString()
+					.padStart(2, '0')}d
+			</p>
+			<div class="flex items-center justify-center">:</div>
+			<p aria-label="hours remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
+				{Math.floor((remaining % (60 * 60 * 24)) / (60 * 60))
+					.toString()
+					.padStart(2, '0')}h
+			</p>
+			<div class="flex items-center justify-center">:</div>
+			<p aria-label="minutes remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
+				{Math.floor((remaining % (60 * 60)) / 60)
+					.toString()
+					.padStart(2, '0')}m
+			</p>
+			<div class="flex items-center justify-center">:</div>
+			<p aria-label="seconds remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
+				{Math.floor(remaining % 60)
+					.toString()
+					.padStart(2, '0')}s
+			</p>
 		</div>
 	</div>
 </div>
+
 <style>
 	#countdown {
-	    background: linear-gradient(180deg, transparent 50%, #FFFFFF 50%);
+		background: linear-gradient(180deg, transparent 50%, #ffffff 50%);
 	}
-
 </style>

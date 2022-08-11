@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	@apply text-white;
 }
 
@@ -28,4 +28,12 @@ section {
 
 .shadow-hover-2xl {
 	@apply hover:shadow-primary/90 hover:shadow-2xl hover:scale-[1.01] shadow-sm transition-all;
+}
+
+.button {
+	@apply px-8 py-3 rounded-md text-white bg-primary shadow-hover-lg;
+}
+
+.button-lg {
+	@apply px-12 text-lg py-4;
 }
