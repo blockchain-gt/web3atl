@@ -89,7 +89,7 @@ import { getEmail, postEmail } from '$lib/fauna/actions';
 					email = val.currentTarget.value
 				}}
 				bind:value={email}/>
-				<button class="bg-primary text-white p-4 rounded-md"
+				<button class="bg-orange text-white p-4 rounded-md"
 					on:click={handleSubmit}>Submit</button>
 			</span>
 			{/if}

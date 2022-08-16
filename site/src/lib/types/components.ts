@@ -28,12 +28,19 @@ export type FAQSection = {
 	faqs: FAQ[];
 };
 
+export type PeopleSection = {
+	SpeakerSection: SpeakersSection
+	SponsorSection: SponsorsSection
+	TicketsSection: TicketsSection
+}
+
 export type Component = (
 	| HeroSection
 	| SpeakersSection
 	| SponsorsSection
 	| TicketsSection
 	| FAQSection
+	| PeopleSection
 ) & {
 	__typename:
 		| 'HeroSection'
@@ -41,5 +48,5 @@ export type Component = (
 		| 'SponsorsSection'
 		| 'TicketsSection'
 		| 'FaqSection'
-		| 'ThemeSection';
+		| 'PeopleSection';
 };

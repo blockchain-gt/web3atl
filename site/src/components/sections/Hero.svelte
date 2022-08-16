@@ -29,20 +29,20 @@
 	});
 </script>
 
-<div id="hero" class="text-white bg-[#000030]">
+<div id="hero" class="text-white bg-background">
 	<section class="flex flex-col justify-start">
 		<div class="py-96 flex flex-col gap-y-8 justify-start">
 			<h1 class="font-bold text-5xl">{section.title}</h1>
 			<p class="text-2xl">{@html section.description.html}</p>
 			<div>
-				<a class="button inline-block" href="#tickets">{section.cta}</a>
+				<a class="button bg-orange inline-block" href="#tickets">{section.cta}</a>
 			</div>
 		</div>
 	</section>
 	<!-- Countdown -->
 	<div id="countdown" class="flex items-center justify-center px-4">
 		<div
-			class="bg-primary border border-blue-400 gap-2 font-bold rounded-xl grid grid-cols-1 lg:grid-cols-9 px-8"
+			class="bg-orange gap-2 font-bold rounded-xl flex px-8"
 		>
 			<p aria-label="weeks remaining" class="m-4 lg:my-10 lg:mx-8 lg:text-3xl">
 				{Math.floor(remaining / (60 * 60 * 24 * 7))
@@ -76,6 +76,46 @@
 		</div>
 	</div>
 </div>
+	<!-- Build Inform Advance -->
+<section class="flex flex-col text-black gap-10 lg:gap-32 mt-20">
+	<div class="flex flex-col lg:flex-row border bg-gray-50 rounded-xl p-8">
+		<div class="flex-1 flex justify-center">
+			<img src="./Build.jpg" class="rounded" alt="Web 3.0 ATL Hackathon" />
+		</div>
+		<div class="lg:flex-1 p-8 lg:pt-0 text-2xl">
+			<h2 class="">Build</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+			</p>
+		</div>
+	</div>
+	<div class="flex flex-col border bg-gray-50 rounded-xl p-8 lg:flex-row-reverse">
+		<div class="flex-1 flex justify-center">
+			<img src="./Inform.jpg" class="rounded" alt="Web 3.0 ATL Hackathon" />
+		</div>
+		<div class="lg:flex-1 p-8 lg:pl-0 lg:pt-0 text-2xl">
+			<h2 class="mt-5">Inform</h2>
+			<p>
+				do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+				aute irure dolor in.
+			</p>
+		</div>
+	</div>
+	<div class="flex flex-col lg:flex-row border bg-gray-50 rounded-xl p-8">
+		<div class="flex-1 flex justify-center">
+			<img src="./Advance.jpg" class="rounded" alt="Web 3.0 ATL Hackathon" />
+		</div>
+		<div class="lg:flex-1 p-8 lg:pt-0 text-2xl">
+			<h2 class="">Advance</h2>
+			<p>
+				do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip.
+			</p>
+		</div>
+	</div>
+</section>
 
 <style>
 	#countdown {

@@ -50,12 +50,16 @@
 			{/each}
 		</div>
 	{/each} -->
-	<div class="h-[5px] w-full bg-[#000030] rounded-full my-10" />
-	<span class="flex flex-col items-baseline text-black p-8 lg:p-0">
-		<h2 class="w-full my-4 text-center lg:text-left">{section.title}</h2>
-		<h3 class="w-full my-4 text-center lg:text-left">Announcing sponsors at the end of August</h3>
+	<div
+		class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
+	>
+		<h2 class="w-full my-4 text-center">{section.title}</h2>
+		<p class="max-w-md text-center my-4">
+			Lorem ipsum. Want to sponsor? Lorem ipsum. Please give us money!
+		</p>
 		<div class="mx-auto lg:mx-0 my-4">
-			<a class="button inline-block" href="#speakers">Sponsor Interest Form</a>
+			<a class="button inline-block button-lg" href="#speakers">Apply to sponsor</a>
 		</div>
-	</span>
+		<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+	</div>
 </section>
