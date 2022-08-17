@@ -55,10 +55,14 @@
 	>
 		<h2 class="w-full my-4 text-center">{section.title}</h2>
 		<p class="max-w-md text-center my-4">
-			Lorem ipsum. Want to sponsor? Lorem ipsum. Please give us money!
+			Interested in sponsoring? Let us know, we’d love to talk!
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
-			<a class="button inline-block button-lg" href="#speakers">Apply to sponsor</a>
+			<a
+				class="button inline-block button-lg"
+				href="https://docs.google.com/forms/d/e/1FAIpQLScJNcC8IPj0nxhkVriR0vcS1wq0CNUgXd7fDAwrA3FPAQy2EA/viewform?usp=sf_link"
+				>Apply to sponsor</a
+			>
 		</div>
 		<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
 	</div>

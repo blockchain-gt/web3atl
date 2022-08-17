@@ -55,35 +55,35 @@
 	>
 		<h2 class="w-full my-4 text-center">{section.SpeakerSection.title}</h2>
 		<p class="max-w-md text-center my-4">
-			Lorem ipsum. Want to speak? Lorem ipsum. Life changing opportunity!
+			Are you an experienced crypto professional looking to share your knowledge? Apply below!
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
 			<a class="button inline-block button-lg" href="#speakers">Apply to speak</a>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
 	</div>
 	<div
 		class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
 	>
 		<h2 class="w-full my-4 text-center">{section.SponsorSection.title}</h2>
 		<p class="max-w-md text-center my-4">
-			Lorem ipsum. Want to sponsor? Lorem ipsum. Please give us money!
+			Interested in sponsoring? Let us know, we'd love to talk!
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
 			<a class="button inline-block button-lg" href="#sponsors">Apply to sponsor</a>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
 	</div>
 	<div
 		class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
 	>
 		<h2 class="w-full my-4 text-center">{section.TicketsSection.title}</h2>
 		<p class="max-w-md text-center my-4">
-			Lorem ipsum. Want tickets? Lorem ipsum. Buy tickets here!
+			Join us to build, inform, and advance your crypto journey.
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
 			<a class="button inline-block button-lg" href="#tickets">Purchase Tickets</a>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Prices increase September 5, 2022</p>
 	</div>
 </section>

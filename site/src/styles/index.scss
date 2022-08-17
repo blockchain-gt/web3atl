@@ -10,9 +10,11 @@ body {
 section {
 	@apply container max-w-screen-2xl mx-auto;
 	padding: 2rem;
+
 	h2 {
 		@apply font-bold text-4xl mb-8;
 	}
+
 	h3 {
 		@apply font-bold text-2xl mt-8 mb-3;
 	}
@@ -31,7 +33,7 @@ section {
 }
 
 .button {
-	@apply px-8 py-3 rounded-md text-white bg-orange shadow-hover-lg;
+	@apply px-8 py-3 rounded-md text-white bg-blue-600 shadow-hover-lg;
 }
 
 .button-lg {

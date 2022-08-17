@@ -35,16 +35,17 @@
 			</span>
 		</a> -->
 		<div
-		class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
+			class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
 		>
-			<h2 class="w-full my-4 text-center">{section.title}</h2>
+			<!-- <h2 class="w-full my-4 text-center">{section.title}</h2> -->
+			<h2 class="w-full my-4 text-center">Tickets</h2>
 			<p class="max-w-md text-center my-4">
-				Lorem ipsum. Want tickets? Lorem ipsum!
+				Join us to build, inform, and advance your crypto journey.
 			</p>
 			<div class="mx-auto lg:mx-0 my-4">
-				<a class="button inline-block button-lg" href="#speakers">Purchase Tickets</a>
+				<a class="button inline-block button-lg" href="#tickets">Get tickets now</a>
 			</div>
-			<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+			<p class="w-full my-4 text-center text-gray-500">Prices increase September 5, 2022</p>
 		</div>
 	</div>
 </section>
