@@ -58,7 +58,11 @@
 			Are you an experienced crypto professional looking to share your knowledge? Apply below!
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
-			<a class="button inline-block button-lg" href="#speakers">Apply to speak</a>
+			<a
+				class="button inline-block button-lg"
+				href="https://docs.google.com/forms/d/e/1FAIpQLSeERRmQG_mxEJ89TW6ufIK3K4qu0uW8If_NXD6ewjWUe3GSyg/viewform?usp=sf_link"
+				>Apply to speak</a
+			>
 		</div>
 		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
 	</div>
@@ -70,7 +74,11 @@
 			Interested in sponsoring? Let us know, we'd love to talk!
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
-			<a class="button inline-block button-lg" href="#sponsors">Apply to sponsor</a>
+			<a
+				class="button inline-block button-lg"
+				href="https://docs.google.com/forms/d/e/1FAIpQLScJNcC8IPj0nxhkVriR0vcS1wq0CNUgXd7fDAwrA3FPAQy2EA/viewform?usp=sf_link"
+				>Apply to sponsor</a
+			>
 		</div>
 		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
 	</div>
