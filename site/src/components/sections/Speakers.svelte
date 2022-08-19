@@ -1,49 +1,86 @@
 <script lang="ts">
 	import type { SpeakersSection } from '$lib/types/components';
+	import type { Person } from '$lib/types/models';
+	import { fade } from 'svelte/transition';
 
 	export let section: SpeakersSection;
+
+	let selectedSpeaker: Person | null = null;
 </script>
 
-<!-- <pre>
-{JSON.stringify(section, null, 2)}
-</pre> -->
-<div class="bg-white mt-12">
-	<section class="p-0 lg:p-8">
-		<div
-			class="mt-20 flex flex-col items-center text-black p-8 bg-gray-100 max-w-lg mx-auto rounded-lg border"
-		>
-			<h2 class="w-full my-4 text-center">{section.title}</h2>
-			<p class="max-w-md text-center my-4">
-				Are you an experienced crypto professional looking to share your knowledge? Apply below!
-			</p>
-			<div class="mx-auto lg:mx-0 my-4">
-				<a
-					class="button inline-block button-lg"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSeERRmQG_mxEJ89TW6ufIK3K4qu0uW8If_NXD6ewjWUe3GSyg/viewform?usp=sf_link"
-					>Apply to speak</a
+{#if selectedSpeaker}
+	<div
+		transition:fade={{ duration: 100 }}
+		class="fixed inset-0 bg-black/40 z-20 flex items-center justify-center px-4"
+		on:click={() => {
+			selectedSpeaker = null;
+		}}
+	>
+		<div class="card bg-white max-w-md relative">
+			<button
+				aria-label="Close speaker modal"
+				class="absolute p-4 right-0 top-0 text-gray-400"
+				on:click={() => {
+					selectedSpeaker = null;
+				}}
+			>
+				<svg
+					data-testid="geist-icon"
+					fill="none"
+					height="24"
+					shape-rendering="geometricPrecision"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="1.5"
+					viewBox="0 0 24 24"
+					width="24"
+					style="color:var(--geist-foreground)"><path d="M18 6L6 18" /><path d="M6 6l12 12" /></svg
 				>
-			</div>
-			<p class="w-full my-4 text-center text-gray-500">Application closes August 28, 2022</p>
+			</button>
+			<img
+				src={selectedSpeaker.image.url}
+				alt={selectedSpeaker.name}
+				class="rounded-full w-48 border shadow-md mb-8 mx-auto"
+			/>
+			<h5 class="font-[adventure] uppercase text-4xl my-4">
+				{selectedSpeaker.name}
+			</h5>
+			{@html selectedSpeaker?.bio?.html || 'An upcoming speaker at Web3 ATL'}
 		</div>
-		<!-- <div class="flex flex-wrap gap-x-8 justify-start">
-			{#each section.people as person}
+	</div>
+{/if}
+
+<section>
+	<h2>{section.title}</h2>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+		{#each section.people as person, i}
+			<button
+				on:click={() => {
+					selectedSpeaker = person;
+				}}
+				class="flex flex-col justify-center items-center gap-y-2 card relative group overflow-hidden"
+			>
 				<div
-					class="text-center flex flex-col bg-white text-black items-center gap-y-1 rounded-lg shadow-hover-2xl p-4 border"
-				>
-					{#if person.image}
-						<img
-							class="rounded-full border border-gray-300 w-40 !aspect-square mb-2"
-							src={person.image.url}
-							alt={person.name}
-						/>
-					{/if}
-					<h4 class="font-bold">
-						{person.name}
-					</h4>
+					class="bg-gradient-{i %
+						5} absolute inset-0 !aspect-square -z-10 opacity-10 group-hover:rotate-180 group-hover:scale-[4] group-hover:opacity-30 transition-all duration-700"
+				/>
+				<!-- Speaker Card -->
+				{#if person.image}
+					<img
+						class="rounded-full border border-gray-300 w-40 !aspect-square"
+						src={person.image.url}
+						alt={person.name}
+					/>
+				{/if}
+				<h4 class="font-bold">
+					{person.name}
+				</h4>
+				<div class="text-center">
 					<p>{person.company}</p>
 					<p>{person.title}</p>
 				</div>
-			{/each}
-		</div> -->
-	</section>
-</div>
+			</button>
+		{/each}
+	</div>
+</section>

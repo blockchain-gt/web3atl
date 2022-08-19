@@ -17,6 +17,9 @@ const homePageQuery = /* GraphQL */ `
 						name
 						company
 						title
+						bio {
+							html
+						}
 						image {
 							url
 						}

@@ -29,10 +29,14 @@ export type FAQSection = {
 };
 
 export type PeopleSection = {
-	SpeakerSection: SpeakersSection
-	SponsorSection: SponsorsSection
-	TicketsSection: TicketsSection
-}
+	SpeakerSection: SpeakersSection;
+	SponsorSection: SponsorsSection;
+	TicketsSection: TicketsSection;
+};
+
+export type CTASection = {
+	title: string;
+};
 
 export type Component = (
 	| HeroSection
@@ -41,6 +45,7 @@ export type Component = (
 	| TicketsSection
 	| FAQSection
 	| PeopleSection
+	| CTASection
 ) & {
 	__typename:
 		| 'HeroSection'
@@ -48,5 +53,6 @@ export type Component = (
 		| 'SponsorsSection'
 		| 'TicketsSection'
 		| 'FaqSection'
-		| 'PeopleSection';
+		| 'PeopleSection'
+		| 'CtaSection';
 };

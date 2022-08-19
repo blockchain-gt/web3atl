@@ -33,8 +33,8 @@
 	};
 </script>
 
-<section class="bg-[#000030] mx-0 max-w-none w-full p-0">
-	<div class="max-w-screen-2xl mx-auto p-8">
+<section class="bg-gray-800 text-white mx-0 max-w-none w-full px-4 py-10 pb-20">
+	<div class="max-w-screen-2xl mx-auto">
 		<h2>{section.title}</h2>
 		{#each section.faqs as faq, i}
 			<button
@@ -77,27 +77,24 @@
 			{/if}
 		{/each}
 	</div>
-	<div class="max-w-screen-2xl mx-auto p-8 flex justify-center">
-		<div class="border-white border-2 rounded-xl p-5">
-			{#if state == 2}
-				<h2>Thanks for subscribing!</h2>
-			{:else}
-				<h2>Subscribe for the latest info!</h2>
-				<span class="flex items-center justify-between gap-4">
-					<input
-						class="flex-1 p-4 text-black rounded-md"
-						type="string"
-						placeholder={state == 1 ? msg : 'email'}
-						on:input={(val) => {
-							email = val.currentTarget.value;
-						}}
-						bind:value={email}
-					/>
-					<button class="bg-blue-600 text-white p-4 rounded-md" on:click={handleSubmit}
-						>Submit</button
-					>
-				</span>
-			{/if}
-		</div>
+	<div
+		class="border-white/10 bg-gray-100/10 border-2 p-12 rounded-xl max-w-2xl text-center mx-auto py-10 mt-10"
+	>
+		{#if state == 2}
+			<h2>Thanks for subscribing!</h2>
+		{:else}
+			<h2>Subscribe to Web3 ATL</h2>
+			<span class="flex items-center justify-between gap-4">
+				<input
+					class="flex-1 p-4 text-black rounded-md"
+					type="email"
+					placeholder={state == 1 ? msg : 'satoshi@nakomoto.com'}
+					bind:value={email}
+				/>
+				<button type="submit" class="bg-blue-600 text-white p-4 rounded-md" on:click={handleSubmit}>
+					Submit
+				</button>
+			</span>
+		{/if}
 	</div>
 </section>
