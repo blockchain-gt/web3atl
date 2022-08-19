@@ -1,0 +1,8 @@
+type Emails {
+    email: String
+}
+
+type Query {
+    allEmails: [Emails]
+    emailsByEmail(email: String!): [Emails]
+}
