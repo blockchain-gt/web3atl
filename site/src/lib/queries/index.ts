@@ -13,7 +13,7 @@ const homePageQuery = /* GraphQL */ `
 				}
 				... on SpeakersSection {
 					title
-					people {
+					people(first: 100) {
 						name
 						company
 						title
@@ -34,7 +34,7 @@ const homePageQuery = /* GraphQL */ `
 				... on SponsorsSection {
 					title
 					tierOrder
-					sponsors {
+					sponsors(first: 100) {
 						tier
 						image {
 							url
@@ -44,7 +44,7 @@ const homePageQuery = /* GraphQL */ `
 				}
 				... on FaqSection {
 					title
-					faqs {
+					faqs(first: 100) {
 						question
 						answer {
 							html
