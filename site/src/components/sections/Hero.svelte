@@ -101,6 +101,11 @@
 				Clubhouse. Regardless of background knowledge, companies have created problems and workshops
 				to help challenge and further your development skills.
 			</p>
+			<a
+				href="#tickets"
+				class="inline-block p-4 bg-gray-800 font-bold text-white mt-6 rounded-md px-8"
+				>Join the Hackathon</a
+			>
 		</div>
 	</div>
 	<div class="flex flex-col gap-12 md:flex-row-reverse">

@@ -36,46 +36,43 @@
 <section class="bg-gray-800 text-white mx-0 max-w-none w-full px-4 py-10 pb-20">
 	<div class="max-w-screen-2xl mx-auto">
 		<h2>{section.title}</h2>
-		{#each section.faqs as faq, i}
-			<button
-				class={`block bg-gray-50 w-full text-left p-3 border border-gray-100 ${
-					i == 0 ? 'rounded-t-md' : ''
-				} ${i == section.faqs.length - 1 && selectedIndex != i ? 'rounded-b-md' : ''}`}
-				on:click={() => {
-					// Close all open FAQs
-					if (selectedIndex === i) {
-						selectedIndex = null;
-					} else {
-						selectedIndex = i;
-					}
-				}}
-			>
-				<span class="flex items-center justify-between">
-					<span class="flex items-center gap-3">
-						<svg class="h-[6px] w-[6px]" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="3px" cy="3px" r="3px" />
-						</svg>
-						<h4 class="font-medium text-xl text-black">
-							{faq.question}
-						</h4>
+		<div class="divide-y divide-gray-400/30">
+			{#each section.faqs as faq, i}
+				<button
+					class="block w-full text-left p-3"
+					on:click={() => {
+						// Close all open FAQs
+						if (selectedIndex === i) {
+							selectedIndex = null;
+						} else {
+							selectedIndex = i;
+						}
+					}}
+				>
+					<span class="flex items-center justify-between">
+						<span class="flex items-center gap-3">
+							<h4 class="font-medium text-xl ">
+								{faq.question}
+							</h4>
+						</span>
+						<span class="text-black px-4 text-2xl">
+							{#if selectedIndex == i}
+								-
+							{:else}
+								+
+							{/if}
+						</span>
 					</span>
-					<span class="text-black px-4 text-2xl">
-						{#if selectedIndex == i}
-							-
-						{:else}
-							+
-						{/if}
-					</span>
-				</span>
-			</button>
-			{#if selectedIndex === i}
-				<div class="p-4 bg-gray-200 w-full">
-					<div class={`prose text-xl ${i == section.faqs.length - 1 ? 'rounded-b-md' : ''}`}>
-						{@html faq.answer.html}
+				</button>
+				{#if selectedIndex === i}
+					<div class="p-4 bg-gray-200 w-full">
+						<div class={`prose text-xl ${i == section.faqs.length - 1 ? 'rounded-b-md' : ''}`}>
+							{@html faq.answer.html}
+						</div>
 					</div>
-				</div>
-			{/if}
-		{/each}
+				{/if}
+			{/each}
+		</div>
 	</div>
 	<div
 		class="border-white/10 bg-gray-100/10 border-2 p-12 rounded-xl max-w-2xl text-center mx-auto py-10 mt-10"
