@@ -45,6 +45,6 @@
 		<div class="mx-auto lg:mx-0 my-4">
 			<a class="button inline-block button-lg" href="#tickets">Purchase Tickets</a>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Prices increase September 5, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Prices increase September 16, 2022</p>
 	</div>
 </section>
