@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { ticketsLink } from '$lib/constants';
+
 	import type { HeroSection } from 'src/lib/types/components';
 
 	export let section: HeroSection;
@@ -32,7 +34,7 @@
 			<p class="text-2xl">{@html section.description.html}</p>
 			{#if section.cta}
 				<div>
-					<a class="button bg-blue-600 inline-block text-gray-500 text-xl" href="https://www.eventbrite.com/e/405921450987"
+					<a class="button bg-blue-600 inline-block text-gray-500 text-xl" href={ticketsLink}
 						>{section.cta}</a
 					>
 				</div>
