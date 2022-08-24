@@ -63,7 +63,7 @@
 			>
 				<div
 					class="bg-gradient-{i %
-						5} absolute inset-0 !aspect-square -z-10 opacity-10 group-hover:rotate-180 group-hover:scale-[4] group-hover:opacity-30 transition-all duration-700"
+						5} absolute inset-0 !aspect-square -z-10 opacity-10 group-hover:rotate-180 group-hover:scale-[4] group-hover:opacity-80 group-hover:brightness-125 transition-all duration-700"
 				/>
 				<!-- Speaker Card -->
 				{#if person.image}

@@ -10,7 +10,7 @@
 	$: msg = '';
 	let selectedIndex: number | null = null;
 
-	const handleSubmit = async () => {
+	const handleSubmit = async (e) => {
 		console.log(email.includes('@'));
 		if (email === '') {
 			state = 1;
@@ -80,18 +80,19 @@
 		{#if state == 2}
 			<h2>Thanks for subscribing!</h2>
 		{:else}
-			<h2>Subscribe to Web3 ATL</h2>
-			<span class="flex items-center justify-between gap-4">
+			<h2 class="text-2xl md:text-4xl">Subscribe to Web3 ATL</h2>
+			<form
+				class="flex flex-col md:flex-row justify-between gap-4"
+				on:submit|preventDefault={handleSubmit}
+			>
 				<input
 					class="flex-1 p-4 text-black rounded-md"
 					type="email"
 					placeholder={state == 1 ? msg : 'satoshi@nakomoto.com'}
 					bind:value={email}
 				/>
-				<button type="submit" class="bg-blue-600 text-white p-4 rounded-md" on:click={handleSubmit}>
-					Submit
-				</button>
-			</span>
+				<button type="submit" class="bg-gray-800 px-8 text-white p-4 rounded-md"> Submit </button>
+			</form>
 		{/if}
 	</div>
 </section>
