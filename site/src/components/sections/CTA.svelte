@@ -43,7 +43,7 @@
 			Join us to build, inform, and advance your crypto journey.
 		</p>
 		<div class="mx-auto lg:mx-0 my-4">
-			<a class="button inline-block button-lg" href="#tickets">Purchase Tickets</a>
+			<a class="button inline-block button-lg" href="https://www.eventbrite.com/e/405921450987">Purchase Tickets</a>
 		</div>
 		<p class="w-full my-4 text-center text-gray-500">Prices increase September 5, 2022</p>
 	</div>
