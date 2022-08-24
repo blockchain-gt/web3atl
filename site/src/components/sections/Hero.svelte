@@ -32,7 +32,7 @@
 			<p class="text-2xl">{@html section.description.html}</p>
 			{#if section.cta}
 				<div>
-					<a class="button bg-blue-600 inline-block text-gray-500 text-xl" href="#tickets"
+					<a class="button bg-blue-600 inline-block text-gray-500 text-xl" href="https://www.eventbrite.com/e/405921450987"
 						>{section.cta}</a
 					>
 				</div>
