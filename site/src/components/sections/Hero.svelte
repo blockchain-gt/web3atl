@@ -20,14 +20,14 @@
 	class="bg-[url(https://cdn.raster.app/blockchain-at-georgia-tech/CVWfqbtr4X?ixlib=js-3.6.0&s=87703771a141a466403c146af36aa8e8)] bg-cover"
 >
 	<section class="flex flex-col md:flex-row justify-between">
-		<div class="py-20 md:py-32 flex flex-col gap-y-8 justify-start">
+		<div class="py-20 md:py-20 flex flex-col gap-y-8 justify-start">
 			<img
 				src="https://cdn.raster.app/blockchain-at-georgia-tech/QVTrg1oejb?ixlib=js-3.6.0&s=7f078ff38cb83bd45ba7af5b72db764e"
 				alt="Logo"
 				class="!aspect-square rounded-full md:hidden block w-40"
 			/>
 			<h1
-				class="font-bold text-4xl lg:text-[9rem] font-[adventure] uppercase max-w-2xl leading-tight"
+				class="font-bold text-4xl lg:text-[8rem] font-[adventure] uppercase max-w-2xl leading-tight"
 			>
 				{section.title}
 			</h1>
