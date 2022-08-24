@@ -102,7 +102,7 @@
 				to help challenge and further your development skills.
 			</p>
 			<a
-				href="#tickets"
+				href="https://forms.gle/PfrUscLXXMroeDhaA"
 				class="inline-block p-4 bg-gray-800 font-bold text-white mt-6 rounded-md px-8"
 				>Join the Hackathon</a
 			>
