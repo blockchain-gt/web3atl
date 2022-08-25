@@ -2,6 +2,7 @@
 	import { getEmail, postEmail } from '$lib/fauna/actions';
 
 	import type { FAQSection } from '$lib/types/components';
+	import { slide } from 'svelte/transition';
 
 	export let section: FAQSection;
 
@@ -65,8 +66,12 @@
 					</span>
 				</button>
 				{#if selectedIndex === i}
-					<div class="p-4 bg-gray-200 w-full">
-						<div class={`prose text-xl ${i == section.faqs.length - 1 ? 'rounded-b-md' : ''}`}>
+					<div class="p-4 bg-gray-900 w-full" transition:slide>
+						<div
+							class={`prose prose-a:text-white prose-strong:text-white text-xl ${
+								i == section.faqs.length - 1 ? 'rounded-b-md' : ''
+							} text-white`}
+						>
 							{@html faq.answer.html}
 						</div>
 					</div>
