@@ -19,6 +19,7 @@
 		<div class="mx-auto lg:mx-0 my-4">
 			<a
 				class="button inline-block button-lg"
+				target="_blank"
 				href="https://docs.google.com/forms/d/e/1FAIpQLSeERRmQG_mxEJ89TW6ufIK3K4qu0uW8If_NXD6ewjWUe3GSyg/viewform?usp=sf_link"
 				>Apply to speak</a
 			>
@@ -33,6 +34,7 @@
 		<div class="mx-auto lg:mx-0 my-4">
 			<a
 				class="button inline-block button-lg"
+				target="_blank"
 				href="https://docs.google.com/forms/d/e/1FAIpQLScJNcC8IPj0nxhkVriR0vcS1wq0CNUgXd7fDAwrA3FPAQy2EA/viewform?usp=sf_link"
 				>Apply to sponsor</a
 			>
