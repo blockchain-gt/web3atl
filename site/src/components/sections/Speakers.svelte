@@ -46,7 +46,7 @@
 			<h5 class="font-[adventure] uppercase text-4xl my-4">
 				{selectedSpeaker.name}
 			</h5>
-			{@html selectedSpeaker?.bio?.html || 'An upcoming speaker at Web3 ATL'}
+			{@html selectedSpeaker?.bio?.html || ''}
 		</div>
 	</div>
 {/if}
