@@ -55,7 +55,7 @@
 								{faq.question}
 							</h4>
 						</span>
-						<span class="text-black px-4 text-2xl">
+						<span class="text-white px-4 text-2xl">
 							{#if selectedIndex == i}
 								-
 							{:else}
