@@ -42,6 +42,14 @@ const homePageQuery = /* GraphQL */ `
 						link
 					}
 				}
+				... on OrganizersSection {
+					organizers {
+						logo {
+							url
+						}
+						link
+					}
+				}
 				... on FaqSection {
 					title
 					faqs(first: 100) {

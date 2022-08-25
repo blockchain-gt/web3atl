@@ -1,43 +1,49 @@
-import type { Component } from './components'
-import type { Image, RichText } from './utils'
+import type { Component } from './components';
+import type { Image, RichText } from './utils';
 
 export type AgendaSpeaker = {
-	tags: string[]
-	person: Person
-}
+	tags: string[];
+	person: Person;
+};
 
 export type Person = {
-	name: string
-	image: Image
-	company: string
-	title: string
-	bio: RichText
-}
+	name: string;
+	image: Image;
+	company: string;
+	title: string;
+	bio: RichText;
+};
 
 export type AgendaItem = {
-	title: string
-	description: string
-	location: string
-	participants: AgendaSpeaker[]
-}
+	title: string;
+	description: string;
+	location: string;
+	participants: AgendaSpeaker[];
+};
 
 export type FAQ = {
-	question: string
-	answer: RichText
-}
+	question: string;
+	answer: RichText;
+};
 
 export type Sponsor = {
-	image: Image
-	link: string
-	tier: string
-}
+	image: Image;
+	link: string;
+	tier: string;
+};
 
 export type TicketPhase = {
-	price: number
-	endDate: string
-}
+	price: number;
+	endDate: string;
+};
 
 export type Page = {
-	title: string
-	components: Component[]
-}
+	title: string;
+	components: Component[];
+};
+
+export type Organizer = {
+	name: string;
+	logo: Image;
+	link: string;
+};

@@ -1,4 +1,4 @@
-import type { FAQ, Person, Sponsor } from './models';
+import type { FAQ, Organizer, Person, Sponsor } from './models';
 import type { RichText } from './utils';
 
 export type HeroSection = {
@@ -23,9 +23,15 @@ export type TicketsSection = {
 	description: RichText;
 };
 
+export type ValuesSection = {};
+
 export type FAQSection = {
 	title: string;
 	faqs: FAQ[];
+};
+
+export type OrganizersSection = {
+	organizers: Organizer[];
 };
 
 export type PeopleSection = {
@@ -46,6 +52,8 @@ export type Component = (
 	| FAQSection
 	| PeopleSection
 	| CTASection
+	| OrganizersSection
+	| ValuesSection
 ) & {
 	__typename:
 		| 'HeroSection'
@@ -54,5 +62,7 @@ export type Component = (
 		| 'TicketsSection'
 		| 'FaqSection'
 		| 'PeopleSection'
-		| 'CtaSection';
+		| 'CtaSection'
+		| 'OrganizersSection'
+		| 'ValuesSection';
 };

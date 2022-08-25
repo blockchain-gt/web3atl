@@ -11,7 +11,7 @@
 	$: msg = '';
 	let selectedIndex: number | null = null;
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async () => {
 		console.log(email.includes('@'));
 		if (email === '') {
 			state = 1;
