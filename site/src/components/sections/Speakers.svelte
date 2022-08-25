@@ -41,7 +41,7 @@
 			<img
 				src={selectedSpeaker.image.url}
 				alt={selectedSpeaker.name}
-				class="rounded-full w-48 border shadow-md mb-8 mx-auto"
+				class="rounded-full w-48 h-48 !aspect-square object-cover border shadow-md mb-8 mx-auto"
 			/>
 			<h5 class="font-[adventure] uppercase text-4xl my-4">
 				{selectedSpeaker.name}
@@ -68,7 +68,7 @@
 				<!-- Speaker Card -->
 				{#if person.image}
 					<img
-						class="rounded-full border border-gray-300 w-40 !aspect-square"
+						class="rounded-full border border-gray-300 w-40 object-cover !aspect-square"
 						src={person.image.url}
 						alt={person.name}
 					/>
