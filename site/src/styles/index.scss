@@ -30,7 +30,7 @@ section {
 }
 
 .shadow-hover-lg {
-	@apply hover:shadow-black/40 hover:shadow-md shadow-sm transition-shadow;
+	@apply hover:shadow-black/20 hover:shadow-lg shadow-sm transition-shadow;
 }
 
 .shadow-hover-2xl {

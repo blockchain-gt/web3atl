@@ -15,9 +15,10 @@
 			</p>
 			<a
 				href="https://forms.gle/PfrUscLXXMroeDhaA"
-				class="inline-block p-4 bg-gray-800 font-bold text-white mt-6 rounded-md px-8"
-				>Join the Hackathon</a
+				class="inline-block p-4 bg-gray-800 font-bold text-white mt-6 rounded-md px-8 shadow-hover-lg"
 			>
+				Join the Hackathon
+			</a>
 		</div>
 	</div>
 	<div class="flex flex-col gap-12 md:flex-row-reverse">
