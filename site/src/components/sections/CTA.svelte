@@ -24,7 +24,7 @@
 				>Apply to speak</a
 			>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Application closes September 30, 2022</p>
 	</div>
 	<div class="mt-20 flex flex-col items-center text-black p-8 max-w-lg mx-auto">
 		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Sponsor</h2>
@@ -39,7 +39,7 @@
 				>Apply to sponsor</a
 			>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Application closes September 5, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Application closes September 30, 2022</p>
 	</div>
 	<div class="mt-20 flex flex-col items-center text-black p-8 max-w-lg mx-auto">
 		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Get Tickets</h2>
@@ -49,6 +49,6 @@
 		<div class="mx-auto lg:mx-0 my-4">
 			<a class="button inline-block button-lg" href={ticketsLink}>Purchase Tickets</a>
 		</div>
-		<p class="w-full my-4 text-center text-gray-500">Prices increase September 5, 2022</p>
+		<p class="w-full my-4 text-center text-gray-500">Prices increase as event approaches</p>
 	</div>
 </section>
