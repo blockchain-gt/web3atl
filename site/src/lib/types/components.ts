@@ -1,4 +1,4 @@
-import type { FAQ, Organizer, Person, Sponsor } from './models';
+import type { FAQ, Organizer, Person, Sponsor, AgendaItem } from './models';
 import type { RichText } from './utils';
 
 export type HeroSection = {
@@ -44,6 +44,10 @@ export type CTASection = {
 	title: string;
 };
 
+export type ScheduleSection = {
+	agendaItems: AgendaItem[];
+};
+
 export type Component = (
 	| HeroSection
 	| SpeakersSection
@@ -54,6 +58,7 @@ export type Component = (
 	| CTASection
 	| OrganizersSection
 	| ValuesSection
+	| ScheduleSection
 ) & {
 	__typename:
 		| 'HeroSection'
@@ -64,5 +69,6 @@ export type Component = (
 		| 'PeopleSection'
 		| 'CtaSection'
 		| 'OrganizersSection'
-		| 'ValuesSection';
+		| 'ValuesSection'
+		| 'Schedule';
 };
