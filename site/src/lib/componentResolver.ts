@@ -2,6 +2,7 @@ import Cta from '$components/sections/CTA.svelte';
 import Faq from '$components/sections/FAQ.svelte';
 import Hero from '$components/sections/Hero.svelte';
 import Organizers from '$components/sections/Organizers.svelte';
+import Schedule from '$components/sections/Schedule.svelte';
 import Speakers from '$components/sections/Speakers.svelte';
 import Sponsors from '$components/sections/Sponsors.svelte';
 import Tickets from '$components/sections/Tickets.svelte';
@@ -28,6 +29,8 @@ function componentResolver(component: Component) {
 			return Organizers;
 		case 'ValuesSection':
 			return Values;
+		case 'Schedule':
+			return Schedule;
 		default:
 			return null;
 	}
