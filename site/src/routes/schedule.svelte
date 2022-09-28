@@ -30,9 +30,35 @@
 	export let page: Page;
 </script>
 
-<section class="max-w-screen-lg">
-	<h1 class="font-[adventure] uppercase text-7xl">Schedule</h1>
+<div
+	id="fun"
+	class="object-cover top-0 right-0 bottom-0 bg-cover -z-10 bg-[url(https://cdn.raster.app/blockchain-at-georgia-tech/CVWfqbtr4X?ixlib=js-3.6.0&s=87703771a141a466403c146af36aa8e8)] w-screen h-screen fixed"
+/>
+<section class="max-w-screen-lg mt-10 block">
+	<img
+		src="https://cdn.raster.app/blockchain-at-georgia-tech/QVTrg1oejb?ixlib=js-3.6.0&s=7f078ff38cb83bd45ba7af5b72db764e"
+		class="rounded-full border border-black/10 w-40 mb-8"
+		alt=""
+	/>
+	<h1 class="font-[adventure] uppercase text-7xl">{page.title}</h1>
 </section>
+
 {#each page.components as component}
 	<svelte:component this={componentResolver(component)} section={component} />
 {/each}
+
+<style>
+	/* Infinite hue shift animation */
+	@keyframes hue-rotate {
+		from {
+			filter: hue-rotate(0deg);
+		}
+		to {
+			filter: hue-rotate(360deg);
+		}
+	}
+
+	#fun {
+		animation: hue-rotate 60s infinite linear;
+	}
+</style>
