@@ -19,6 +19,7 @@ export type AgendaItem = {
 	description: string;
 	location: string;
 	participants: AgendaSpeaker[];
+	startTime: string;
 };
 
 export type FAQ = {

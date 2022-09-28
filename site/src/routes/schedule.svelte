@@ -30,7 +30,7 @@
 	export let page: Page;
 </script>
 
-<section>
+<section class="max-w-screen-lg">
 	<h1 class="font-[adventure] uppercase text-7xl">Schedule</h1>
 </section>
 {#each page.components as component}

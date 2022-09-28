@@ -5,10 +5,11 @@ const scheduleQuery = /* GraphQL */ `
 			components {
 				__typename
 				... on Schedule {
-					agendaItems {
+					agendaItems(orderBy: startTime_ASC) {
 						id
 						title
 						location
+						startTime
 					}
 				}
 			}
