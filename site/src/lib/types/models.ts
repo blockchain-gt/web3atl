@@ -18,7 +18,7 @@ export type AgendaItem = {
 	title: string;
 	description: string;
 	location: string;
-	participants: AgendaSpeaker[];
+	agendaSpeakers: AgendaSpeaker[];
 	startTime: string;
 };
 
@@ -47,4 +47,5 @@ export type Organizer = {
 	name: string;
 	logo: Image;
 	link: string;
+	type: string;
 };

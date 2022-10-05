@@ -25,6 +25,10 @@ const homePageQuery = /* GraphQL */ `
 						}
 					}
 				}
+				... on CtaLink {
+					title
+					link
+				}
 				... on TicketsSection {
 					title
 					description {
@@ -47,6 +51,7 @@ const homePageQuery = /* GraphQL */ `
 						logo {
 							url
 						}
+						type
 						link
 					}
 				}

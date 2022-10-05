@@ -1,4 +1,4 @@
-<section class="max-w-5xl flex flex-col gap-y-20 my-20">
+<section class="max-w-5xl flex flex-col gap-y-20 my-10">
 	<div class="flex flex-col gap-12 md:flex-row">
 		<img
 			src="./Build.jpg"

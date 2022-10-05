@@ -48,6 +48,11 @@ export type ScheduleSection = {
 	agendaItems: AgendaItem[];
 };
 
+export type CtaLink = {
+	title: string;
+	link: string;
+}
+
 export type Component = (
 	| HeroSection
 	| SpeakersSection
@@ -59,6 +64,7 @@ export type Component = (
 	| OrganizersSection
 	| ValuesSection
 	| ScheduleSection
+	| CtaLink
 ) & {
 	__typename:
 		| 'HeroSection'
@@ -71,4 +77,5 @@ export type Component = (
 		| 'OrganizersSection'
 		| 'ValuesSection'
 		| 'Schedule';
+		| 'CtaLink';
 };

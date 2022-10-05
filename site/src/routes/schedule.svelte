@@ -34,7 +34,7 @@
 	id="fun"
 	class="object-cover top-0 right-0 bottom-0 bg-cover -z-10 bg-[url(https://cdn.raster.app/blockchain-at-georgia-tech/CVWfqbtr4X?ixlib=js-3.6.0&s=87703771a141a466403c146af36aa8e8)] w-screen h-screen fixed"
 />
-<section class="max-w-screen-lg mt-10 block">
+<section class="max-w-screen-lg mt-20 block">
 	<a href="/">
 		<img
 			src="https://cdn.raster.app/blockchain-at-georgia-tech/QVTrg1oejb?ixlib=js-3.6.0&s=7f078ff38cb83bd45ba7af5b72db764e"

@@ -33,10 +33,19 @@
 			</h1>
 			<p class="text-2xl">{@html section.description.html}</p>
 			{#if section.cta}
-				<div>
-					<a class="button bg-blue-600 inline-block text-gray-500 text-xl" href={ticketsLink}
-						>{section.cta}</a
-					>
+				<div class="text-center w-full gap-y-8">
+					<div class="justify-start gap-8 grid md:grid-cols-3 ">
+						<a
+							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
+							href={ticketsLink}>{section.cta}</a
+						>
+						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="/"
+							>Student Tickets</a
+						>
+						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="/"
+							>Hackathon Application</a
+						>
+					</div>
 				</div>
 			{/if}
 		</div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ScheduleItem from '$components/ScheduleItem.svelte';
 	import type { OrganizersSection, ScheduleSection } from '$lib/types/components';
 
 	export let section: ScheduleSection;
@@ -27,15 +28,7 @@
 			<h2 class="{i !== 0 ? '!mt-8' : ''} !mb-2">{day}</h2>
 			<div class="space-y-4">
 				{#each byDay[day] as item}
-					<div class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50">
-						<time class="font-medium uppercase text-gray-700 text-sm"
-							>{new Date(item.startTime).toLocaleTimeString('en-US', {
-								hour: 'numeric',
-								minute: '2-digit'
-							})} | {item.location.replace('_', ' ')}</time
-						>
-						<h3 class="font-sans my-0">{item.title}</h3>
-					</div>
+					<ScheduleItem {item} />
 				{/each}
 			</div>
 		{/each}

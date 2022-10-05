@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PersonCard from '$components/PersonCard.svelte';
 	import type { SpeakersSection } from '$lib/types/components';
 	import type { Person } from '$lib/types/models';
 	import { fade } from 'svelte/transition';
@@ -16,7 +17,7 @@
 			selectedSpeaker = null;
 		}}
 	>
-		<div class="card bg-white max-w-md relative">
+		<div class="card bg-white max-w-md relative max-h-screen overflow-y-auto">
 			<button
 				aria-label="Close speaker modal"
 				class="absolute p-4 right-0 top-0 text-gray-400"
@@ -51,36 +52,11 @@
 	</div>
 {/if}
 
-<section>
+<section id={section.title.toLowerCase()}>
 	<h2>{section.title}</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 		{#each section.people as person, i}
-			<button
-				on:click={() => {
-					selectedSpeaker = person;
-				}}
-				class="flex flex-col justify-center items-center gap-y-2 card relative group overflow-hidden"
-			>
-				<div
-					class="bg-gradient-{i %
-						5} absolute inset-0 !aspect-square -z-10 opacity-10 group-hover:rotate-180 group-hover:scale-[4] group-hover:opacity-80 group-hover:brightness-125 transition-all duration-700"
-				/>
-				<!-- Speaker Card -->
-				{#if person.image}
-					<img
-						class="rounded-full border border-gray-300 w-40 object-cover !aspect-square"
-						src={person.image.url}
-						alt={person.name}
-					/>
-				{/if}
-				<h4 class="font-bold">
-					{person.name}
-				</h4>
-				<div class="text-center">
-					<p>{person.company}</p>
-					<p>{person.title}</p>
-				</div>
-			</button>
+			<PersonCard {person} bind:selectedSpeaker {i} />
 		{/each}
 	</div>
 </section>

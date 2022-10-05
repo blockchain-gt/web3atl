@@ -1,4 +1,5 @@
 import Cta from '$components/sections/CTA.svelte';
+import CtaLink from '$components/sections/CTALink.svelte';
 import Faq from '$components/sections/FAQ.svelte';
 import Hero from '$components/sections/Hero.svelte';
 import Organizers from '$components/sections/Organizers.svelte';
@@ -31,6 +32,10 @@ function componentResolver(component: Component) {
 			return Values;
 		case 'Schedule':
 			return Schedule;
+		case 'Schedule':
+			return Schedule;
+		case 'CtaLink':
+			return CtaLink;
 		default:
 			return null;
 	}

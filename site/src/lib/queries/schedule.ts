@@ -10,6 +10,17 @@ const scheduleQuery = /* GraphQL */ `
 						title
 						location
 						startTime
+						agendaSpeakers {
+							person {
+								name
+								company
+								title
+								image {
+									url
+								}
+							}
+							tags
+						}
 					}
 				}
 			}
