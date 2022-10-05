@@ -7,7 +7,7 @@
 </script>
 
 <section
-	class="text-black grid grid-cols-2 lg:flex-row gap-5 lg:justify-between divide-slate-400 mb-20"
+	class="text-black grid md:grid-cols-2 lg:flex-row gap-5 lg:justify-between divide-slate-400 mb-20"
 >
 	<!-- <div
 		class="mt-20 flex flex-col items-center text-black p-8 max-w-lg mx-auto overflow-hidden relative"
