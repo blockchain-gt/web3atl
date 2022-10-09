@@ -18,6 +18,7 @@ export type AgendaItem = {
 	title: string;
 	description: string;
 	location: string;
+	category: string;
 	agendaSpeakers: AgendaSpeaker[];
 	startTime: string;
 };

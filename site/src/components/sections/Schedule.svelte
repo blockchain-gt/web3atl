@@ -20,7 +20,7 @@
 	}, {} as Record<string, any[]>);
 </script>
 
-<!-- <div class="px-4">
+<div class="px-4">
 	<section
 		class="space-y-0 max-w-screen-lg pb-10 backdrop-blur-lg bg-gray-400/10 border border-black/10 mb-10 rounded-2xl"
 	>
@@ -33,4 +33,4 @@
 			</div>
 		{/each}
 	</section>
-</div> -->
+</div>

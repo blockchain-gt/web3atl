@@ -16,13 +16,13 @@
 >
 	<div class="text-left flex justify-between w-full">
 		<div>
-			<!-- <time class="font-medium uppercase text-gray-700 text-sm"></time>
+			<time class="font-medium uppercase text-gray-700 text-sm">
 				{new Date(item.startTime).toLocaleTimeString('en-US', {
 					hour: 'numeric',
 					minute: '2-digit'
 				})}
-				| {item.location?.replace('_', ' ')}</time
-			> -->
+				| {item.location?.replace('_', ' ')}
+			</time>
 			<h3 class="font-sans my-0">{item.title}</h3>
 		</div>
 		<divs class="font-semibold text-3xl">
