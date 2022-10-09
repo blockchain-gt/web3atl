@@ -106,7 +106,7 @@
 			>
 		</li>
 		<li>
-			<a href="https://discord.gg/MgSWTGMXXT"
+			<a href="https://discord.gg/gVvKKhcCA8"
 				><svg
 					data-testid="geist-icon"
 					fill="none"
