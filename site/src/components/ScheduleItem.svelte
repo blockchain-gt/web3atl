@@ -29,13 +29,13 @@
 			<span class="rotate-90">
 				{#if open}
 					&times;
-				{:else}
+				{:else if (item.category != 'Announcement') && (item.category != 'Break') && (item.agendaSpeakers.length > 1)}
 					+
 				{/if}
 			</span>
 		</divs>
 	</div>
-	{#if open}
+	{#if open && (item.category != 'Announcement') && (item.category != 'Break')}
 		<ul transition:slide class="text-left flex gap-x-4 mt-4">
 			{#each item.agendaSpeakers as speaker, i}
 				{#if speaker.person.name}
