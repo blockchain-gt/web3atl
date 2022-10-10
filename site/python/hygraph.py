@@ -70,14 +70,7 @@ class Hygraph:
 		self.agenda_item_ids = []
 		print('Deleting Agenda Items...')
 		for data in agenda_data:
-			print("\n\n\n")
-			print(data)
-			# resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
-			resp = requests.post("https://api-us-east-1.hygraph.com/v2/cl6isf8724r4g01uh7l9w44u3/master", json={"query":queries.add_agenda_item,"variables":data})
-			if resp.status_code != 200:
-				print(resp.text)
-				1/0
-			resp = resp.json()
+			resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
 			self.agenda_item_ids.append(resp['data']['createAgendaItem']['id'])
 		print('Publishing Agenda Items...')
 		self._publish_agenda()
