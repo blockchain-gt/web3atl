@@ -39,10 +39,10 @@
 							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
 							href={ticketsLink}>{section.cta}</a
 						>
-						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="/"
+						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="https://forms.gle/tGVyQRMPu6KiQHmc8"
 							>Student Tickets</a
 						>
-						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="/"
+						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="https://forms.gle/YN6NSAbe2CyuzADc7"
 							>Hackathon Application</a
 						>
 					</div>
