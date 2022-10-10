@@ -56,7 +56,9 @@
 	<h2>{section.title}</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 		{#each section.people as person, i}
-			<PersonCard {person} bind:selectedSpeaker {i} />
+			{#if person.name}
+				<PersonCard {person} bind:selectedSpeaker {i} />
+			{/if}
 		{/each}
 	</div>
 </section>

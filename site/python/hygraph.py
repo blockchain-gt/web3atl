@@ -1,7 +1,8 @@
 from python_graphql_client import GraphqlClient
 from datetime import datetime
+from nltk import distance as dist
 import pandas as pd
-import time, random, queries
+import queries, requests
 
 class Hygraph:
 
@@ -11,6 +12,7 @@ class Hygraph:
 		self.speakers = []
 		self.speaker_ids = []
 		self.speaker_name_to_id = {}
+		self.speaker_name_to_agenda_speaker_id = {}
 		if fetch_now:
 			self.set_speakers()
 
@@ -39,11 +41,26 @@ class Hygraph:
 		if not self.speakers:
 			self.set_speakers()
 		for speaker, speaker_id in self.speaker_name_to_id.items():
-			Hygraph.client.execute(query=queries.add_agenda_speaker, variables={"id":speaker_id})
+			resp = Hygraph.client.execute(query=queries.add_agenda_speaker, variables={"id":speaker_id})
+			self.speaker_name_to_agenda_speaker_id[speaker] = resp["data"]["createAgendaSpeaker"]["id"]
 		self._publish_agenda_speakers()
 		
 	def _publish_agenda_speakers(self):
 		Hygraph.client.execute(query=queries.publish_agenda_speakers, variables=None)
+
+	def _get_agenda_speaker_id(self, speaker_name):
+		# default null speaker
+		# should probably adjust logic 
+		selected_speaker_id = self.speaker_name_to_agenda_speaker_id[None]
+		if not speaker_name:
+			return selected_speaker_id
+		for speaker, speaker_id in self.speaker_name_to_agenda_speaker_id.items():
+			if not speaker:
+				continue
+			js_dist = dist.jaro_similarity(speaker, speaker_name)
+			if js_dist > 0.95:
+				selected_speaker_id = speaker_id
+		return selected_speaker_id
 
 	def _delete_agenda_items(self):
 		Hygraph.client.execute(query=queries.delete_agenda, variables=None)
@@ -53,7 +70,14 @@ class Hygraph:
 		self.agenda_item_ids = []
 		print('Deleting Agenda Items...')
 		for data in agenda_data:
-			resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
+			print("\n\n\n")
+			print(data)
+			# resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
+			resp = requests.post("https://api-us-east-1.hygraph.com/v2/cl6isf8724r4g01uh7l9w44u3/master", json={"query":queries.add_agenda_item,"variables":data})
+			if resp.status_code != 200:
+				print(resp.text)
+				1/0
+			resp = resp.json()
 			self.agenda_item_ids.append(resp['data']['createAgendaItem']['id'])
 		print('Publishing Agenda Items...')
 		self._publish_agenda()
@@ -74,13 +98,8 @@ class Hygraph:
 if __name__ == "__main__":
 	h = Hygraph()
 
-	response = 'None'
-	print('\n\n')
-	while response not in "nyNY":
-		response = input('Create agenda speakers? [Y/N]\n')
-	if response.lower() == "y":
-		print("Creating Agenda Speakers...")
-		h.add_agenda_speakers()
+	print("Creating Agenda Speakers...")
+	h.add_agenda_speakers()
 
 	from google_sheets import Agenda
 	a = Agenda()
@@ -99,13 +118,23 @@ if __name__ == "__main__":
 		endTime = datetime(2022,11,int(row["Day"]),hour,minute)
 		endTime = endTime.strftime("%Y-%m-%dT%H:%M:00-04:00")
 		category = row["Type"]
+		id1 = h._get_agenda_speaker_id(row["Speaker 1"])
+		id2 = h._get_agenda_speaker_id(row["Speaker 2"])
+		id3 = h._get_agenda_speaker_id(row["Speaker 3"])
+		id4 = h._get_agenda_speaker_id(row["Speaker 4"])
+		id5 = h._get_agenda_speaker_id(row["Moderator"])
 		data.append({
 			"title":title,
 			"description":description,
 			"location":location,
 			"startTime":startTime,
 			"endTime":endTime,
-			"category":category
+			"category":category,
+			"id1":id1,
+			"id2":id2,
+			"id3":id3,
+			"id4":id4,
+			"id5":id5
 		})
 
 	h.post_agenda(data)

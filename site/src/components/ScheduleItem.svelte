@@ -38,7 +38,7 @@
 	{#if open}
 		<ul transition:slide class="text-left flex gap-x-4 mt-4">
 			{#each item.agendaSpeakers as speaker, i}
-				{#if speaker.person}
+				{#if speaker.person.name}
 					<div class="w-60 h-72">
 						<PersonCard person={speaker.person} {i} z={'-z-10'} />
 					</div>

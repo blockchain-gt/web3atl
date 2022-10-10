@@ -42,7 +42,12 @@ add_agenda_item = """
         $location:String,
         $startTime:DateTime,
         $endTime:DateTime,
-        $category:String
+        $category:String,
+        $id1:ID,
+        $id2:ID,
+        $id3:ID,
+        $id4:ID,
+        $id5:ID
         ){
         createAgendaItem(data: {
             title: $title
@@ -51,6 +56,15 @@ add_agenda_item = """
             startTime: $startTime
             endTime: $endTime
             category: $category
+            agendaSpeakers: {
+                connect: [
+                    {id: $id1},
+                    {id: $id2},
+                    {id: $id3},
+                    {id: $id4},
+                    {id: $id5}
+                ]
+            }
         }) {
             id
         }
