@@ -12,7 +12,7 @@
 	};
 </script>
 
-<div class="py-16 px-20 bg-gray-100 space-y-8">
+<div class="py-16 px-20 bg-gray-100 space-y-8" id="sponsors">
 	<h2 class="text-4xl md:text-5xl">
 		{section.title}
 	</h2>

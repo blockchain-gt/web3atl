@@ -21,6 +21,7 @@ export type AgendaItem = {
 	category: string;
 	agendaSpeakers: AgendaSpeaker[];
 	startTime: string;
+	eventType: string;
 };
 
 export type FAQ = {
