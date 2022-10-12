@@ -21,11 +21,7 @@
 >
 	<section class="flex flex-col md:flex-row justify-between">
 		<div class="py-20 md:py-20 flex flex-col gap-y-8 justify-start">
-			<img
-				src="https://cdn.raster.app/blockchain-at-georgia-tech/QVTrg1oejb?ixlib=js-3.6.0&s=7f078ff38cb83bd45ba7af5b72db764e"
-				alt="Logo"
-				class="!aspect-square rounded-full md:hidden block w-40"
-			/>
+			<img src="/logo.png" alt="Logo" class="!aspect-square rounded-full md:hidden block w-40" />
 			<h1
 				class="font-bold text-4xl lg:text-[8rem] font-[adventure] uppercase max-w-2xl leading-tight"
 			>
@@ -39,22 +35,20 @@
 							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
 							href={ticketsLink}>{section.cta}</a
 						>
-						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="https://forms.gle/tGVyQRMPu6KiQHmc8"
-							>Student Tickets</a
+						<a
+							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
+							href="https://forms.gle/tGVyQRMPu6KiQHmc8">Student Tickets</a
 						>
-						<a class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6" href="https://forms.gle/YN6NSAbe2CyuzADc7"
-							>Hackathon Application</a
+						<a
+							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
+							href="https://forms.gle/YN6NSAbe2CyuzADc7">Hackathon Application</a
 						>
 					</div>
 				</div>
 			{/if}
 		</div>
 		<div class="flex flex-col justify-center">
-			<img
-				src="https://cdn.raster.app/blockchain-at-georgia-tech/QVTrg1oejb?ixlib=js-3.6.0&s=7f078ff38cb83bd45ba7af5b72db764e"
-				alt="Logo"
-				class="!aspect-square rounded-full hidden md:block"
-			/>
+			<img src="/logo.png" alt="Logo" class="!aspect-square rounded-full hidden md:block" />
 		</div>
 	</section>
 	<!-- Countdown -->

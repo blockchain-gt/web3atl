@@ -1,10 +1,20 @@
 <script lang="ts">
 	import ScheduleItem from '$components/ScheduleItem.svelte';
-	import type { OrganizersSection, ScheduleSection } from '$lib/types/components';
+	import type { ScheduleSection } from '$lib/types/components';
 
 	export let section: ScheduleSection;
 
-	const byDay = section.agendaItems.reduce((acc, item) => {
+	let filters = [
+		{ id: 'conference', name: 'Conference', selected: false },
+		{ id: 'hackathon', name: 'Hackathon', selected: false },
+		{ id: 'events', name: 'Events', selected: false }
+	];
+
+	$: byDay = section.agendaItems.reduce((acc, item) => {
+		const showAll = filters.every((filter) => !filter.selected);
+		if (!showAll && !filters.some(({ id }) => item.eventType === id)) {
+			return acc;
+		}
 		const time = new Date(item.startTime);
 
 		const day = time.toLocaleDateString('en-US', {
@@ -21,8 +31,23 @@
 </script>
 
 <div class="px-4">
+	<section class="max-w-screen-lg">
+		<div class="flex md:flex-row flex-col gap-4">
+			{#each filters as filter}
+				{@const isSelected = filter.selected}
+				<button
+					on:click={() => {
+						filter.selected = !filter.selected;
+					}}
+					class="rounded-md border border-black/10 min-w-[120px] font-medium {isSelected
+						? 'bg-pink text-white'
+						: 'bg-white text-black'} p-3">{filter.name}</button
+				>
+			{/each}
+		</div>
+	</section>
 	<section
-		class="space-y-0 max-w-screen-lg pb-10 backdrop-blur-lg bg-gray-400/10 border border-black/10 mb-10 rounded-2xl"
+		class="space-y-0 max-w-screen-lg pb-10  bg-gray-100 shadow-lg border border-black/10 mb-10 rounded-2xl"
 	>
 		{#each Object.keys(byDay) as day, i}
 			<h2 class="{i !== 0 ? '!mt-8' : ''} !mb-2">{day}</h2>
