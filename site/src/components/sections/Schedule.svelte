@@ -5,9 +5,9 @@
 	export let section: ScheduleSection;
 
 	let filters = [
-		{ id: 'conference', name: 'Speaker Series', selected: false },
+		{ id: 'conference', name: 'Conference', selected: false },
 		{ id: 'hackathon', name: 'Hackathon', selected: false },
-		{ id: 'events', name: 'Satellite Event', selected: false }
+		{ id: 'events', name: 'Events', selected: false }
 	];
 
 	$: byDay = section.agendaItems.reduce((acc, item) => {
