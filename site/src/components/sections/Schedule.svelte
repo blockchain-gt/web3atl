@@ -12,7 +12,8 @@
 
 	$: byDay = section.agendaItems.reduce((acc, item) => {
 		const showAll = filters.every((filter) => !filter.selected);
-		if (!showAll && !filters.some(({ id }) => item.eventType === id)) {
+
+		if (!showAll && !filters.some(({ id, selected }) => item.eventType === id && selected)) {
 			return acc;
 		}
 		const time = new Date(item.startTime);
