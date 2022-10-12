@@ -32,7 +32,7 @@
 
 <div class="px-4">
 	<section class="max-w-screen-lg">
-		<div class="flex gap-x-4">
+		<div class="flex md:flex-row flex-col gap-4">
 			{#each filters as filter}
 				{@const isSelected = filter.selected}
 				<button

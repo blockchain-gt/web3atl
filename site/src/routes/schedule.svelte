@@ -42,7 +42,7 @@
 			alt=""
 		/>
 	</a>
-	<h1 class="font-[adventure] uppercase text-7xl">{page.title}</h1>
+	<h1 class="font-[adventure] uppercase text-5xl md:text-7xl">{page.title}</h1>
 </section>
 
 {#each page.components as component}
