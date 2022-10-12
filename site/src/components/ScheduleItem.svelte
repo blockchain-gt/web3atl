@@ -29,17 +29,17 @@
 			<span class="rotate-90">
 				{#if open}
 					&times;
-				{:else if (item.category != 'Announcement') && (item.category != 'Break') && (item.agendaSpeakers.length > 1)}
+				{:else if item.category != 'Announcement' && item.category != 'Break' && item.agendaSpeakers.length > 1}
 					+
 				{/if}
 			</span>
 		</divs>
 	</div>
-	{#if open && (item.category != 'Announcement') && (item.category != 'Break')}
+	{#if open && item.category != 'Announcement' && item.category != 'Break'}
 		<ul transition:slide class="text-left flex gap-x-4 mt-4">
 			{#each item.agendaSpeakers as speaker, i}
 				{#if speaker.person.name}
-					<div class="w-60 h-72">
+					<div class="w-60 h-80">
 						<PersonCard person={speaker.person} {i} z={'-z-10'} />
 					</div>
 				{/if}

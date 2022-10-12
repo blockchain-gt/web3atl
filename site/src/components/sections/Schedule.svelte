@@ -39,7 +39,7 @@
 					on:click={() => {
 						filter.selected = !filter.selected;
 					}}
-					class="rounded-md border border-black/10 min-w-[100px] font-medium {isSelected
+					class="rounded-md border border-black/10 min-w-[120px] font-medium {isSelected
 						? 'bg-pink text-white'
 						: 'bg-white text-black'} p-3">{filter.name}</button
 				>
