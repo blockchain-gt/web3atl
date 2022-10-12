@@ -9,6 +9,9 @@ module.exports = {
 				orange: '#FFA75B',
 				pink: '#FF96B8',
 				lightblue: '8FD6FF'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--gradient-color-stops))'
 			}
 		}
 	},

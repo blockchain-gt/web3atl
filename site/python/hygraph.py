@@ -70,6 +70,14 @@ class Hygraph:
 		self.agenda_item_ids = []
 		print('Deleting Agenda Items...')
 		for data in agenda_data:
+			# resp = requests.post("https://api-us-east-1.hygraph.com/v2/cl6isf8724r4g01uh7l9w44u3/master",json={"query":queries.add_agenda_item, "variables":data})
+			# if resp != 200:
+			# 	print(queries.add_agenda_item)
+			# 	print(data)
+			# 	print(resp.text)
+			# 	1/0
+			# else:
+			# 	print("success")
 			resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
 			self.agenda_item_ids.append(resp['data']['createAgendaItem']['id'])
 		print('Publishing Agenda Items...')
@@ -111,6 +119,7 @@ if __name__ == "__main__":
 		endTime = datetime(2022,11,int(row["Day"]),hour,minute)
 		endTime = endTime.strftime("%Y-%m-%dT%H:%M:00-04:00")
 		category = row["Type"]
+		eventType = row["Event Type"]
 		id1 = h._get_agenda_speaker_id(row["Speaker 1"])
 		id2 = h._get_agenda_speaker_id(row["Speaker 2"])
 		id3 = h._get_agenda_speaker_id(row["Speaker 3"])
@@ -123,6 +132,7 @@ if __name__ == "__main__":
 			"startTime":startTime,
 			"endTime":endTime,
 			"category":category,
+			"eventType":eventType,
 			"id1":id1,
 			"id2":id2,
 			"id3":id3,

@@ -13,7 +13,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 class Agenda:
     
     SPREADSHEET_ID = "1TsVVJHaGxGjawxx69nfwZwP68_x8v9eOS3_k7gHo2rA"
-    AGENDA_RANGE = "Agenda V3 Hygraph!A:K"
+    AGENDA_RANGE = "Agenda V3 Hygraph!A:L"
     SPEAKERS_RANGE = "Speakers Hygraph"
 
     def __init__(self, fetch_now=True):
