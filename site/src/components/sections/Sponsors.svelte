@@ -4,7 +4,7 @@
 	export let section: SponsorsSection;
 
 	const colors: Record<string, string> = {
-		platinum: 'bg-gradient-to-r from-gray-400 to-blue-300 font-extrabold drop-shadow-xl',
+		platinum: 'bg-gradient-to-r to-blue-900 from-blue-300 font-black drop-shadow-xl',
 		gold: 'bg-gradient-to-r from-amber-500 to-amber-600',
 		silver: 'bg-gradient-to-r from-gray-400 to-gray-600',
 		bronze: 'bg-gradient-to-r from-amber-600 to-amber-800',
