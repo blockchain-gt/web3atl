@@ -34,13 +34,13 @@
 		{section.title}
 	</h2>
 	{#each sortedGroupSections as tierGroup}
-		<h3>
+		<h3 class="mb-4">
 			{tierGroup.tier}
 		</h3>
 		<div class="flex flex-wrap">
 			{#each tierGroup.sponsors as sponsor}
 				<a href={sponsor.link} class="overflow-hidden">
-					<img src={sponsor.image.url} alt="{sponsor.tier} Sponsor {sponsor.link}" />
+					<img src={sponsor.image.url} class="w-80" alt="{sponsor.tier} Sponsor {sponsor.link}" />
 				</a>
 			{/each}
 		</div>
