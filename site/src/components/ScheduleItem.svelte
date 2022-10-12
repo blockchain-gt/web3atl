@@ -9,7 +9,7 @@
 </script>
 
 <button
-	class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50 w-full"
+	class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50 w-full relative overflow-hidden"
 	on:click={() => {
 		open = !open;
 	}}
@@ -36,7 +36,7 @@
 		</divs>
 	</div>
 	{#if open && item.category != 'Announcement' && item.category != 'Break'}
-		<ul transition:slide class="text-left flex gap-x-4 mt-4">
+		<ul transition:slide class="text-left flex md:flex-row flex-col gap-4 mt-4">
 			{#each item.agendaSpeakers as speaker, i}
 				{#if speaker.person.name}
 					<div class="w-60 h-80">
