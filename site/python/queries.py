@@ -43,6 +43,7 @@ add_agenda_item = """
         $startTime:DateTime,
         $endTime:DateTime,
         $category:String,
+        $eventType:EventType,
         $id1:ID,
         $id2:ID,
         $id3:ID,
@@ -56,6 +57,7 @@ add_agenda_item = """
             startTime: $startTime
             endTime: $endTime
             category: $category
+            eventType: $eventType
             agendaSpeakers: {
                 connect: [
                     {id: $id1},
