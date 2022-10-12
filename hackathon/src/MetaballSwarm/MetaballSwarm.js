@@ -12,6 +12,22 @@ const MetaballSwarm = () => {
   const mesh = useRef()
   let metaballCount = 15
 
+  const [percentRed, setPercentRed] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const scroll = e.target.scrollTop
+      console.log(scroll)
+      setPercentRed(scroll / e.target.scrollHeight)
+    }
+
+    document.getElementById('root').addEventListener('scroll', handleScroll)
+
+    return () => {
+      document.getElementById('root').removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   const metaballUniforms = useMemo(() => new Array(metaballCount).fill().map(() => new Vector3()), [metaballCount])
   const resolution = useMemo(() => new Vector2(width, height), [height, width])
 
@@ -65,7 +81,13 @@ const MetaballSwarm = () => {
   return (
     <mesh ref={mesh}>
       <planeBufferGeometry attach="geometry" args={[width, height, 1, 1]} />
-      <shaderMaterial attach="material" uniforms-metaballs-value={metaballUniforms} uniforms-resolution-value={resolution} args={[metaballMaterial]} />
+      <shaderMaterial
+        attach="material"
+        uniforms-red-value={percentRed}
+        uniforms-metaballs-value={metaballUniforms}
+        uniforms-resolution-value={resolution}
+        args={[metaballMaterial]}
+      />
     </mesh>
   )
 }

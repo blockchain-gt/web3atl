@@ -31,10 +31,13 @@ function App() {
           </Suspense>
         </Canvas>
       </div>
-      <section className="relative text-white z-20 flex justify-end items-center min-h-screen p-8">
+      <section className=" text-white z-20 flex max-w-screen-2xl mx-auto justify-end items-center min-h-screen">
         <div className="max-w-[600px]">
           <h3 className={`text-3xl font-extrabold  transition-all duration-1000 ease-out ${hasMounted ? 'opacity-75' : 'opacity-0 translate-y-4'}`}>Web3ATL</h3>
-          <h1 className={`text-8xl font-black drop-shadow-2xl transition-all duration-1000 delay-500 ease-out ${hasMounted ? '' : 'opacity-0 translate-y-4'}`}>
+          <h1
+            className={`text-8xl font-black drop-shadow-2xl transition-all duration-1000 delay-500 ease-out font-mono ${
+              hasMounted ? '' : 'opacity-0 translate-y-4'
+            }`}>
             Hackathon.
           </h1>
           <p className={`${extra} mb-3 text-gray-400 drop-shadow`}>
@@ -46,8 +49,20 @@ function App() {
           </div>
         </div>
       </section>
-      <div className="relative text-white max-w-screen-lg mx-auto glass -translate-y-1/2 grid grid-cols-1 md:grid-cols-4">test</div>
+      <div className=" text-white max-w-screen-lg mx-auto glass -translate-y-1/2 grid grid-cols-1 md:grid-cols-4">test</div>
       <section className="max-w-screen-lg mx-auto text-white items-center justify-end h-screen flex">
+        <div className="glass w-[500px]">
+          <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
+          <p className="opacity-80 my-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit officia tenetur, omnis ullam deleniti numquam enim odio harum delectus corporis
+            voluptatem, explicabo quam, iusto et! Delectus repellendus dolorem similique.
+          </p>
+          <a href="" className="button">
+            View Schedule
+          </a>
+        </div>
+      </section>
+      <section className="max-w-screen-lg mx-auto text-white items-center justify-start h-screen flex">
         <div className="glass w-[500px]">
           <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
           <p className="opacity-80 my-4">
