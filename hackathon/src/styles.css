@@ -37,5 +37,9 @@ body {
 }
 
 .glass {
-  @apply p-8 backdrop-blur-xl backdrop-brightness-50 border border-white/0 rounded-2xl;
+  @apply p-8 backdrop-blur-xl backdrop-brightness-50 border border-white/10 rounded-2xl;
+}
+
+.button {
+  @apply w-full border-white/90 border text-white bg-transparent hover:bg-white hover:text-black p-4 block text-center rounded-md transition-all font-mono duration-700;
 }
