@@ -41,7 +41,7 @@
 					on:click={() => {
 						selectedEventTypeId = filter.id;
 					}}
-					class="rounded-md border border-black/10 min-w-[100px] {isSelected
+					class="rounded-md border border-black/10 min-w-[100px] font-medium {isSelected
 						? 'bg-pink text-white'
 						: 'bg-white text-black'} p-3">{filter.name}</button
 				>
