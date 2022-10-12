@@ -10,6 +10,7 @@ const MetaballSwarm = () => {
   const width = size.width * pixelRatio
   const height = size.height * pixelRatio
   const mesh = useRef()
+
   let metaballCount = 15
 
   const [percentRed, setPercentRed] = useState(0)
