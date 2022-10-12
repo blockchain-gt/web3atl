@@ -12,12 +12,12 @@
 {#if selectedSpeaker}
 	<div
 		transition:fade={{ duration: 100 }}
-		class="fixed inset-0 bg-black/40 z-20 flex items-center justify-center px-4"
+		class="fixed inset-0 bg-black/40 z-20 flex items-center justify-center px-4 "
 		on:click={() => {
 			selectedSpeaker = null;
 		}}
 	>
-		<div class="card bg-white max-w-md relative max-h-screen overflow-y-auto">
+		<div class="card bg-white max-w-md relative max-h-[80vh] overflow-y-auto">
 			<button
 				aria-label="Close speaker modal"
 				class="absolute p-4 right-0 top-0 text-gray-400"
@@ -54,7 +54,7 @@
 
 <section id={section.title.toLowerCase()}>
 	<h2>{section.title}</h2>
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+	<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 		{#each section.people as person, i}
 			{#if person.name}
 				<PersonCard {person} bind:selectedSpeaker {i} />

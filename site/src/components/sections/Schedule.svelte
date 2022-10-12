@@ -4,17 +4,15 @@
 
 	export let section: ScheduleSection;
 
-	const filters = [
-		{ id: 'all', name: 'All' },
-		{ id: 'hackathon', name: 'Hackathon' },
-		{ id: 'satelliteEvent', name: 'Satellite Event' },
-		{ id: 'speakerSeries', name: 'Speaker Series' }
+	let filters = [
+		{ id: 'conference', name: 'Speaker Series', selected: false },
+		{ id: 'hackathon', name: 'Hackathon', selected: false },
+		{ id: 'events', name: 'Satellite Event', selected: false }
 	];
 
-	let selectedEventTypeId = filters[0].id;
-
 	$: byDay = section.agendaItems.reduce((acc, item) => {
-		if (item.eventType !== selectedEventTypeId && selectedEventTypeId !== 'all') {
+		const showAll = filters.every((filter) => !filter.selected);
+		if (!showAll && !filters.some(({ id }) => item.eventType === id)) {
 			return acc;
 		}
 		const time = new Date(item.startTime);
@@ -36,10 +34,10 @@
 	<section class="max-w-screen-lg">
 		<div class="flex gap-x-4">
 			{#each filters as filter}
-				{@const isSelected = selectedEventTypeId === filter.id}
+				{@const isSelected = filter.selected}
 				<button
 					on:click={() => {
-						selectedEventTypeId = filter.id;
+						filter.selected = !filter.selected;
 					}}
 					class="rounded-md border border-black/10 min-w-[100px] font-medium {isSelected
 						? 'bg-pink text-white'
@@ -49,7 +47,7 @@
 		</div>
 	</section>
 	<section
-		class="space-y-0 max-w-screen-lg pb-10 backdrop-blur-lg bg-gray-400/10 border border-black/10 mb-10 rounded-2xl"
+		class="space-y-0 max-w-screen-lg pb-10  bg-gray-100 shadow-lg border border-black/10 mb-10 rounded-2xl"
 	>
 		{#each Object.keys(byDay) as day, i}
 			<h2 class="{i !== 0 ? '!mt-8' : ''} !mb-2">{day}</h2>
