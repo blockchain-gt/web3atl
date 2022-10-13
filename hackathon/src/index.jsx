@@ -90,8 +90,7 @@ function App() {
         <div className="glass w-[500px]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit officia tenetur, omnis ullam deleniti numquam enim odio harum delectus corporis
-            voluptatem, explicabo quam, iusto et! Delectus repellendus dolorem similique.
+          Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
           </p>
           <a href="" className="button">
             Problem Details
