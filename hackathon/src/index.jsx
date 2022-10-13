@@ -78,7 +78,9 @@ function App() {
         <div className="border-card bg-black/50 w-[500px]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
-          On Saturday November 5th, hackers will compete in a 1 hour solidity competition where they try to make the contract evaluate to true. Participants will be provided an in-person workshop and educational materials to help them prepare for the sprint. Problems increase in difficulty. May the best hacker win.
+            On Saturday November 5th, hackers will compete in a 1 hour solidity competition where they try to make the contract evaluate to true. Participants
+            will be provided an in-person workshop and educational materials to help them prepare for the sprint. Problems increase in difficulty. May the best
+            hacker win.
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
@@ -90,9 +92,10 @@ function App() {
         <div className="glass w-[500px]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
-          Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
+            Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking
+            the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
           </p>
-          <DifficultySlider />
+          <DifficultySlider num={2} title="Test" />
           <a href="" className="button">
             Problem Details
           </a>
@@ -108,7 +111,8 @@ function App() {
 function DifficultySlider({ num, title }) {
   const max = 4
   return (
-    <div className="flex gap-x-1">
+    <div className="flex gap-x-1 items-center">
+      <p className="mr-2 font-mono">{title}</p>
       {new Array(max).fill(0).map((_, i) => {
         return <div className={`rounded-full w-2 h-2 border border-white/90 ${i < num ? 'bg-white' : ''}`}></div>
       })}
