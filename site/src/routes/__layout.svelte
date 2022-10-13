@@ -44,7 +44,7 @@
 			<a href="/#sponsors">Sponsors</a>
 		</li>
 		<li>
-			<a href="/">Hackathon</a>
+			<a href="/hack" sveltekit:reload>Hackathon</a>
 		</li>
 	</ul>
 	<ul class="flex gap-x-3 items-center">

@@ -2,7 +2,7 @@
 	"rewrites": [
 		{
 			"source": "/hack",
-			"destination": "/index.html"
+			"destination": "https://web3-atl-hackathon.vercel.app/"
 		}
 	]
 }
