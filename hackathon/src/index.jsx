@@ -13,7 +13,7 @@ const faqs = [
     answer: 'Teams are capped to at most 3 participants'
   },
   {
-    question: 'Where do I submit my team?',
+    question: 'Where do I submit a team?',
     answer: 'Use <b><u><a href="https://forms.gle/a8oWcWnYxt3ZhyAj7" target="_blank">this link</a></u></b> to submit teams'
   },
   {
@@ -137,7 +137,7 @@ function App() {
           <h2 className="text-3xl font-bold">Security Track</h2>
           <p className="opacity-80 my-4">
             Forta protects Web3. 
-            Hackers will develop solutions using Fortas SDK to build protection or detection value through bots, libraries, or data insights.
+            Hackers will develop solutions using Fortas SDK to deliver protection or detection value through bots, libraries, or data insights.
             <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={1} title="GQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
