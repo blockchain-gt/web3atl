@@ -37,6 +37,7 @@ function App() {
           </Suspense>
         </Canvas>
       </div>
+      {/* First fold */}
       <section className="text-white z-20 flex max-w-screen-2xl mx-auto justify-end items-center min-h-screen drop-shadow">
         <div className="max-w-[600px]">
           <h3 className={`text-3xl font-extrabold  transition-all duration-1000 ease-out ${hasMounted ? 'opacity-75' : 'opacity-0 translate-y-4'}`}>Web3ATL</h3>
@@ -71,29 +72,29 @@ function App() {
           ))}
         </div>
       </div>
+      {/* Track 1 */}
       <section className="backdrop-blur-2xl border-y border-white/20 section-thing">
         <img src={urls[0]} alt="" />
         <div className="border-card bg-black/50 w-[500px]">
-          <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
+          <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit officia tenetur, omnis ullam deleniti numquam enim odio harum delectus corporis
-            voluptatem, explicabo quam, iusto et! Delectus repellendus dolorem similique.
+          On Saturday November 5th, hackers will compete in a 1 hour solidity competition where they try to make the contract evaluate to true. Participants will be provided an in-person workshop and educational materials to help them prepare for the sprint. Problems increase in difficulty. May the best hacker win.
           </p>
-          <a href="" className="button">
-            View Schedule
+          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
+            Problem Details
           </a>
         </div>
       </section>
-
+      {/* Track 2 */}
       <section className="max-w-screen-lg mx-auto text-white items-center justify-start h-screen flex">
         <div className="glass w-[500px]">
-          <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
+          <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit officia tenetur, omnis ullam deleniti numquam enim odio harum delectus corporis
             voluptatem, explicabo quam, iusto et! Delectus repellendus dolorem similique.
           </p>
           <a href="" className="button">
-            View Schedule
+            Problem Details
           </a>
         </div>
       </section>
