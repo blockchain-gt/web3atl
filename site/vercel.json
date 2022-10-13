@@ -3,6 +3,10 @@
 		{
 			"source": "/hack",
 			"destination": "https://web3-atl-hackathon.vercel.app/"
+		},
+		{
+			"source": "/hackathon",
+			"destination": "https://web3-atl-hackathon.vercel.app/"
 		}
 	]
 }
