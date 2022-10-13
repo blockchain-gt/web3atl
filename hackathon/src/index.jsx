@@ -9,9 +9,25 @@ import './styles.css'
 
 const faqs = [
   {
-    question: 'How do I play?',
-    answer: 'Use the arrow keys to move the ball around. Try to avoid the obstacles and collect the coins.'
-  }
+    question: 'What are the team sizes?',
+    answer: 'Teams are capped to at most 3 participants'
+  },
+  {
+    question: 'Where do I submit my team?',
+    answer: 'Use <b><u><a href="https://forms.gle/a8oWcWnYxt3ZhyAj7" target="_blank">this link</a></u></b> to submit teams'
+  },
+  {
+    question: 'How will the prizes be distributed?',
+    answer: 'Each sponsor outlines prize distribution according to the details included in the <b><u><a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" target="_blank">hack pack</a></u></b>'
+  },
+  {
+    question: 'Where is the hackathon located?',
+    answer: 'The kick off event is at Kitt Labs, the hackathon is at Tech Square Social Club'
+  },
+  {
+    question: 'When is the hackathon?',
+    answer: 'Begins October 26th in-person or virtual, ends November 6th in-person'
+  },
 ]
 
 const useHasMounted = () => {
@@ -45,8 +61,8 @@ function App() {
         </Canvas>
       </div>
       {/* First fold */}
-      <section className="text-white z-20 flex max-w-screen-2xl mx-auto justify-end items-center min-h-screen drop-shadow">
-        <div className="max-w-[min(600px,100vw)] px-4">
+      <section className="text-white z-20 flex max-w-screen-2xl mx-auto justify-start items-center min-h-screen drop-shadow">
+        <div className="max-w-[min(600px,100vw)] px-16 md:mx-20 lg:mx-36 xl:mx-48">
           <h3 className={`text-3xl font-extrabold  transition-all duration-1000 ease-out ${hasMounted ? 'opacity-75' : 'opacity-0 translate-y-4'}`}>Web3ATL</h3>
           <h1
             className={`text-5xl md:text-8xl font-black drop-shadow-2xl transition-all duration-1000 delay-500 ease-out font-mono ${
@@ -56,16 +72,17 @@ function App() {
           </h1>
           <div className={extra}>
             <p className={`mb-3 text-gray-400`}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore perspiciatis id similique, laudantium non in veritatis a suscipit pariatur
-              voluptates doloremque corporis rerum voluptatibus adipisci ut placeat facilis amet.
+            💻 Hybrid Event.<br/> 
+            🤝 Open to all. <br/>
+            💸 <b>$10,000 in prizes.</b>
             </p>
-            <p className="uppercase text-white font-bold mb-8 ">Oct 26 - Nov 6</p>
+            <p className="uppercase text-white font-bold mb-8 ">📍 Oct 26 - Nov 6, Tech Square</p>
             <div className={`grid md:grid-cols-2 gap-4 text-center`}>
               <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button">
                 Apply
               </a>
               <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="cta-button">
-                Hacker Pack
+                Hack Pack
               </a>
             </div>
           </div>
@@ -85,9 +102,12 @@ function App() {
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
-            On Saturday November 5th, hackers will compete in a 1 hour solidity competition where they try to make the contract evaluate to true. Participants
-            will be provided an in-person workshop and educational materials to help them prepare for the sprint. Problems increase in difficulty. May the best
-            hacker win.
+            On Saturday November 5th, hackers will compete in a 1 hour solidity competition. 
+            Participants will be provided an in-person workshop and educational materials to help them prepare for the sprint. 
+            Problems increase in difficulty. 
+            May the best hacker win.
+            <DifficultySlider num={1} title="Solidity&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Blockchain" />
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
@@ -100,14 +120,15 @@ function App() {
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
             Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking
-            the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
+            the NMSE of the predicted price versus actual price over 24 1-hour intervals.
+            <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Python" />
           </p>
-          <DifficultySlider num={2} title="Test" />
-          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button">
+          <a href="https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/predict-eth.md" className="button">
             Problem Details
           </a>
         </div>
-        <img src={urls[1]} alt="" className="drop-shadow" />
+        <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
       {/* Track 3 */}
       <section className="blur-and-dark section-thing">
@@ -115,8 +136,12 @@ function App() {
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Security Track</h2>
           <p className="opacity-80 my-4">
-            Hackers will leverage Forta&apos;s SDK to build detection bots. Detection bots digest blockchain data to detect some condition and can make network
-            calls to other APIs to combine richer data sources
+            Forta protects Web3. 
+            Hackers will develop solutions using Fortas SDK to build protection or detection value through bots, libraries, or data insights.
+            <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={1} title="GQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Python, JS, or TS" />
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
@@ -126,44 +151,44 @@ function App() {
       {/* Track 4 */}
       <section className="section-thing">
         <div className="glass w-[min(500px,90vw)]">
-          <h2 className="text-3xl font-bold">Data Track</h2>
+          <h2 className="text-3xl font-bold">TBD</h2>
           <p className="opacity-80 my-4">
-            Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking
-            the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
+            More details soon!
+            <br></br>
+            <br></br>
+            <br></br>
           </p>
-          <DifficultySlider num={2} title="Test" />
-          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button">
+          <a href="/" className="button">
             Problem Details
           </a>
         </div>
-        <img src={urls[1]} alt="" className="drop-shadow" />
+        <img src={urls[3]} alt="" className="drop-shadow" />
       </section>
       <section className="section-thing blur-and-dark !h-auto py-20">
         <div className="w-full space-y-10">
           <div className="flex flex-col md:flex-row w-full justify-around px-8 gap-6 min-w-[300px] mx-auto drop-shadow">
-            <a href="" className="button hover:text-white !bg-black/50">
+            <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
-            <a href="" className="button hover:text-white !bg-black/50">
-              View Schedule
+            <a href="https://web3atl.io/schedule" className="button hover:text-white !bg-black/50">
+              Schedule
             </a>
-            <a href="" className="button hover:text-white !bg-black/50">
+            <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50">
               Apply
             </a>
-            <a href="" className="button hover:text-white !bg-black/50">
-              Join Discord
+            <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50">
+              Discord
             </a>
           </div>
-          <div className="px-20">
-            <h2 className="mb-4 mt-4 font-bold text-4xl">FAQs</h2>
+          <div className="px-10 md:px-16 lg:px-20 xl:px-24">
+            <h2 className="mb-2 mt-4 font-bold text-4xl">FAQs</h2>
             <div className="faq">
               {faqs.map((faq, i) => (
                 <>
                   <h3 className="" key={faq.question}>
                     {faq.question}
                   </h3>
-                  <p key={faq.question} className="text-gray-300">
-                    {faq.answer}
+                  <p key={faq.question} className="text-gray-300 pl-2 pb-4" dangerouslySetInnerHTML={{__html: faq.answer}}>
                   </p>
                 </>
               ))}
