@@ -40,9 +40,12 @@
 		<li>
 			<a href="/#speakers">Speakers</a>
 		</li>
-		<!-- <li>
+		<li>
 			<a href="/#sponsors">Sponsors</a>
-		</li> -->
+		</li>
+		<li>
+			<a href="/">Hackathon</a>
+		</li>
 	</ul>
 	<ul class="flex gap-x-3 items-center">
 		<li>
