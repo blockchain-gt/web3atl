@@ -53,5 +53,17 @@ body {
 }
 
 .section-thing {
-  @apply px-40  mx-auto text-white items-center justify-between h-screen flex;
+  @apply px-4 py-8 md:px-40 mx-auto text-white items-center justify-between h-screen flex md:flex-row flex-col;
+}
+
+.section-thing img {
+  @apply h-60 max-w-[min(500px,80vw)] object-contain mx-auto;
+}
+
+.blur-and-dark {
+  @apply backdrop-blur-2xl border-y border-white/20 backdrop-brightness-50;
+}
+
+.faq h3 {
+  @apply font-bold text-2xl mb-3;
 }
