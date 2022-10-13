@@ -13,13 +13,13 @@ const MetaballSwarm = () => {
 
   let metaballCount = 15
 
-  const [percentRed, setPercentRed] = useState(0)
+  const [percentDownPage, setPercentDownPage] = useState(0)
 
   useEffect(() => {
     const handleScroll = (e) => {
       const scroll = e.target.scrollTop
       console.log(scroll)
-      setPercentRed(scroll / e.target.scrollHeight)
+      setPercentDownPage(scroll / e.target.scrollHeight)
     }
 
     document.getElementById('root').addEventListener('scroll', handleScroll)
@@ -59,7 +59,9 @@ const MetaballSwarm = () => {
     }
   }, [])
 
-  useFrame(() => {
+  useFrame((ctx) => {
+    const offset1 = (Math.sin(ctx.clock.elapsedTime + percentDownPage * 5) + Math.cos(0.25 * ctx.clock.elapsedTime + percentDownPage * 5)) / 4
+    const offset2 = (Math.cos(0.97 * ctx.clock.elapsedTime + percentDownPage * 5) + Math.sin(0.15 * ctx.clock.elapsedTime + percentDownPage * 5)) / 4
     const metaballTarget = {
       x: mousePos.x,
       y: mousePos.y
@@ -70,8 +72,8 @@ const MetaballSwarm = () => {
       const distX = metaballTarget.x - metaball.position.x
       const distY = metaballTarget.y - metaball.position.y
 
-      metaball.position.y += distY * speed
-      metaball.position.x += distX * speed
+      metaball.position.y += distY * speed + offset1
+      metaball.position.x += distX * speed + offset2
 
       const diffs = 0.3
       metaballTarget.x = diffs * metaball.position.x + (1 - diffs) * metaballTarget.x
@@ -85,7 +87,7 @@ const MetaballSwarm = () => {
       <planeBufferGeometry attach="geometry" args={[width, height, 1, 1]} />
       <shaderMaterial
         attach="material"
-        uniforms-red-value={percentRed}
+        uniforms-red-value={percentDownPage}
         uniforms-metaballs-value={metaballUniforms}
         uniforms-resolution-value={resolution}
         args={[metaballMaterial]}

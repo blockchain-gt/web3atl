@@ -20,7 +20,7 @@ const useHasMounted = () => {
 function App() {
   const hasMounted = useHasMounted()
 
-  const extra = `transition-all ease-out duration-1000 delay-1000 ${hasMounted ? '' : 'opacity-0 translate-y-4'}`
+  const extra = `z-10 transition-all ease-out duration-1000 delay-1000 drop-shadow ${hasMounted ? 'opacity-100' : 'opacity-0 translate-y-4'}`
   return (
     <>
       <div style={{ height: '100vh' }} className="fixed w-full pointer-events-none">
@@ -40,12 +40,16 @@ function App() {
             }`}>
             Hackathon.
           </h1>
-          <p className={`${extra} mb-3 text-gray-400 drop-shadow`}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore perspiciatis id similique, laudantium non in veritatis a suscipit pariatur
-            voluptates doloremque corporis rerum voluptatibus adipisci ut placeat facilis amet.
-          </p>
-          <div className={`flex text-blue-400 font-bold uppercase ${extra}`}>
-            <p className="">Oct 26 - Nov 6</p>
+          <div className={extra}>
+            <p className={`mb-3 text-gray-400`}>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore perspiciatis id similique, laudantium non in veritatis a suscipit pariatur
+              voluptates doloremque corporis rerum voluptatibus adipisci ut placeat facilis amet.
+            </p>
+            <p className="uppercase text-white font-bold">Oct 26 - Nov 6</p>
+            <div className={`grid grid-cols-2 gap-4`}>
+              <a className="cta-button">Apply</a>
+              <a className="cta-button">Hacker Pack</a>
+            </div>
           </div>
         </div>
       </section>

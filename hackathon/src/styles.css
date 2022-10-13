@@ -43,3 +43,7 @@ body {
 .button {
   @apply w-full border-white/90 border text-white bg-transparent hover:bg-white hover:text-black p-4 block text-center rounded-md transition-all font-mono duration-700;
 }
+
+.cta-button {
+  @apply border-white/80 border backdrop-blur-md backdrop-brightness-75 bg-black/20 rounded-md p-3 text-center font-medium hover:bg-white transition-all hover:text-black cursor-pointer font-mono;
+}
