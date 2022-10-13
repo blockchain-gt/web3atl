@@ -96,12 +96,11 @@ function App() {
             the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
           </p>
           <DifficultySlider num={2} title="Test" />
-          <a href="" className="button">
+          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button">
             Problem Details
           </a>
         </div>
       </section>
-
       {/* Track 3 */}
       <section className="backdrop-blur-2xl border-y border-white/20 section-thing">
         <img src={urls[0]} alt="" />
