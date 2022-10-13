@@ -1,2 +1,5 @@
 /.svelte-kit
 hackathon/node_modules
+/site/python/credentials.json
+/site/python/token.json
+/site/python/__pycache__
