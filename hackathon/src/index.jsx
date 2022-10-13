@@ -52,6 +52,7 @@ function App() {
   const extra = `z-10 transition-all ease-out duration-1000 delay-1000 drop-shadow ${hasMounted ? 'opacity-100' : 'opacity-0 translate-y-4'}`
   return (
     <>
+      <meta property="og:image" content="https://cdn.raster.app/blockchain-at-georgia-tech/Sb4iAtiu4B?ixlib=js-3.6.0&amp;s=ef4c765f8a020ebbb89567b2d2d73076"></meta>
       <div style={{ height: '100vh' }} className="fixed w-full pointer-events-none">
         <Canvas gl={{ autoClear: false }} pixelRatio={getDevicePixelRatio(1)}>
           <MetaballSwarm />
