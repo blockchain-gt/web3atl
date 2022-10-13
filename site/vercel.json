@@ -5,6 +5,10 @@
 			"destination": "https://web3-atl-hackathon.vercel.app/"
 		},
 		{
+			"source": "/static/:path",
+			"destination": "https://web3-atl-hackathon.vercel.app/:path"
+		},
+		{
 			"source": "/hackathon",
 			"destination": "https://web3-atl-hackathon.vercel.app/"
 		}
