@@ -33,7 +33,7 @@ body {
   overscroll-behavior-y: none;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   color: black;
-  background: white;
+  background: black;
 }
 
 .glass {
@@ -53,5 +53,5 @@ body {
 }
 
 .section-thing {
-  @apply px-40 backdrop-brightness-50 mx-auto text-white items-center justify-between h-screen flex;
+  @apply px-40  mx-auto text-white items-center justify-between h-screen flex;
 }

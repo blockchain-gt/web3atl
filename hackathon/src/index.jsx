@@ -73,7 +73,7 @@ function App() {
         </div>
       </div>
       {/* Track 1 */}
-      <section className="backdrop-blur-2xl border-y border-white/20 section-thing">
+      <section className="backdrop-blur-2xl border-y border-white/20 backdrop-brightness-50 section-thing">
         <img src={urls[0]} alt="" />
         <div className="border-card bg-black/50 w-[500px]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
@@ -88,7 +88,7 @@ function App() {
         </div>
       </section>
       {/* Track 2 */}
-      <section className="max-w-screen-lg mx-auto text-white items-center justify-start h-screen flex">
+      <section className="section-thing">
         <div className="glass w-[500px]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
@@ -101,21 +101,23 @@ function App() {
           </a>
         </div>
       </section>
-      <section className="w-full backdrop-blur-lg bg-black/50 p-10 border-t border-white/20 text-white">
-        <div className="max-w-screen-xl mx-auto">this is a test</div>
-      </section>
+
       {/* Track 3 */}
       <section className="backdrop-blur-2xl border-y border-white/20 section-thing">
         <img src={urls[0]} alt="" />
         <div className="border-card bg-black/50 w-[500px]">
           <h2 className="text-3xl font-bold">Security Track</h2>
           <p className="opacity-80 my-4">
-          Hackers will leverage Forta&apos;s SDK to build detection bots. Detection bots digest blockchain data to detect some condition and can make network calls to other APIs to combine richer data sources
+            Hackers will leverage Forta&apos;s SDK to build detection bots. Detection bots digest blockchain data to detect some condition and can make network
+            calls to other APIs to combine richer data sources
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
           </a>
         </div>
+      </section>
+      <section className="w-full backdrop-blur-lg bg-black/50 p-10 border-t border-white/20 text-white">
+        <div className="max-w-screen-xl mx-auto">this is a test</div>
       </section>
     </>
   )
