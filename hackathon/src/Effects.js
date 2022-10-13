@@ -24,7 +24,6 @@ const Effects = () => {
     <effectComposer ref={composer} args={[gl]}>
       <renderPass attachArray="passes" args={[scene, camera]} />
       <unrealBloomPass attachArray="passes" args={[aspect, 2, 1, 0]} />
-      {/* <shaderPass attachArray="passes" args={[FXAAShader]} uniforms-resolution-value={[1 / size.width, 1 / size.height]} renderToScreen /> */}
     </effectComposer>
   )
 }

@@ -18,6 +18,12 @@ const useHasMounted = () => {
 }
 
 function App() {
+  const urls = [
+    'https://media.graphassets.com/RmZ06tMSj6st04ov8lkh',
+    'https://media.graphassets.com/U7IY50hxQyRtmm5CjURM',
+    'https://media.graphassets.com/rTq3hpFTGqzVkXvT2gQ7',
+    'https://media.graphassets.com/Nw6xvqTARD6EGkh38yP2'
+  ]
   const hasMounted = useHasMounted()
 
   const extra = `z-10 transition-all ease-out duration-1000 delay-1000 drop-shadow ${hasMounted ? 'opacity-100' : 'opacity-0 translate-y-4'}`
@@ -31,7 +37,7 @@ function App() {
           </Suspense>
         </Canvas>
       </div>
-      <section className=" text-white z-20 flex max-w-screen-2xl mx-auto justify-end items-center min-h-screen">
+      <section className="text-white z-20 flex max-w-screen-2xl mx-auto justify-end items-center min-h-screen drop-shadow">
         <div className="max-w-[600px]">
           <h3 className={`text-3xl font-extrabold  transition-all duration-1000 ease-out ${hasMounted ? 'opacity-75' : 'opacity-0 translate-y-4'}`}>Web3ATL</h3>
           <h1
@@ -45,17 +51,29 @@ function App() {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore perspiciatis id similique, laudantium non in veritatis a suscipit pariatur
               voluptates doloremque corporis rerum voluptatibus adipisci ut placeat facilis amet.
             </p>
-            <p className="uppercase text-white font-bold">Oct 26 - Nov 6</p>
+            <p className="uppercase text-white font-bold mb-8 ">Oct 26 - Nov 6</p>
             <div className={`grid grid-cols-2 gap-4`}>
-              <a className="cta-button">Apply</a>
-              <a className="cta-button">Hacker Pack</a>
+              <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button">
+                Apply
+              </a>
+              <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="cta-button">
+                Hacker Pack
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <div className=" text-white max-w-screen-lg mx-auto glass -translate-y-1/2 grid grid-cols-1 md:grid-cols-4">test</div>
-      <section className="max-w-screen-lg mx-auto text-white items-center justify-end h-screen flex">
-        <div className="glass w-[500px]">
+      {/* Sponsors */}
+      <div className="relative h-0 flex justify-center">
+        <div className="absolute z-40 text-white max-w-screen-lg mx-auto glass -translate-y-1/2 grid grid-cols-1 md:grid-cols-4 items-center gap-12">
+          {urls.map((url, i) => (
+            <img src={url} alt="" />
+          ))}
+        </div>
+      </div>
+      <section className="backdrop-blur-2xl border-y border-white/20 section-thing">
+        <img src={urls[0]} alt="" />
+        <div className="border-card bg-black/50 w-[500px]">
           <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
           <p className="opacity-80 my-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sit officia tenetur, omnis ullam deleniti numquam enim odio harum delectus corporis
@@ -66,6 +84,7 @@ function App() {
           </a>
         </div>
       </section>
+
       <section className="max-w-screen-lg mx-auto text-white items-center justify-start h-screen flex">
         <div className="glass w-[500px]">
           <h2 className="text-3xl font-bold">Lorem Ipsum</h2>
@@ -77,6 +96,9 @@ function App() {
             View Schedule
           </a>
         </div>
+      </section>
+      <section className="w-full backdrop-blur-lg bg-black/50 p-10 border-t border-white/20 text-white">
+        <div className="max-w-screen-xl mx-auto">this is a test</div>
       </section>
     </>
   )
