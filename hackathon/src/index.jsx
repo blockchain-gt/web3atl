@@ -23,7 +23,7 @@ function App() {
   const extra = `transition-all ease-out duration-1000 delay-1000 ${hasMounted ? '' : 'opacity-0 translate-y-4'}`
   return (
     <>
-      <div style={{ height: '100vh' }} className="fixed w-full">
+      <div style={{ height: '100vh' }} className="fixed w-full pointer-events-none">
         <Canvas gl={{ autoClear: false }} pixelRatio={getDevicePixelRatio(1)}>
           <MetaballSwarm />
           <Suspense fallback={null}>
