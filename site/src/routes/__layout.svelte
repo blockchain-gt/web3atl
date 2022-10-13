@@ -44,7 +44,7 @@
 			<a href="/#sponsors">Sponsors</a>
 		</li>
 		<li>
-			<a href="/hack" sveltekit:reload>Hackathon</a>
+			<a href="https://hack.web3atl.io">Hackathon</a>
 		</li>
 	</ul>
 	<ul class="flex gap-x-3 items-center">
