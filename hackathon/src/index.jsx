@@ -92,6 +92,7 @@ function App() {
           <p className="opacity-80 my-4">
           Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking the NMSE of the predicted price versus actual price over a 24 1-hour intervals.
           </p>
+          <DifficultySlider />
           <a href="" className="button">
             Problem Details
           </a>
@@ -101,6 +102,17 @@ function App() {
         <div className="max-w-screen-xl mx-auto">this is a test</div>
       </section>
     </>
+  )
+}
+
+function DifficultySlider({ num, title }) {
+  const max = 4
+  return (
+    <div className="flex gap-x-1">
+      {new Array(max).fill(0).map((_, i) => {
+        return <div className={`rounded-full w-2 h-2 border border-white/90 ${i < num ? 'bg-white' : ''}`}></div>
+      })}
+    </div>
   )
 }
 
