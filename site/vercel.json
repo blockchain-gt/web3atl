@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/hack",
+			"destination": "/index.html"
+		}
+	]
+}
