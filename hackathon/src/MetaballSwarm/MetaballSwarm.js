@@ -39,7 +39,7 @@ const MetaballSwarm = () => {
       temp[i] = new Object3D()
       temp[i].userData = {
         radius: 45 * pixelRatio,
-        speed: 0.1
+        speed: 0.01
       }
     }
     return temp
@@ -70,11 +70,12 @@ const MetaballSwarm = () => {
       const distX = metaballTarget.x - metaball.position.x
       const distY = metaballTarget.y - metaball.position.y
 
-      metaball.position.x += distX * speed
       metaball.position.y += distY * speed
+      metaball.position.x += distX * speed
 
-      metaballTarget.x = metaball.position.x
-      metaballTarget.y = metaball.position.y
+      const diffs = 0.3
+      metaballTarget.x = diffs * metaball.position.x + (1 - diffs) * metaballTarget.x
+      metaballTarget.y = diffs * metaball.position.y + (1 - diffs) * metaballTarget.y
       metaballUniforms[i].set(metaball.position.x, metaball.position.y, radius)
     })
   })
