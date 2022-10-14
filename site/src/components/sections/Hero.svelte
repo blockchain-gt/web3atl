@@ -41,7 +41,7 @@
 						>
 						<a
 							class="text-base rounded-lg bg-gray-800 text-white font-medium p-4 px-6"
-							href="https://forms.gle/YN6NSAbe2CyuzADc7">Hackathon Application</a
+							href="https://hack.web3atl.io">Hackathon</a
 						>
 					</div>
 				</div>

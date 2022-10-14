@@ -14,7 +14,7 @@
 				to help challenge and further your development skills.
 			</p>
 			<a
-				href="https://forms.gle/PfrUscLXXMroeDhaA"
+				href="https://hack.web3atl.io"
 				class="inline-block p-4 bg-gray-800 font-bold text-white mt-6 rounded-md px-8 shadow-hover-lg"
 			>
 				Join the Hackathon

@@ -168,14 +168,14 @@ function App() {
       <section className="section-thing blur-and-dark !h-auto py-20">
         <div className="w-full space-y-10">
           <div className="flex flex-col md:flex-row w-full justify-around px-8 gap-6 min-w-[300px] mx-auto drop-shadow">
+            <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50">
+              Apply
+            </a>
             <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
             <a href="https://web3atl.io/schedule" className="button hover:text-white !bg-black/50">
               Schedule
-            </a>
-            <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50">
-              Apply
             </a>
             <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50">
               Discord
