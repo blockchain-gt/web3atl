@@ -178,7 +178,7 @@ function App() {
               className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
-            <a href="https://web3atl.io/schedule" className="button hover:text-white !bg-black/50">
+            <a href="https://web3atl.io/schedule?hackathon=1" className="button hover:text-white !bg-black/50">
               Schedule
             </a>
             <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50">
