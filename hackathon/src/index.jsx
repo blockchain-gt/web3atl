@@ -103,6 +103,7 @@ function App() {
       </div>
       {/* Track 1 */}
       <section className="blur-and-dark section-thing">
+      <img src={urls[1]} alt="" className="drop-shadow pb-10" />
         <div className="glass w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
@@ -115,7 +116,6 @@ function App() {
             Problem Details
           </a>
         </div>
-        <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
       {/* Track 2 */}
       <section className="section-thing">
@@ -141,9 +141,10 @@ function App() {
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
-            TBD
-            <DifficultySlider num={2} title="Solidity&nbsp;&nbsp;" />
-            <DifficultySlider num={2} title="Blockchain" />
+            More details soon!
+            <br></br>
+            <br></br>
+            <br></br>
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
@@ -178,7 +179,7 @@ function App() {
               className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
-            <a href="https://web3atl.io/schedule" className="button hover:text-white !bg-black/50">
+            <a href="https://web3atl.io/schedule?hackathon=1" className="button hover:text-white !bg-black/50">
               Schedule
             </a>
             <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50">
