@@ -55,8 +55,10 @@
 					on:click={() => {
 						filter.selected = !filter.selected;
 					}}
-					class="rounded-md border border-black/10 min-w-[120px] font-medium {isSelected
-						? 'bg-pink text-white'
+					class="rounded-md border border-black/10 min-w-[120px] font-medium transition-all {isSelected
+						? filter.id === 'party'
+							? 'bg-gradient-to-r from-pink to-orange text-white shadow-lg shadow-pink'
+							: 'bg-pink text-white'
 						: 'bg-white text-black'} p-3">{filter.name}</button
 				>
 			{/each}
