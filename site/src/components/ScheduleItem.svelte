@@ -40,7 +40,7 @@
 					</time>
 				</div>
 			</div>
-			<h3 class="font-sans my-0 flex flex-wrap items-center gap-x-4">
+			<h3 class="font-sans my-0 flex flex-wrap items-center gap-x-4 gap-y-2">
 				{item.title}
 				<span
 					class="uppercase text-sm px-3 py-1 {colors[
