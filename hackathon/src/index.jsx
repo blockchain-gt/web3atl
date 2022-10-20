@@ -103,6 +103,7 @@ function App() {
       </div>
       {/* Track 1 */}
       <section className="blur-and-dark section-thing">
+      <img src={urls[1]} alt="" className="drop-shadow pb-10" />
         <div className="glass w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
@@ -115,7 +116,6 @@ function App() {
             Problem Details
           </a>
         </div>
-        <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
       {/* Track 2 */}
       <section className="section-thing">
