@@ -119,8 +119,7 @@ function App() {
       </section>
       {/* Track 2 */}
       <section className="section-thing">
-        <img src={urls[0]} alt="" className="drop-shadow" />
-        <div className="border-card bg-black/50 w-[min(500px,90vw)]">
+        <div className="glass w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Security Track</h2>
           <p className="opacity-80 my-4">
             Forta protects Web3. Hackers will develop solutions using Fortas SDK to deliver protection or detection value through bots, libraries, or data
@@ -134,6 +133,7 @@ function App() {
             Problem Details
           </a>
         </div>
+        <img src={urls[0]} alt="" className="drop-shadow" />
       </section>
       {/* Track 3 */}
       <section className="blur-and-dark section-thing">
