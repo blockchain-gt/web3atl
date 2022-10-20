@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import ScheduleItem from '$components/ScheduleItem.svelte';
 	import type { ScheduleSection } from '$lib/types/components';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
 	export let section: ScheduleSection;
@@ -44,6 +47,24 @@
 	$: isConfSelected =
 		filters.find((filter) => filter.id === 'conference')?.selected ||
 		filters.every((filter) => !filter.selected);
+
+	$: $page, updateFiltersFromUrl();
+
+	function updateFiltersFromUrl() {
+		if (typeof window === 'undefined') return;
+		const url = new URL(window.location.href);
+		const allParams = Array.from(url.searchParams.entries());
+		const allIds = filters.map((filter) => filter.id);
+		allParams.forEach(([key, value]) => {
+			if (allIds.includes(key)) {
+				const filt = filters.find((filter) => filter.id === key);
+				console.log(key, filt);
+				if (filt) {
+					filt.selected = true;
+				}
+			}
+		});
+	}
 </script>
 
 <div class="px-4">
@@ -54,6 +75,12 @@
 				<button
 					on:click={() => {
 						filter.selected = !filter.selected;
+						if (!filter.selected) {
+							$page.url.searchParams.delete(filter.id);
+						} else {
+							$page.url.searchParams.set(filter.id, '1');
+						}
+						goto(`?${$page.url.searchParams.toString()}`);
 					}}
 					class="rounded-md border border-black/10 min-w-[120px] font-medium transition-all {isSelected
 						? filter.id === 'party'
