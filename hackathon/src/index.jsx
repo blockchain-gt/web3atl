@@ -98,7 +98,7 @@ function App() {
         </div>
       </div>
       {/* Track 1 */}
-      <section className="section-thing">
+      <section className="blur-and-dark section-thing">
         <div className="glass w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
@@ -114,7 +114,7 @@ function App() {
         <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
       {/* Track 2 */}
-      <section className="blur-and-dark section-thing">
+      <section className="section-thing">
         <img src={urls[0]} alt="" />
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Security Track</h2>
