@@ -62,15 +62,15 @@
 			{/each}
 		</div>
 		{#if isConfSelected}
-			<div transition:slide class="mt-4 flex md:flex-row flex-col">
+			<div transition:slide class="mt-8 md:mt-4 flex md:flex-row flex-col">
 				{#each rooms as room}
 					<button
 						on:click={() => {
 							selectedRoomId = room;
 						}}
-						class="border-l border-y border-black/10 min-w-[60px] font-medium
-						last:rounded-r-full last:border-r
-						first:rounded-l-full
+						class="border-l border-y border-r border-black/10 min-w-[60px] font-medium
+						md:last:rounded-r-full md:last:border-r md:border-r-0 last:rounded-b-md
+						md:first:rounded-l-full first:rounded-t-md
 						 {selectedRoomId === room ? 'bg-primary text-white' : 'bg-white text-black'} py-1.5 px-3 text-sm"
 						>{room}</button
 					>

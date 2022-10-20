@@ -14,7 +14,8 @@
 		'tech square social club': 'bg-amber-300',
 		'main stage': 'bg-orange',
 		'side stage': 'bg-violet-300',
-		'coda rooftop': 'bg-black text-white'
+		'coda rooftop': 'bg-black text-white',
+		'kitt labs': 'bg-black text-white'
 	} as any;
 </script>
 
@@ -70,7 +71,7 @@
 			{#each item.agendaSpeakers as speaker, i}
 				{#if speaker.person.name}
 					<div class="w-60 h-80">
-						<PersonCard person={speaker.person} {i} z={'-z-10'} />
+						<PersonCard noGradient person={speaker.person} {i} z={'-z-10'} />
 					</div>
 				{/if}
 			{/each}
