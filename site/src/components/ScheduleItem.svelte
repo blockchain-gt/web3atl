@@ -6,12 +6,20 @@
 	export let item: AgendaItem;
 
 	let open = false;
+
+	const colors = {
+		conference: 'bg-blue-300',
+		hackathon: 'bg-pink',
+		party: 'bg-green-300'
+	};
 </script>
 
 <button
 	class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50 w-full relative overflow-hidden"
 	on:click={() => {
-		open = !open;
+		if (item.agendaSpeakers.length > 1) {
+			open = !open;
+		}
 	}}
 >
 	<div class="text-left flex justify-between w-full">
@@ -28,15 +36,20 @@
 			</div>
 			<h3 class="font-sans my-0 flex flex-wrap items-center gap-x-4">
 				{item.title}
-				<span class="uppercase text-sm px-3 py-1 bg-blue-300 rounded-full">{item.eventType}</span>
+				<span
+					class="uppercase text-sm px-3 py-1 {colors[item.eventType.toLowerCase()]} rounded-full"
+					>{item.eventType}</span
+				>
 			</h3>
 		</div>
 		<divs class="font-semibold text-3xl">
 			<span class="rotate-90">
-				{#if open}
-					&times;
-				{:else if item.category != 'Announcement' && item.category != 'Break' && item.agendaSpeakers.length > 1}
-					+
+				{#if item.agendaSpeakers.length > 1}
+					{#if open}
+						&times;
+					{:else}
+						+
+					{/if}
 				{/if}
 			</span>
 		</divs>

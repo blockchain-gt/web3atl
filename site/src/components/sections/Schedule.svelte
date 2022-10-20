@@ -1,21 +1,32 @@
 <script lang="ts">
 	import ScheduleItem from '$components/ScheduleItem.svelte';
 	import type { ScheduleSection } from '$lib/types/components';
+	import { slide } from 'svelte/transition';
 
 	export let section: ScheduleSection;
 
 	let filters = [
 		{ id: 'conference', name: 'Conference', selected: false },
 		{ id: 'hackathon', name: 'Hackathon', selected: false },
-		{ id: 'events', name: 'Events', selected: false }
+		{ id: 'party', name: 'Party', selected: false }
 	];
 
-	$: byDay = section.agendaItems.reduce((acc, item) => {
-		const showAll = filters.every((filter) => !filter.selected);
+	let rooms = ['All', 'Main Stage', 'Side Stage'];
+	let selectedRoomId: string = 'All';
 
-		if (!showAll && !filters.some(({ id, selected }) => item.eventType === id && selected)) {
+	$: byDay = section.agendaItems.reduce((acc, item) => {
+		const showAllTypes = filters.every((filter) => !filter.selected);
+		const showAllRooms = selectedRoomId === 'All';
+
+		const thisTypeAllowed =
+			showAllTypes || filters.find((filter) => filter.selected && filter.id === item.eventType);
+
+		const thisRoomAllowed = showAllRooms || item.location === selectedRoomId || !isConfSelected;
+
+		if (!thisTypeAllowed || !thisRoomAllowed) {
 			return acc;
 		}
+
 		const time = new Date(item.startTime);
 
 		const day = time.toLocaleDateString('en-US', {
@@ -29,6 +40,10 @@
 		acc[day].push(item);
 		return acc;
 	}, {} as Record<string, any[]>);
+
+	$: isConfSelected =
+		filters.find((filter) => filter.id === 'conference')?.selected ||
+		filters.every((filter) => !filter.selected);
 </script>
 
 <div class="px-4">
@@ -46,6 +61,22 @@
 				>
 			{/each}
 		</div>
+		{#if isConfSelected}
+			<div transition:slide class="mt-4 flex md:flex-row flex-col">
+				{#each rooms as room}
+					<button
+						on:click={() => {
+							selectedRoomId = room;
+						}}
+						class="border-l border-y border-black/10 min-w-[60px] font-medium
+						last:rounded-r-full last:border-r
+						first:rounded-l-full
+						 {selectedRoomId === room ? 'bg-primary text-white' : 'bg-white text-black'} py-1.5 px-3 text-sm"
+						>{room}</button
+					>
+				{/each}
+			</div>
+		{/if}
 	</section>
 	<section
 		class="space-y-0 max-w-screen-lg pb-10  bg-gray-100 shadow-lg border border-black/10 mb-10 rounded-2xl"
