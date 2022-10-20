@@ -133,7 +133,7 @@ function App() {
       </section>
       {/* Track 3 */}
       <section className="blur-and-dark section-thing">
-        <img src={urls[2]} alt="" />
+        <img src={urls[2]} alt="" className="drop-shadow"/>
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
