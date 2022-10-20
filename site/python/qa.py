@@ -6,11 +6,11 @@ from pprint import pprint
 h = Hygraph()
 a = Agenda()
 d = {
-    6:"G",
     7:"H",
     8:"I",
     9:"J",
-    10:"K"
+    10:"K",
+    11:"L"
 }
 
 def generate_report():
@@ -29,7 +29,7 @@ def generate_report():
     row_num = 2
     for _, row in df2.iterrows():
         # speaker 1, speaker 2, ..., moderator
-        for col in [6,7,8,9,10]:
+        for col in d.keys():
             col_name = df2.columns[col]
             if row[col_name] and row[col_name] not in hygraph_speakers:
                 df2_red_cells.append(f"{d[col]}{row_num}")
@@ -41,7 +41,7 @@ def generate_report():
     row_num = 2
     for _, row in df3.iterrows():
         # speaker 1, speaker 2, ..., moderator
-        for col in [6,7,8,9,10]:
+        for col in d.keys():
             col_name = df3.columns[col]
             if row[col_name] and row[col_name] not in agenda_speakers:
                 df3_red_cells.append(f"{d[col]}{row_num}")

@@ -76,7 +76,7 @@ class Agenda:
 
     def _clean_speakers(self):
         exclude = ["FALSE", "Name"]
-        self.speakers = [i[0].strip() for i in self.speakers if i[0].strip() not in exclude]
+        self.speakers = [i[0].strip() for i in self.speakers if i and i[0].strip() not in exclude]
 
     def set_speakers(self):
         self.speakers = self._get_subsheet_data(range=Agenda.SPEAKERS_RANGE)
