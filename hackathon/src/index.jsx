@@ -18,7 +18,8 @@ const faqs = [
   },
   {
     question: 'How will the prizes be distributed?',
-    answer: 'Each sponsor outlines prize distribution according to the details included in the <b><u><a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" target="_blank">hack pack</a></u></b>'
+    answer:
+      'Each sponsor outlines prize distribution according to the details included in the <b><u><a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" target="_blank">hack pack</a></u></b>'
   },
   {
     question: 'Where is the hackathon located?',
@@ -27,7 +28,7 @@ const faqs = [
   {
     question: 'When is the hackathon?',
     answer: 'Begins October 26th in-person or virtual, ends November 6th in-person'
-  },
+  }
 ]
 
 const useHasMounted = () => {
@@ -52,7 +53,9 @@ function App() {
   const extra = `z-10 transition-all ease-out duration-1000 delay-1000 drop-shadow ${hasMounted ? 'opacity-100' : 'opacity-0 translate-y-4'}`
   return (
     <>
-      <meta property="og:image" content="https://cdn.raster.app/blockchain-at-georgia-tech/Sb4iAtiu4B?ixlib=js-3.6.0&amp;s=ef4c765f8a020ebbb89567b2d2d73076"></meta>
+      <meta
+        property="og:image"
+        content="https://cdn.raster.app/blockchain-at-georgia-tech/Sb4iAtiu4B?ixlib=js-3.6.0&amp;s=ef4c765f8a020ebbb89567b2d2d73076"></meta>
       <div style={{ height: '100vh' }} className="fixed w-full pointer-events-none">
         <Canvas gl={{ autoClear: false }} pixelRatio={getDevicePixelRatio(1)}>
           <MetaballSwarm />
@@ -73,9 +76,10 @@ function App() {
           </h1>
           <div className={extra}>
             <p className={`mb-3 text-gray-400`}>
-            💻 Hybrid Event.<br/> 
-            🤝 Open to all. <br/>
-            💸 <b>$10,000 in prizes.</b>
+              💻 Hybrid Event.
+              <br />
+              🤝 Open to all. <br />
+              💸 <b>$10,000 in prizes.</b>
             </p>
             <p className="uppercase text-white font-bold mb-8 ">📍 Oct 26 - Nov 6, Tech Square</p>
             <div className={`grid md:grid-cols-2 gap-4 text-center`}>
@@ -115,12 +119,12 @@ function App() {
       </section>
       {/* Track 2 */}
       <section className="section-thing">
-        <img src={urls[0]} alt="" />
+        <img src={urls[0]} alt="" className="drop-shadow" />
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Security Track</h2>
           <p className="opacity-80 my-4">
-            Forta protects Web3. 
-            Hackers will develop solutions using Fortas SDK to deliver protection or detection value through bots, libraries, or data insights.
+            Forta protects Web3. Hackers will develop solutions using Fortas SDK to deliver protection or detection value through bots, libraries, or data
+            insights.
             <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={1} title="GQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
@@ -133,7 +137,7 @@ function App() {
       </section>
       {/* Track 3 */}
       <section className="blur-and-dark section-thing">
-        <img src={urls[2]} alt="" className="drop-shadow"/>
+        <img src={urls[2]} alt="" className="drop-shadow" />
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Solidity Track</h2>
           <p className="opacity-80 my-4">
@@ -169,7 +173,9 @@ function App() {
             <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50">
               Apply
             </a>
-            <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="button hover:text-white !bg-black/50">
+            <a
+              href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing"
+              className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
             <a href="https://web3atl.io/schedule" className="button hover:text-white !bg-black/50">
@@ -187,8 +193,7 @@ function App() {
                   <h3 className="" key={faq.question}>
                     {faq.question}
                   </h3>
-                  <p key={faq.question} className="text-gray-300 pl-2 pb-4" dangerouslySetInnerHTML={{__html: faq.answer}}>
-                  </p>
+                  <p key={faq.question} className="text-gray-300 pl-2 pb-4" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
                 </>
               ))}
             </div>
