@@ -50,6 +50,9 @@
 	<section
 		class="space-y-0 max-w-screen-lg pb-10  bg-gray-100 shadow-lg border border-black/10 mb-10 rounded-2xl"
 	>
+		{#if !Object.keys(byDay).length}
+			<p class="text-gray-500 mt-2">No items for this category yet!</p>
+		{/if}
 		{#each Object.keys(byDay) as day, i}
 			<h2 class="{i !== 0 ? '!mt-8' : ''} !mb-2">{day}</h2>
 			<div class="space-y-4">
