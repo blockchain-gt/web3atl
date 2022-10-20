@@ -21,8 +21,7 @@
 					{new Date(item.startTime).toLocaleTimeString('en-US', {
 						hour: 'numeric',
 						minute: '2-digit',
-						timeZone: 'America/New_York',
-						timeZoneName: 'shortGeneric'
+						timeZone: 'America/New_York'
 					})}
 					| {item.location?.replace('_', ' ')}
 				</time>
