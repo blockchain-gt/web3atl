@@ -99,24 +99,6 @@ function App() {
       </div>
       {/* Track 1 */}
       <section className="blur-and-dark section-thing">
-        <img src={urls[2]} alt="" />
-        <div className="border-card bg-black/50 w-[min(500px,90vw)]">
-          <h2 className="text-3xl font-bold">Solidity Track</h2>
-          <p className="opacity-80 my-4">
-            On Saturday November 5th, hackers will compete in a 1 hour solidity competition. 
-            Participants will be provided an in-person workshop and educational materials to help them prepare for the sprint. 
-            Problems increase in difficulty. 
-            May the best hacker win.
-            <DifficultySlider num={1} title="Solidity&nbsp;&nbsp;" />
-            <DifficultySlider num={2} title="Blockchain" />
-          </p>
-          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
-            Problem Details
-          </a>
-        </div>
-      </section>
-      {/* Track 2 */}
-      <section className="section-thing">
         <div className="glass w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
@@ -125,14 +107,14 @@ function App() {
             <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Python" />
           </p>
-          <a href="https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/predict-eth.md" className="button">
+          <a href="https://github.com/oceanprotocol/predict-eth/blob/main/predict-eth2.md" className="button">
             Problem Details
           </a>
         </div>
         <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
-      {/* Track 3 */}
-      <section className="blur-and-dark section-thing">
+      {/* Track 2 */}
+      <section className="section-thing">
         <img src={urls[0]} alt="" />
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
           <h2 className="text-3xl font-bold">Security Track</h2>
@@ -143,6 +125,21 @@ function App() {
             <DifficultySlider num={1} title="GQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Python, JS, or TS" />
+          </p>
+          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
+            Problem Details
+          </a>
+        </div>
+      </section>
+      {/* Track 3 */}
+      <section className="blur-and-dark section-thing">
+        <img src={urls[2]} alt="" />
+        <div className="border-card bg-black/50 w-[min(500px,90vw)]">
+          <h2 className="text-3xl font-bold">Solidity Track</h2>
+          <p className="opacity-80 my-4">
+            TBD
+            <DifficultySlider num={2} title="Solidity&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Blockchain" />
           </p>
           <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
             Problem Details
@@ -165,6 +162,7 @@ function App() {
         </div>
         <img src={urls[3]} alt="" className="drop-shadow" />
       </section>
+
       <section className="section-thing blur-and-dark !h-auto py-20">
         <div className="w-full space-y-10">
           <div className="flex flex-col md:flex-row w-full justify-around px-8 gap-6 min-w-[300px] mx-auto drop-shadow">

@@ -112,12 +112,16 @@ if __name__ == "__main__":
 		location = row["Room"]
 		hour, minute = row["Start Time"].strip().split(":")
 		hour, minute = int(hour), int(minute)
-		startTime = datetime(2022,11,int(row["Day"]),hour,minute)
-		startTime = startTime.strftime("%Y-%m-%dT%H:%M:00-04:00")
+		day = int(row["Day"])
+		month = 11 if day <= 6 else 10
+		adj = 4 if day != 6 else 5
+		startTime = datetime(2022,month,day,hour,minute)
+		startTime = startTime.strftime(f"%Y-%m-%dT%H:%M:00-0{adj}:00")
 		hour, minute = row["End Time"].strip().split(":")
 		hour, minute = int(hour), int(minute)
-		endTime = datetime(2022,11,int(row["Day"]),hour,minute)
-		endTime = endTime.strftime("%Y-%m-%dT%H:%M:00-04:00")
+		day = int(row["Day"])
+		endTime = datetime(2022,month,day,hour,minute)
+		endTime = endTime.strftime(f"%Y-%m-%dT%H:%M:00-0{adj}:00")
 		category = row["Type"]
 		eventType = row["Event Type"]
 		id1 = h._get_agenda_speaker_id(row["Speaker 1"])
