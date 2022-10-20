@@ -35,9 +35,9 @@
 	</ul>
 </nav>
 
-<!-- Mobile Nav -->
+<!-- Mobile Nav btns -->
 <button
-	class="fixed md:hidden top-3 right-3 p-2 rounded-full bg-white shadow-lg z-10"
+	class="fixed md:hidden top-3 right-3 p-2 rounded-full bg-white shadow-lg z-[999]"
 	on:click={() => (navOpen = !navOpen)}
 >
 	<svg
@@ -70,8 +70,9 @@
 		><path d="M3 12h18" /><path d="M3 6h18" /><path d="M3 18h18" /></svg
 	>
 </button>
+<!-- Mobile nav -->
 <nav
-	class="fixed inset-0 w-screen h-screen bg-black/80 backdrop-blur text-white transition-all flex justify-center items-center {navOpen
+	class="fixed inset-0 z-[990] w-screen h-screen bg-black/80 backdrop-blur text-white transition-all flex justify-center items-center {navOpen
 		? ''
 		: 'opacity-0 -translate-y-full'}"
 >
