@@ -129,7 +129,7 @@ function App() {
             <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Python, JS, or TS" />
           </p>
-          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
+          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button">
             Problem Details
           </a>
         </div>
