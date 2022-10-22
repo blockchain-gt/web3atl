@@ -66,15 +66,17 @@
 			</span>
 		</divs>
 	</div>
-	{#if open && item.category != 'Announcement' && item.category != 'Break'}
-		<ul transition:slide class="text-left flex md:flex-row flex-col gap-4 mt-4">
-			{#each item.agendaSpeakers as speaker, i}
-				{#if speaker.person.name}
-					<div class="w-60 h-80">
-						<PersonCard noGradient person={speaker.person} {i} z={'-z-10'} />
-					</div>
-				{/if}
-			{/each}
-		</ul>
-	{/if}
+	<div class="overflow-x-auto w-full">
+		{#if open && item.category != 'Announcement' && item.category != 'Break'}
+			<ul transition:slide class="text-left flex md:flex-row flex-col gap-4 mt-4">
+				{#each item.agendaSpeakers as speaker, i}
+					{#if speaker.person.name}
+						<div class="w-60 h-80">
+							<PersonCard noGradient person={speaker.person} {i} z={'-z-10'} />
+						</div>
+					{/if}
+				{/each}
+			</ul>
+		{/if}
+	</div>
 </button>
