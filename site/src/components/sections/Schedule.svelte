@@ -48,23 +48,22 @@
 		filters.find((filter) => filter.id === 'conference')?.selected ||
 		filters.every((filter) => !filter.selected);
 
-	$: $page, updateFiltersFromUrl();
-
-	function updateFiltersFromUrl() {
-		if (typeof window === 'undefined') return;
-		const url = new URL(window.location.href);
-		const allParams = Array.from(url.searchParams.entries());
-		const allIds = filters.map((filter) => filter.id);
-		allParams.forEach(([key, value]) => {
-			if (allIds.includes(key)) {
-				const filt = filters.find((filter) => filter.id === key);
-				console.log(key, filt);
-				if (filt) {
-					filt.selected = true;
+	onMount(() => {
+		function updateFiltersFromUrl() {
+			if (typeof window === 'undefined') return;
+			const url = new URL(window.location.href);
+			const allParams = Array.from(url.searchParams.entries());
+			const allIds = filters.map((filter) => filter.id);
+			allParams.forEach(([key, value]) => {
+				if (allIds.includes(key)) {
+					document.getElementById('hackathon')?.click();
 				}
-			}
-		});
-	}
+			});
+		}
+		const params = new URLSearchParams(window.location.search);
+		console.log();
+		updateFiltersFromUrl();
+	});
 </script>
 
 <div class="px-4">
@@ -73,6 +72,7 @@
 			{#each filters as filter}
 				{@const isSelected = filter.selected}
 				<button
+					id={filter.id}
 					on:click={() => {
 						filter.selected = !filter.selected;
 						if (!filter.selected) {
