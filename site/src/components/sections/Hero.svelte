@@ -23,7 +23,7 @@
 		<div class="py-20 md:py-20 flex flex-col gap-y-8 justify-start">
 			<img src="/logo.png" alt="Logo" class="!aspect-square rounded-full md:hidden block w-40" />
 			<h1
-				class="font-bold text-4xl lg:text-[8rem] font-[adventure] uppercase max-w-2xl leading-tight"
+				class="font-bold text-4xl lg:text-[8rem] font-adventure uppercase max-w-2xl leading-tight"
 			>
 				{section.title}
 			</h1>
@@ -54,7 +54,7 @@
 	<!-- Countdown -->
 </div>
 <div
-	class="flex items-center justify-center px-4 font-[adventure] uppercase text-white w-full bg-gray-800 py-8"
+	class="flex items-center justify-center px-4 font-adventure uppercase text-white w-full bg-gray-800 py-8"
 >
 	<div
 		class="gap-6 md:gap-2 font-bold rounded-xl grid grid-cols-5 lg:text-3xl text-xs md:grid-cols-9 py-4"

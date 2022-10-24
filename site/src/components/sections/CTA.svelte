@@ -12,7 +12,7 @@
 	<!-- <div
 		class="mt-20 flex flex-col items-center text-black p-8 max-w-lg mx-auto overflow-hidden relative"
 	>
-		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Speak</h2>
+		<h2 class="w-full my-4 text-center font-adventure uppercase">Speak</h2>
 		<p class="max-w-md text-center my-4">
 			Are you an experienced crypto professional looking to share your knowledge? Apply below!
 		</p>
@@ -27,7 +27,7 @@
 		<p class="w-full my-4 text-center text-gray-500">Application closes September 30, 2022</p>
 	</div> -->
 	<!-- <div class="mt-20 flex flex-col items-center text-black p-8 max-w-lg mx-auto">
-		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Sponsor</h2>
+		<h2 class="w-full my-4 text-center font-adventure uppercase">Sponsor</h2>
 		<p class="max-w-md text-center my-4">
 			Interested in sponsoring? Let us know, we'd love to talk!
 		</p>
@@ -43,7 +43,7 @@
 	</div> -->
 
 	<div class="mt-20 flex flex-col items-center text-black max-w-lg mx-auto">
-		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Volunteer</h2>
+		<h2 class="w-full my-4 text-center font-adventure uppercase">Volunteer</h2>
 		<p class="max-w-md text-center my-4">
 			Interested in volunteering? Let us know, we'd love to talk!
 		</p>
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div class="mt-20 flex flex-col items-center text-black max-w-lg mx-auto">
-		<h2 class="w-full my-4 text-center font-[adventure] uppercase">Get Tickets</h2>
+		<h2 class="w-full my-4 text-center font-adventure uppercase">Get Tickets</h2>
 		<p class="max-w-md text-center my-4">
 			Join us to build, inform, and advance your crypto journey.
 		</p>

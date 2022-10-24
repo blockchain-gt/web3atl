@@ -17,7 +17,7 @@
 					class="h-56 w-80 flex flex-col justify-between gap-y-2 text-center"
 				>
 					<img src={organizer.logo?.url} class="rounded-md" alt={organizer.name} />
-					<p class="font-[adventure] uppercase text-xl">{organizer.type}</p>
+					<p class="font-adventure uppercase text-xl">{organizer.type}</p>
 				</a>
 			{/each}
 		</div>

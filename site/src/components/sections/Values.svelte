@@ -7,7 +7,7 @@
 		/>
 
 		<div>
-			<h2 class="font-[adventure] uppercase">Hack</h2>
+			<h2 class="font-adventure uppercase">Hack</h2>
 			<p>
 				Compete for <b>$10,000 in cash prizes</b> at the first Web3 ATL hackathon in the Tech Square
 				Clubhouse. Regardless of background knowledge, companies have created problems and workshops
@@ -29,7 +29,7 @@
 		/>
 
 		<div>
-			<h2 class="font-[adventure] uppercase">Learn</h2>
+			<h2 class="font-adventure uppercase">Learn</h2>
 			<p>
 				Hear from industry leaders as they share their perspectives on current events and discuss
 				the cutting-edge innovation happening across all areas of crypto. A mix of panels,
@@ -46,7 +46,7 @@
 		/>
 
 		<div>
-			<h2 class="font-[adventure] uppercase">Network</h2>
+			<h2 class="font-adventure uppercase">Network</h2>
 			<p>
 				Directly interact with representatives from top companies in the crypto industry and advance
 				your career. Networking opportunities will be available within advanced industry workshops,

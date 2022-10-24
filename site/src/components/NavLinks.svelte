@@ -25,6 +25,6 @@
 
 <style>
 	li a {
-		@apply font-bold font-[adventure] uppercase py-3;
+		@apply font-bold font-adventure uppercase py-3;
 	}
 </style>

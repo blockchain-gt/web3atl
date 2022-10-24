@@ -32,7 +32,7 @@
 </script>
 
 <section>
-	<h1 class="font-[adventure] uppercase text-6xl mt-20">Team</h1>
+	<h1 class="font-adventure uppercase text-6xl mt-20">Team</h1>
 </section>
 
 {#each page.components as component}

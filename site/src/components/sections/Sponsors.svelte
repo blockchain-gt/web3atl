@@ -25,11 +25,11 @@
 				>
 					<img src={organizer.image?.url} class="rounded-md my-auto" alt={organizer.link} />
 					<p
-						class="font-[adventure] uppercase text-2xl bg-clip-text text-transparent {colors[
+						class="font-adventure uppercase text-2xl bg-clip-text text-transparent {colors[
 							organizer.tier.toLowerCase()
 						]}"
 					>
-						<!-- <p class="font-[adventure] uppercase text-2xl {}"> -->
+						<!-- <p class="font-adventure uppercase text-2xl {}"> -->
 						{organizer.tier}
 					</p>
 				</a>

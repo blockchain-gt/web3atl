@@ -44,7 +44,7 @@
 				alt={selectedSpeaker.name}
 				class="rounded-full w-48 h-48 !aspect-square object-cover border shadow-md mb-8 mx-auto"
 			/>
-			<h5 class="font-[adventure] uppercase text-4xl my-4">
+			<h5 class="font-adventure uppercase text-4xl my-4">
 				{selectedSpeaker.name}
 			</h5>
 			{@html selectedSpeaker?.bio?.html || ''}
