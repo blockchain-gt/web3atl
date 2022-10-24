@@ -19,13 +19,17 @@
 	} as any;
 </script>
 
-<button
-	class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50 w-full relative overflow-hidden"
+<a
+	class="flex flex-col justify-between rounded-lg shadow-md p-4 bg-gray-50 {item.eventLink
+		? 'border border-gray-200 hover:border-black transition-all'
+		: ''} w-full relative overflow-hidden group cursor-pointer"
 	on:click={() => {
 		if (item.agendaSpeakers.length > 1) {
 			open = !open;
 		}
 	}}
+	href={item.eventLink || undefined}
+	target="_blank"
 >
 	<div class="text-left flex justify-between w-full">
 		<div class="w-full">
@@ -38,6 +42,13 @@
 							timeZone: 'America/New_York'
 						})}
 					</time>
+					{#if item.eventLink}
+						<div
+							class="inline group-hover:translate-x-0 !-translate-x-3 group-hover:opacity-100 opacity-0 transition-all"
+						>
+							&rarr;
+						</div>
+					{/if}
 				</div>
 			</div>
 			<h3 class="font-sans my-0 flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -79,4 +90,4 @@
 			</ul>
 		{/if}
 	</div>
-</button>
+</a>

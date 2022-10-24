@@ -12,6 +12,7 @@ const scheduleQuery = /* GraphQL */ `
 						location
 						startTime
 						eventType
+						eventLink
 						agendaSpeakers {
 							person {
 								name
