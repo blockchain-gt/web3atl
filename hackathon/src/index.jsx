@@ -46,7 +46,7 @@ function App() {
     'https://media.graphassets.com/RmZ06tMSj6st04ov8lkh',
     'https://media.graphassets.com/U7IY50hxQyRtmm5CjURM',
     'https://media.graphassets.com/XL8aVyXoQ9iU1LZYw09d',
-    'https://media.graphassets.com/q5n0pT5Q1Oqv1LzdA1Gp'
+    'https://media.graphassets.com/pyb441HiSOW35ZlFJiFs'
   ]
   const hasMounted = useHasMounted()
 
@@ -81,12 +81,13 @@ function App() {
               🤝 Open to all. <br />
               💸 <b>$10,000 in prizes.</b>
             </p>
-            <p className="uppercase text-white font-bold mb-8 ">📍 Oct 26 - Nov 6, Tech Square</p>
+            <p className="uppercase text-white font-bold mb-2 ">📍 Oct 26 - Nov 6, Tech Square</p>
+            <p className="uppercase text-white font-bold mb-8 ">🚨 Applications close Nov 1</p>
             <div className={`grid md:grid-cols-2 gap-4 text-center`}>
-              <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button">
+              <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button" target="_blank">
                 Apply
               </a>
-              <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="cta-button">
+              <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="cta-button" target="_blank">
                 Hack Pack
               </a>
             </div>
@@ -103,16 +104,17 @@ function App() {
       </div>
       {/* Track 1 */}
       <section className="blur-and-dark section-thing">
-      <img src={urls[1]} alt="" className="drop-shadow pb-10" />
-        <div className="glass w-[min(500px,90vw)]">
-          <h2 className="text-3xl font-bold">Data Track</h2>
+        <img src={urls[3]} alt="" className="drop-shadow" />
+        <div className="border-card bg-black/50 w-[min(500px,90vw)]">
+          <h2 className="text-3xl font-bold">Solidity Sprint</h2>
           <p className="opacity-80 my-4">
-            Beginning October 26th, hackers will compete to build an ETH price prediction model using the ocean protocol SDK. Winner will be decided by taking
-            the NMSE of the predicted price versus actual price over 24 1-hour intervals.
-            <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;" />
-            <DifficultySlider num={2} title="Python" />
+            On November 5th, hackers will compete in a Solidity Sprint competition with problems that increase in difficulty. 
+            The goal is to achieve the highest score by interacting with a live contract on Goerli testnet. 
+            <DifficultySlider num={2} title="Blockchain&nbsp;" />
+            <DifficultySlider num={2} title="Solidity&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Game Theory" />
           </p>
-          <a href="https://github.com/oceanprotocol/predict-eth/blob/main/predict-eth2.md" className="button">
+          <a href="https://docs.google.com/document/d/16Q_mg1YALV35S_sCy_fjlKw5480r9dRBdvhlfAi-8aE/edit?usp=sharing" className="button" target="_blank">
             Problem Details
           </a>
         </div>
@@ -129,7 +131,7 @@ function App() {
             <DifficultySlider num={2} title="Blockchain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
             <DifficultySlider num={2} title="Python, JS, or TS" />
           </p>
-          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button">
+          <a href="https://docs.google.com/document/d/17xHAAFSGQvqFVjnnMepil4Jwwq2iCHX2RQSQ3SnozX0/edit?usp=sharing" className="button" target="_blank">
             Problem Details
           </a>
         </div>
@@ -139,14 +141,15 @@ function App() {
       <section className="blur-and-dark section-thing">
         <img src={urls[2]} alt="" className="drop-shadow" />
         <div className="border-card bg-black/50 w-[min(500px,90vw)]">
-          <h2 className="text-3xl font-bold">Solidity Track</h2>
+          <h2 className="text-3xl font-bold">Chainlink Track</h2>
           <p className="opacity-80 my-4">
-            More details soon!
-            <br></br>
-            <br></br>
-            <br></br>
+            Chainlink is vital to Web3.
+            Hackers will build projects that utilize data feeds, varifiable randomness, automation, or API calls inside of smart contracts.
+            <DifficultySlider num={2} title="Blockchain" />
+            <DifficultySlider num={2} title="Solidity&nbsp;&nbsp;" />
+            <DifficultySlider num={1} title="Oracles&nbsp;&nbsp;&nbsp;" />
           </p>
-          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/edit?usp=sharing" className="button">
+          <a href="https://docs.google.com/document/d/1JoUTH5JFYXdkpcSWpToqJkPCANg2qmEvzMWVFyIy64I/" className="button" target="_blank">
             Problem Details
           </a>
         </div>
@@ -154,35 +157,36 @@ function App() {
       {/* Track 4 */}
       <section className="section-thing">
         <div className="glass w-[min(500px,90vw)]">
-          <h2 className="text-3xl font-bold">TBD</h2>
+          <h2 className="text-3xl font-bold">Data Track</h2>
           <p className="opacity-80 my-4">
-            More details soon!
-            <br></br>
-            <br></br>
-            <br></br>
+            Ocean democratizes data through tokenization, trade, and analysis of data in an open marketplace.
+            Hackers can choose from two problems - ETH price prediction and Eneregy Efficiency modelling and analysis. 
+            <DifficultySlider num={2} title="ML&nbsp;&nbsp;&nbsp;&nbsp;" />
+            <DifficultySlider num={2} title="Python" />
           </p>
-          <a href="/" className="button">
+          <a href="https://docs.google.com/document/d/16mPQvJiJM39qTz3i_lwsrJ6Mg4tEai1UPsCAgY-UyMI/edit?usp=sharing" className="button" target="_blank">
             Problem Details
           </a>
         </div>
-        <img src={urls[3]} alt="" className="drop-shadow" />
+      <img src={urls[1]} alt="" className="drop-shadow pb-10" />
       </section>
 
       <section className="section-thing blur-and-dark !h-auto py-20">
         <div className="w-full space-y-10">
           <div className="flex flex-col md:flex-row w-full justify-around px-8 gap-6 min-w-[300px] mx-auto drop-shadow">
-            <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50">
+            <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="button hover:text-white !bg-black/50" target="_blank">
               Apply
             </a>
             <a
-              href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" t
+              arget="_blank"
               className="button hover:text-white !bg-black/50">
               Hack Pack
             </a>
-            <a href="https://web3atl.io/schedule?hackathon=1" className="button hover:text-white !bg-black/50">
+            <a href="https://web3atl.io/schedule?hackathon=1" className="button hover:text-white !bg-black/50" target="_blank">
               Schedule
             </a>
-            <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50">
+            <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50" target="_blank">
               Discord
             </a>
           </div>
