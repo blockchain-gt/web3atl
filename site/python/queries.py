@@ -44,6 +44,46 @@ add_agenda_item = """
         $endTime:DateTime,
         $category:String,
         $eventType:EventType,
+        $eventLink:String,
+        $id1:ID,
+        $id2:ID,
+        $id3:ID,
+        $id4:ID,
+        $id5:ID
+        ){
+        createAgendaItem(data: {
+            title: $title
+            description: $description
+            location: $location
+            startTime: $startTime
+            endTime: $endTime
+            category: $category
+            eventType: $eventType
+            eventLink: $eventLink
+            agendaSpeakers: {
+                connect: [
+                    {id: $id1},
+                    {id: $id2},
+                    {id: $id3},
+                    {id: $id4},
+                    {id: $id5}
+                ]
+            }
+        }) {
+            id
+        }
+    }
+"""
+
+add_agenda_item_wo_link = """
+    mutation m1(
+        $title:String, 
+        $description:String,
+        $location:String,
+        $startTime:DateTime,
+        $endTime:DateTime,
+        $category:String,
+        $eventType:EventType,
         $id1:ID,
         $id2:ID,
         $id3:ID,
@@ -72,6 +112,7 @@ add_agenda_item = """
         }
     }
 """
+
 
 publish_agenda_item = """
     mutation {

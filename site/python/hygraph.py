@@ -78,8 +78,13 @@ class Hygraph:
 			# 	1/0
 			# else:
 			# 	print("success")
-			resp = Hygraph.client.execute(query=queries.add_agenda_item, variables=data)
+			if data.get("eventLink",""):
+				query = queries.add_agenda_item
+			else:
+				query = queries.add_agenda_item_wo_link
+			resp = Hygraph.client.execute(query=query, variables=data)
 			self.agenda_item_ids.append(resp['data']['createAgendaItem']['id'])
+
 		print('Publishing Agenda Items...')
 		self._publish_agenda()
 		print('Adding to Schedule...')
@@ -124,24 +129,42 @@ if __name__ == "__main__":
 		endTime = endTime.strftime(f"%Y-%m-%dT%H:%M:00-0{adj}:00")
 		category = row["Type"]
 		eventType = row["Event Type"]
+		eventLink = row["Event Link"]
 		id1 = h._get_agenda_speaker_id(row["Speaker 1"])
 		id2 = h._get_agenda_speaker_id(row["Speaker 2"])
 		id3 = h._get_agenda_speaker_id(row["Speaker 3"])
 		id4 = h._get_agenda_speaker_id(row["Speaker 4"])
 		id5 = h._get_agenda_speaker_id(row["Moderator"])
-		data.append({
-			"title":title,
-			"description":description,
-			"location":location,
-			"startTime":startTime,
-			"endTime":endTime,
-			"category":category,
-			"eventType":eventType,
-			"id1":id1,
-			"id2":id2,
-			"id3":id3,
-			"id4":id4,
-			"id5":id5
-		})
+		if eventLink:
+			data.append({
+				"title":title,
+				"description":description,
+				"location":location,
+				"startTime":startTime,
+				"endTime":endTime,
+				"category":category,
+				"eventType":eventType,
+				"eventLink":eventLink,
+				"id1":id1,
+				"id2":id2,
+				"id3":id3,
+				"id4":id4,
+				"id5":id5
+			})
+		else:
+			data.append({
+				"title":title,
+				"description":description,
+				"location":location,
+				"startTime":startTime,
+				"endTime":endTime,
+				"category":category,
+				"eventType":eventType,
+				"id1":id1,
+				"id2":id2,
+				"id3":id3,
+				"id4":id4,
+				"id5":id5
+			})
 
 	h.post_agenda(data)
