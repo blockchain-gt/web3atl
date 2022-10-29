@@ -77,13 +77,13 @@
 			</span>
 		</divs>
 	</div>
-	<div class="overflow-x-auto w-full">
+	<div class="overflow-x-auto w-full px-4 py-2">
 		{#if open && item.category != 'Announcement' && item.category != 'Break'}
 			<ul transition:slide class="text-left flex md:flex-row flex-col gap-4 mt-4">
 				{#each item.agendaSpeakers as speaker, i}
 					{#if speaker.person.name}
 						<div class="w-60 h-80">
-							<PersonCard noGradient person={speaker.person} {i} z={'-z-10'} />
+							<PersonCard noGradient person={speaker.person} tags={speaker.tags} {i} z={'-z-10'} />
 						</div>
 					{/if}
 				{/each}

@@ -2,7 +2,7 @@ import type { Component } from './components';
 import type { Image, RichText } from './utils';
 
 export type AgendaSpeaker = {
-	tags: string[];
+	tags: string;
 	person: Person;
 };
 

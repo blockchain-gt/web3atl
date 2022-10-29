@@ -3,6 +3,8 @@
 
 	export let person: Person;
 
+	export let tags: string;
+
 	export let selectedSpeaker: any = undefined;
 	export let i: number;
 	export let z = '-z-10';
@@ -16,7 +18,7 @@
 			selectedSpeaker = person;
 		}
 	}}
-	class="flex flex-col justify-center items-center gap-y-2 card relative group overflow-hidden w-full h-full"
+	class="flex flex-col justify-center items-center gap-y-2 card relative group overflow-hidden w-full h-full shadow-lg"
 >
 	<div
 		class="{!noGradient
@@ -37,5 +39,10 @@
 	<div class="text-center">
 		<p>{person?.company}</p>
 		<p>{person?.title}</p>
+		{#if tags}
+			<span class="uppercase text-sm px-3 py-1 rounded-full font-bold text-white bg-blue-900">
+				Moderator
+			</span>
+		{/if}
 	</div>
 </button>
