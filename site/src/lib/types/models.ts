@@ -13,6 +13,7 @@ export type Person = {
 	title: string;
 	bio: RichText;
 	isAlumni: boolean;
+	isStudent: boolean;
 };
 
 export type AgendaItem = {

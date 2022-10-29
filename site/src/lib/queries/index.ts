@@ -24,6 +24,7 @@ const homePageQuery = /* GraphQL */ `
 							url
 						}
 						isAlumni
+						isStudent
 					}
 				}
 				... on CtaLink {

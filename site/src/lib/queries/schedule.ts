@@ -22,6 +22,7 @@ const scheduleQuery = /* GraphQL */ `
 									url
 								}
 								isAlumni
+								isStudent
 							}
 							tags
 						}

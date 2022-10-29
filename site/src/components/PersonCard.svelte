@@ -27,13 +27,21 @@
 	/>
 	<!-- Speaker Card -->
 
-	<!-- {#if person?.isAlumni}
+	{#if person?.isAlumni}
 		<div class="absolute w-0 h-0 overflow-visible top-0 right-0 font-bold text-white rotate-45 -translate-x-20 -translate-y-4">
-			<div class="bg-background w-36 h-6">
+			<div class="bg-background w-36 h-6 -translate-x-1">
 				GT Alumni
 			</div>
 		</div>
-	{/if} -->
+	{/if}
+
+	{#if person?.isStudent}
+		<div class="absolute w-0 h-0 overflow-visible top-0 right-0 font-bold text-white rotate-45 -translate-x-20 -translate-y-4">
+			<div class="bg-background w-36 h-6 -translate-x-1">
+				GT Student
+			</div>
+		</div>
+	{/if}
 
 	{#if person?.image}
 		<img
