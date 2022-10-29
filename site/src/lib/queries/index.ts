@@ -23,6 +23,7 @@ const homePageQuery = /* GraphQL */ `
 						image {
 							url
 						}
+						isAlumni
 					}
 				}
 				... on CtaLink {

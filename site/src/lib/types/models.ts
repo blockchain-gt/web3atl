@@ -12,6 +12,7 @@ export type Person = {
 	company: string;
 	title: string;
 	bio: RichText;
+	isAlumni: boolean;
 };
 
 export type AgendaItem = {

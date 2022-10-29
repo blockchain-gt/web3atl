@@ -22,10 +22,19 @@
 >
 	<div
 		class="{!noGradient
-			? `bg-gradient-${i % 5}`
+			? `bg-gradient-${i % 5} w-full`
 			: ''} absolute h-full !inset-0 !aspect-square {z} opacity-10 group-hover:rotate-180 group-hover:scale-[4] group-hover:opacity-80 group-hover:brightness-125 transition-all duration-700"
 	/>
 	<!-- Speaker Card -->
+
+	<!-- {#if person?.isAlumni}
+		<div class="absolute w-0 h-0 overflow-visible top-0 right-0 font-bold text-white rotate-45 -translate-x-20 -translate-y-4">
+			<div class="bg-background w-36 h-6">
+				GT Alumni
+			</div>
+		</div>
+	{/if} -->
+
 	{#if person?.image}
 		<img
 			class="rounded-full border border-gray-300 w-40 object-cover !aspect-square"
@@ -35,6 +44,9 @@
 	{/if}
 	<h4 class="font-bold">
 		{person?.name}
+		<!-- {#if person?.isAlumni}
+			🐝
+		{/if} -->
 	</h4>
 	<div class="text-center">
 		<p>{person?.company}</p>

@@ -21,6 +21,7 @@ const scheduleQuery = /* GraphQL */ `
 								image {
 									url
 								}
+								isAlumni
 							}
 							tags
 						}
