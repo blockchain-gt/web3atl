@@ -15,8 +15,6 @@
 
 		const json = await res.json();
 
-		console.log(json);
-
 		return {
 			status: 200,
 			props: {

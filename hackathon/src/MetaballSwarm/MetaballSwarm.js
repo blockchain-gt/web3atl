@@ -18,7 +18,6 @@ const MetaballSwarm = () => {
   useEffect(() => {
     const handleScroll = (e) => {
       const scroll = e.target.scrollTop
-      console.log(scroll)
       setPercentDownPage(scroll / e.target.scrollHeight)
     }
 

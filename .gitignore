@@ -1,4 +1,6 @@
 /.svelte-kit
+**/.env
+**/**/node_modules/
 **/node_modules/
 hackathon/node_modules
 hackathon/node_modules
