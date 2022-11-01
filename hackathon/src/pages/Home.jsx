@@ -159,7 +159,7 @@ export function Home() {
               <a href="https://web3atl.io/schedule?hackathon=1" className="button hover:text-white !bg-black/50" target="_blank">
                 Schedule
               </a>
-              <a href="https://discord.gg/gVvKKhcCA8" className="button hover:text-white !bg-black/50" target="_blank">
+              <a href="https://discord.gg/G7ZV5kFmd2" className="button hover:text-white !bg-black/50" target="_blank">
                 Discord
               </a>
             </div>

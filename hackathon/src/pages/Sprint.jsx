@@ -6,7 +6,7 @@ import { useHasMounted } from '../utils'
 export function Sprint() {
 
     let data = useData()
-    const hasMounted = useHasMounted(10)
+    const hasMounted = useHasMounted(100)
     data['isLive'] = true
     return (
       <>
