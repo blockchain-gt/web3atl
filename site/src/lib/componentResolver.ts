@@ -11,7 +11,6 @@ import Values from '$components/sections/Values.svelte';
 import type { Component } from './types/components';
 
 function componentResolver(component: Component) {
-	console.log(component.__typename);
 
 	switch (component.__typename) {
 		case 'HeroSection':

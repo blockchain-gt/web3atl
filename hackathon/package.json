@@ -5,9 +5,12 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "ethers": "^5.7.2",
+    "fs": "^0.0.1-security",
     "postprocessing": "6.16.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
     "react-three-fiber": "4.2.17",
     "three": "0.118.3"
