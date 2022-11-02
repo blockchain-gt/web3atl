@@ -59,7 +59,7 @@
 	>
 </li>
 <li>
-	<a href="https://discord.gg/gVvKKhcCA8"
+	<a href="https://discord.gg/G7ZV5kFmd2"
 		><svg
 			data-testid="geist-icon"
 			fill="none"
