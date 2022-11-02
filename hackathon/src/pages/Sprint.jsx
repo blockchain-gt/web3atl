@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import { TeamResult } from './../components/TeamResult'
 import { Columns } from './../components/Columns'
 import { useHasMounted } from '../utils'
+import AnimateBubbles from '../components/Animate'
 
 export function Sprint() {
   let data = useData()
@@ -18,9 +19,11 @@ export function Sprint() {
           <div>
             <Columns />
             {hasMounted ? (
-              data['teamOrder'].map((team, i) => {
-                return <TeamResult data={data} team={team} key={i} />
-              })
+              <AnimateBubbles>
+                {data['teamOrder'].map((team, i) => {
+                  return <TeamResult data={data} team={team} key={i} ref={createRef()} />
+                })}
+              </AnimateBubbles>
             ) : (
               <></>
             )}
@@ -49,5 +52,7 @@ const useData = () => {
       getData().then((data) => setData(data))
     }, 10000)
   }, [])
+  console.log(data)
+  // window.shuff = () => setData((data) => data.reverse())
   return data
 }
