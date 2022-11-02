@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { Layout } from './Layout'
 import { Home } from './pages/Home'
 import { Sprint } from './pages/Sprint'
@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="sprint" element={<Sprint/>}/>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/sprint" element={<Sprint />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
@@ -24,6 +24,6 @@ function App() {
 ReactDOM.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>, 
+  </BrowserRouter>,
   document.getElementById('root')
 )
