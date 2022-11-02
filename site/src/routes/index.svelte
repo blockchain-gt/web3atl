@@ -1,6 +1,8 @@
 <script lang="ts" context="module">
 	import homePageQuery from '$lib/queries';
 
+	export const prerender = true;
+
 	export async function load({ fetch }: any) {
 		const res = await fetch(
 			'https://api-us-east-1.hygraph.com/v2/cl6isf8724r4g01uh7l9w44u3/master',
