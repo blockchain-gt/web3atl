@@ -59,8 +59,22 @@
 	>
 </li>
 <li>
+<<<<<<< HEAD
+	<a href="https://discord.gg/G7ZV5kFmd2"
+		><svg
+			data-testid="geist-icon"
+			fill="none"
+			height="24"
+			shape-rendering="geometricPrecision"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="1.5"
+			viewBox="0 0 24 24"
+=======
 	<a href="https://discord.gg/gVvKKhcCA8">
 		<svg
+>>>>>>> fd62e15c4667999dfcccb26e7dc7460b16338ad5
 			width="24"
 			height="24"
 			viewBox="0 0 511 376"

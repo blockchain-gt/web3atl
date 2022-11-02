@@ -55,7 +55,7 @@ export function Home() {
                 💸 <b>$10,000 in prizes.</b>
               </p>
               <p className="uppercase text-white font-bold mb-2 ">📍 Oct 26 - Nov 6, Tech Square</p>
-              <p className="uppercase text-white font-bold mb-8 ">🚨 Applications close Nov 1</p>
+              <p className="uppercase text-white font-bold mb-8 ">🚨 Applications close Nov 3</p>
               <div className={`grid md:grid-cols-2 gap-4 text-center`}>
                 <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button" target="_blank">
                   Apply
