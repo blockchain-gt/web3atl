@@ -27,7 +27,7 @@
 			>
 				{section.title}
 			</h1>
-			<p class="text-2xl">{@html section.description.html}</p>
+			<p class="text-2xl">{@html "Join us for the premier Web3 Conference on <b>November 4-6 in Tech Square.</b><br/><br/><b>Speaker series:</b> GT Hotel and Conference Center<br/><b>Hackathon: </b>TSQATL Social Club<br/>"}</p>
 			{#if section.cta}
 				<div class="text-center w-full gap-y-8">
 					<div class="justify-start gap-8 grid md:grid-cols-3 ">
