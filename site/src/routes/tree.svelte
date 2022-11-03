@@ -25,13 +25,18 @@
 		{#each links as link}
 			<li>
 				<a
-					class="border text-center p-4 block hover:border-black transition-all font-medium"
+					class="border text-center p-4 block hover:border-black transition-all font-medium bg-white shadow-lg"
 					href={link.link}>{link.title}</a
 				>
 			</li>
 		{/each}
 	</ul>
 </div>
+
+<div
+	id="fun"
+	class="object-cover top-0 right-0 bottom-0 bg-cover -z-10 bg-[url(https://cdn.raster.app/blockchain-at-georgia-tech/CVWfqbtr4X?ixlib=js-3.6.0&s=87703771a141a466403c146af36aa8e8)] w-screen h-screen fixed"
+/>
 
 <style>
 	div {
