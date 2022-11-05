@@ -55,43 +55,45 @@
 	</section>
 	<!-- Countdown -->
 </div>
-<div
-	class="flex items-center justify-center px-4 font-adventure uppercase text-white w-full bg-gray-800 py-8"
->
+{#if remaining > 0}
 	<div
-		class="gap-6 md:gap-2 font-bold rounded-xl grid grid-cols-5 lg:text-3xl text-xs md:grid-cols-9 py-4"
+		class="flex items-center justify-center px-4 font-adventure uppercase text-white w-full bg-gray-800 py-8"
 	>
-		<p aria-label="weeks remaining" class="">
-			{Math.floor(remaining / (60 * 60 * 24 * 7))
-				.toString()
-				.padStart(2, '0')} w
-		</p>
-		<div class="hidden md:flex items-center justify-center">:</div>
-		<p aria-label="days remaining" class="">
-			{Math.floor((remaining % (60 * 60 * 24 * 7)) / (60 * 60 * 24))
-				.toString()
-				.padStart(2, '0')} d
-		</p>
-		<div class="hidden md:flex items-center justify-center">:</div>
-		<p aria-label="hours remaining" class="">
-			{Math.floor((remaining % (60 * 60 * 24)) / (60 * 60))
-				.toString()
-				.padStart(2, '0')} h
-		</p>
-		<div class="hidden md:flex items-center justify-center">:</div>
-		<p aria-label="minutes remaining" class="">
-			{Math.floor((remaining % (60 * 60)) / 60)
-				.toString()
-				.padStart(2, '0')} m
-		</p>
-		<div class="hidden md:flex items-center justify-center">:</div>
-		<p aria-label="seconds remaining" class="">
-			{Math.floor(remaining % 60)
-				.toString()
-				.padStart(2, '0')} s
-		</p>
+		<div
+			class="gap-6 md:gap-2 font-bold rounded-xl grid grid-cols-5 lg:text-3xl text-xs md:grid-cols-9 py-4"
+		>
+			<p aria-label="weeks remaining" class="">
+				{Math.floor(remaining / (60 * 60 * 24 * 7))
+					.toString()
+					.padStart(2, '0')} w
+			</p>
+			<div class="hidden md:flex items-center justify-center">:</div>
+			<p aria-label="days remaining" class="">
+				{Math.floor((remaining % (60 * 60 * 24 * 7)) / (60 * 60 * 24))
+					.toString()
+					.padStart(2, '0')} d
+			</p>
+			<div class="hidden md:flex items-center justify-center">:</div>
+			<p aria-label="hours remaining" class="">
+				{Math.floor((remaining % (60 * 60 * 24)) / (60 * 60))
+					.toString()
+					.padStart(2, '0')} h
+			</p>
+			<div class="hidden md:flex items-center justify-center">:</div>
+			<p aria-label="minutes remaining" class="">
+				{Math.floor((remaining % (60 * 60)) / 60)
+					.toString()
+					.padStart(2, '0')} m
+			</p>
+			<div class="hidden md:flex items-center justify-center">:</div>
+			<p aria-label="seconds remaining" class="">
+				{Math.floor(remaining % 60)
+					.toString()
+					.padStart(2, '0')} s
+			</p>
+		</div>
 	</div>
-</div>
+{/if}
 
 <style>
 	#countdown {
