@@ -4,7 +4,6 @@
 			title: `Speaker Schedule`,
 			link: `https://www.canva.com/design/DAFQ2liuSLw/qwpdoYt1m-KWihq-7MUEVQ/view?utm_content=DAFQ2liuSLw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink `
 		},
-
 		{
 			title: `Floor Plans`,
 			link: `https://www.canva.com/design/DAFQ27Zqrm0/w2RKqkq-ipUuimzHm0zc2w/view?utm_content=DAFQ27Zqrm0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink `
@@ -13,7 +12,7 @@
 		{ title: `Discord`, link: `https://discord.gg/AYtJD5ZD4z ` },
 		{ title: `Twitter`, link: `https://twitter.com/web3_atl ` },
 		{ title: `LinkedIn`, link: `https://www.linkedin.com/company/web3-atl ` },
-		{ title: ` Instagram`, link: `https://www.instagram.com/web3atl/` }
+		{ title: `Instagram`, link: `https://www.instagram.com/web3atl/` }
 	];
 </script>
 
