@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import NavLinks from '$components/NavLinks.svelte';
 	import NavSocial from '$components/NavSocial.svelte';
 	import { onMount } from 'svelte';
@@ -15,6 +16,8 @@
 	});
 
 	let navOpen = false;
+
+	$: isSprint = $page.routeId === 'sprint';
 </script>
 
 <svelte:head>
@@ -23,7 +26,9 @@
 
 <!-- Non-mobile nav -->
 <nav
-	class="fixed top-0 w-full px-20 mx-auto hidden md:flex py-5 transition-all z-50 justify-between {!scrolledToTop
+	class="fixed top-0 w-full px-20 mx-auto hidden md:flex py-5 transition-all z-50 justify-between {isSprint
+		? '!text-white'
+		: ''} {!scrolledToTop
 		? `bg-gray-800/90 backdrop-blur border-b border-white/10 text-white translate-y-0`
 		: 'translate-y-4 duration-500'}"
 >
