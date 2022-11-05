@@ -105,9 +105,10 @@
 		</div>
 		<ul class="!text-white">
 			{#if teamData && data}
-				{#each teamData as team (team.name)}
+                {@const top5Score = teamData.slice(0, 5).reduce((a, b) => a + b.hackers.sort((a, b) => a.score - b.score)[0].score, 0)}
+				{#each teamData as team, i (team.name)}
 					<div animate:flip class="relative">
-						<Team totalWinningScore={data.totalWinningScore} name={team.name} team={team.hackers} />
+						<Team totalWinningScore={top5Score} name={team.name} team={team.hackers} place={i}/>
 					</div>
 				{/each}
 			{/if}

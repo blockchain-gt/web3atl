@@ -4,6 +4,7 @@
 	export let team: HackerInfo[];
 	export let name: string;
 	export let totalWinningScore: number;
+    export let place: number;
 
 	$: highestScore = team.sort((a, b) => a.score - b.score)[0].score;
 	$: prize = Math.round((highestScore / (!totalWinningScore ? 1 : totalWinningScore) * 2500));
@@ -31,5 +32,5 @@
 			{/each}
 		</table>
 	</div>
-	<div class="flex justify-center items-center w-full">${prize}</div>
+	<div class="flex justify-center items-center w-full">${place < 5 ? prize : 0}</div>
 </div>
