@@ -1,0 +1,70 @@
+{
+    "teamData": {
+        "0": [
+            {
+                "hacker": "0xC4c80378b5eaEa3C7A58273b75c956e20B41622F",
+                "score": 6
+            },
+            {
+                "hacker": "0xB65273ad19AC1a451BD7626febD38da355C6F03f",
+                "score": 3
+            }
+        ],
+        "1": [
+            {
+                "hacker": "0x9DbF71675709fD3E6FF8a74cAce034a800e6F32C",
+                "score": 6
+            }
+        ],
+        "2": [
+            {
+                "hacker": "0xF04CDA2E2233dcCdC1f3ec5410d302cF567F4B23",
+                "score": 21
+            },
+            {
+                "hacker": "0xA1174F6c66351A74fd615F3F0f67cAcc3F0d6aA9",
+                "score": 16
+            }
+        ],
+        "test team": [
+            {
+                "hacker": "0x0ecFedA7A5c642f2c42a2eD5501844Cf7F35dBAa",
+                "score": 0
+            }
+        ]
+    },
+    "teamOrder": [
+        "2",
+        "0",
+        "1",
+        "test team"
+    ],
+    "totalWinningScore": 33,
+    "solves": {
+        "f0": null,
+        "f1": null,
+        "f2": null,
+        "f3": null,
+        "f4": null,
+        "f5": null,
+        "f6": null,
+        "f7": null,
+        "f8": null,
+        "f9": null,
+        "f10": null,
+        "f11": null,
+        "f12": null,
+        "f13": null,
+        "f14": null,
+        "f15": null,
+        "f16": null,
+        "f17": null,
+        "f18": null,
+        "f19": null,
+        "f20": null,
+        "f21": null,
+        "f22": null,
+        "f23": null
+    },
+    "endTime": 1667772299
+}

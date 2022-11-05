@@ -54,7 +54,7 @@
 	let timeLeft = 0;
 
 	onMount(() => {
-		const set = () => (timeLeft = Date.now() / 1000 - (data?.endTime || 0));
+		const set = () => (timeLeft =  (data?.endTime || 0) - Date.now() / 1000);
 		setInterval(() => {
 			set();
 		}, 1000);
@@ -70,21 +70,9 @@
 			: ''}"
 	>
 		<div
-			class="gap-6 md:gap-2 font-bold rounded-xl grid grid-cols-5 lg:text-3xl text-xs md:grid-cols-9 py-4"
+			class="gap-6 md:gap-2 font-bold rounded-xl grid grid-cols-3 lg:text-3xl text-xs md:grid-cols-5 py-4 "
 		>
-			<p aria-label="weeks remaining" class="">
-				{Math.floor(timeLeft / (60 * 60 * 24 * 7))
-					.toString()
-					.padStart(2, '0')} w
-			</p>
-			<div class="hidden md:flex items-center justify-center">:</div>
-			<p aria-label="days timeLeft" class="">
-				{Math.floor((timeLeft % (60 * 60 * 24 * 7)) / (60 * 60 * 24))
-					.toString()
-					.padStart(2, '0')} d
-			</p>
-			<div class="hidden md:flex items-center justify-center">:</div>
-			<p aria-label="hours timeLeft" class="">
+			<p aria-label="hours timeLeft" class="justify-center">
 				{Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60))
 					.toString()
 					.padStart(2, '0')} h

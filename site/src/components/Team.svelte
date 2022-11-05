@@ -6,7 +6,7 @@
 	export let totalWinningScore: number;
 
 	$: highestScore = team.sort((a, b) => a.score - b.score)[0].score;
-	$: prize = Math.round((highestScore / totalWinningScore) * 2500);
+	$: prize = Math.round((highestScore / (!totalWinningScore ? 1 : totalWinningScore) * 2500));
 </script>
 
 <div

@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API for the Solidity Sprint Hackathon leaderboard ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"node hacking.js\" \"node index.js\""
+  },
+  "author": "0xManny",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.5.0",
+    "cors": "^2.8.5",
+    "ethers": "^5.7.2",
+    "express": "^4.18.2"
+  }
+}
