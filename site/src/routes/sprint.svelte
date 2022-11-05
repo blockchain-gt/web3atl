@@ -103,15 +103,28 @@
 			</p>
 		</div>
 	</div>
-	<ul class="!text-white z-10 relative">
-		{#if teamData && data}
-			{#each teamData as team (team.name)}
-				<div animate:flip class="relative">
-					<Team totalWinningScore={data.totalWinningScore} name={team.name} team={team.hackers} />
-				</div>
-			{/each}
-		{/if}
-	</ul>
+	<div class="relative z-10">
+		<div
+			class="relative text-green-400 font-bold flex items-center gap-4 px-10 {timeLeft < 0
+				? 'hidden'
+				: ''}"
+		>
+			<div class="flex items-center justify-center">
+				<div class="absolute !w-2 !h-2 rounded-full bg-green-400" />
+				<div class="absolute !w-3 !h-3 rounded-full bg-green-400 animate-ping" />
+			</div>
+			LIVE
+		</div>
+		<ul class="!text-white">
+			{#if teamData && data}
+				{#each teamData as team (team.name)}
+					<div animate:flip class="relative">
+						<Team totalWinningScore={data.totalWinningScore} name={team.name} team={team.hackers} />
+					</div>
+				{/each}
+			{/if}
+		</ul>
+	</div>
 
 	<div
 		class="grid relative text-white gap-1"
