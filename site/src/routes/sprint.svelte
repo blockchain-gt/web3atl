@@ -14,7 +14,8 @@
 	const transform = (data: Res) => {
 		const orderedTeamData = [];
 
-		shuffle(data.teamOrder);
+		// shuffle(data.teamOrder);
+
 		for (const key of data.teamOrder) {
 			orderedTeamData.push({ name: key, hackers: data.teamData[key] });
 		}
@@ -57,7 +58,6 @@
 		setInterval(() => {
 			set();
 		}, 1000);
-		set();
 	});
 </script>
 
