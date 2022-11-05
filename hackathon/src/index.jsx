@@ -6,6 +6,7 @@ import { Home } from './pages/Home'
 import { Sprint } from './pages/Sprint'
 import { NoMatch } from './pages/NoMatch'
 import './styles.css'
+import Blank from './pages/Blank'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/sprint" element={<Sprint />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/blank" element={<Blank />} />
         </Route>
       </Routes>
     </>
