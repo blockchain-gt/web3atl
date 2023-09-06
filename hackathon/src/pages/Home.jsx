@@ -56,13 +56,16 @@ export function Home() {
               </p>
               <p className="uppercase text-white font-bold mb-2 ">📍 Oct 26 - Nov 6, Tech Square</p>
               <p className="uppercase text-white font-bold mb-8 ">🚨 Applications close Nov 3</p>
-              <div className={`grid md:grid-cols-2 gap-4 text-center`}>
+              <div className={`grid md:grid-cols-3 gap-4 text-center`}>
                 <a href="https://forms.gle/YN6NSAbe2CyuzADc7" className="cta-button" target="_blank">
                   Apply
                 </a>
                 <a href="https://docs.google.com/document/d/1SKRlqt5lIM3IOvXQeupBlJwITV3hggryKK9T0wXo9fk/edit?usp=sharing" className="cta-button" target="_blank">
                   Hack Pack
                 </a>
+		<a href="https://2022.web3atl.io/sprint" className="cta-button">
+		  Results
+		</a>
               </div>
             </div>
           </div>
